@@ -1,0 +1,45 @@
+.scrollTextContainerRightToLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    white-space: nowrap;
+    transition: all 1s ease;
+  }
+  
+  .scrollTextContainerLeftToRight{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    white-space: nowrap;
+    transition: all 1s ease;
+  }
+  
+  .scrollTextContainerRightToLeft > div {
+    display: flex;
+    animation: move-left 40s infinite linear;
+  }
+  
+  .scrollTextContainerLeftToRight > div {
+    display: flex;
+    animation: move-right 40s infinite linear;
+  }
+  
+  /* @keyframes move-left {
+      to { transform: translateX(-100%); }
+  } */
+  
+  @keyframes move-right {
+      to { transform: translateX(100%); }
+  }
+  
+  @keyframes move-left {
+    from   { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+  
+  @keyframes move-right {
+    from   { transform: translateX(-50%); }
+    to { transform: translateX(0%); }
+  }

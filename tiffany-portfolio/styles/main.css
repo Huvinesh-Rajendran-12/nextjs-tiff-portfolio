@@ -1,0 +1,28 @@
+.footer-border {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+  }
+  
+  .navbar-border {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+  }
+
+.vertical-line {
+  border-left: 2px solid white;
+  height: 100%;
+}
+
+.h11 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
