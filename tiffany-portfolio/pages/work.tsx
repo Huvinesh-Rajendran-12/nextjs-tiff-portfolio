@@ -46,16 +46,20 @@ export default function Work() {
         <div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
           <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
             <div className="w-full row-span-2">
+              <Link href='/work/page1'>
               <img
                 src="https://imgix.cosmicjs.com/43bcfae0-8bea-11ed-bac9-7fe1734a16aa-RealIsRare2.jpg"
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100"/>
+              </Link>
             </div>
             <div className="w-full col-span-2 row-span-2">
+              <Link href='/work/page2'>
               <img
                 src="https://imgix.cosmicjs.com/7e055ed0-8beb-11ed-bac9-7fe1734a16aa-PinkOct1.jpg"
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+              </Link>
             </div>
             <div className="w-full ">
               <img
@@ -64,23 +68,29 @@ export default function Work() {
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
             </div>
             <div className="w-full">
+              <Link href='/work/page3'>
               <img
                 src="https://imgix.cosmicjs.com/abb42a30-8c10-11ed-bac9-7fe1734a16aa-TC1.jpeg"
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+              </Link>
             </div>
             <div className="w-full col-span-2 row-span-2">
+              <Link href='/work/page4'>
               <img
                 src="https://imgix.cosmicjs.com/ca11b9e0-8c13-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg"
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+              </Link>
             </div>
           
             <div className="w-full col-span-2">
+              <Link href='/work/page5'>
               <img
                 src="https://imgix.cosmicjs.com/490571d0-8d7f-11ed-bac9-7fe1734a16aa-HalfDayTeaHouse2.jpg"
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+              </Link>
             </div>
             <div className="w-full">
               <img
@@ -89,10 +99,12 @@ export default function Work() {
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
             </div>
             <div className="w-full">
+              <Link href='/work/page3'>
               <img
                 src="https://imgix.cosmicjs.com/abb42a30-8c10-11ed-bac9-7fe1734a16aa-TC1.jpeg"
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+              </Link>
             </div>
           </div>
         </div>

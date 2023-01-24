@@ -4,7 +4,7 @@ import {
     
     export default function Footer() {
       return (
-      <footer className='footer-border pt-2 justify-between px-4 flex flex-row px-2'>
+      <footer className='footer-border pt-2 justify-between px-4 flex flex-row'>
           <p className='text-white text-sm'>
             &copy; {new Date().getFullYear()} TIFFANYCFY. All rights reserved.
           </p>

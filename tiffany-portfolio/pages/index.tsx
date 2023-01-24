@@ -56,9 +56,9 @@ export default function HomePage(){
                         className=''
                         alt='' />
                       <div
-                        className='relative w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-black-600 hover:opacity-1'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                       >
-                        <Link href="/work/page/1">
+                        <Link href="/work/page1">
                           VIEW PROJECT
                         </Link>
                       </div>
@@ -70,9 +70,9 @@ export default function HomePage(){
                     <div className='relative'>
                       <img alt='' src={'https://imgix.cosmicjs.com/39296d60-8d80-11ed-bac9-7fe1734a16aa-PinkOct1.jpg'} className='w-full' />
                       <div
-                        className='relative w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-black-600 hover:opacity-1'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                       >
-                        <Link href="/work/page/2">
+                        <Link href="/work/page2">
                           VIEW PROEJCT
                         </Link>
                       </div>
@@ -84,11 +84,11 @@ export default function HomePage(){
                 <div className='lg:w-1/2 w-full gap-x-2 lg:pl-6'>
                   <div>
                     <div className='relative'>
-                      <img alt='' src={'https://imgix.cosmicjs.com/49ac1ca0-8d80-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg'} />
+                      <img alt='' src={'https://imgix.cosmicjs.com/49ac1ca0-8d80-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg'} className='w-full' />
                       <div
-                        className='relative w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-black-600 hover:opacity-1'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                       >
-                        <Link href="/work/page/4">
+                        <Link href="/work/page3">
                           VIEW PROJECT
                         </Link>
                       </div>
@@ -98,11 +98,11 @@ export default function HomePage(){
                   </div>
                   <div>
                     <div className='relative'>
-                      <img alt='' src={'https://imgix.cosmicjs.com/49ac1ca0-8d80-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg'} />
+                      <img alt='' src={'https://imgix.cosmicjs.com/49ac1ca0-8d80-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg'} className='w-full' />
                       <div
-                        className='relative w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-black-600 hover:opacity-1'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                       >
-                        <Link href="/work/page/4">
+                        <Link href="/work/page4">
                           VIEW PROJECT
                         </Link>
                       </div>
@@ -115,9 +115,9 @@ export default function HomePage(){
                   <div className='relative'>
                     <img alt='' src={'https://imgix.cosmicjs.com/4e91c620-8d80-11ed-bac9-7fe1734a16aa-HalfDayTeaHouse1.jpg'} />
                     <div
-                      className='relative w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-black-600 hover:opacity-1'
+                      className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                     >
-                      <Link href="/work/page/5">
+                      <Link href="/work/page5">
                         VIEW PROJECT
                       </Link>
                     </div>
@@ -128,14 +128,14 @@ export default function HomePage(){
               </div>
             </div>
           </section>
-          <section>
+          <section className='py-10'>
             <div className='py-2'>
-              <div className='text-center w-full text-2xl items-center justify-center flex flex-row'>
-                <p className='max-w-sm'>BASED IN KUALA LUMPUR, MALAYSIA. AVAILABLE WORLDWIDE.</p>
+              <div className='text-center w-full text-5xl items-center justify-center flex flex-row'>
+                <p className='max-w-xl'>BASED IN KUALA LUMPUR, MALAYSIA. AVAILABLE WORLDWIDE.</p>
               </div>
             </div>
             <div
-              className='flex flex-row justify-center items-center gap-x-4'
+              className='flex flex-row justify-center py-10 items-center gap-x-4'
             >
                 <img alt='' src={'https://imgix.cosmicjs.com/79675130-8e52-11ed-bac9-7fe1734a16aa-Pic.jpg'} className='w-1/4' />
               <div className='justify-center'>
