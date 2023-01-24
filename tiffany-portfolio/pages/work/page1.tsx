@@ -5,90 +5,74 @@ import img from 'next/image';
 
 export default function PageOne() {
   return (
-    <div className="min-h-screen bg-black">
-      <div className="py-2 text-center">
-        <div>
+    <div className="flex flex-col">
+      <section className='py-10 lg:pt-[9.88vh] lg:pb-[10vh] px-5 lg:px-[8.89vw]'>
+        <div className='flex flex-col justify-center text-center'>
           <h1 className='lg:text-5xl sm:text-3xl'>#REALISRARE DIAMOND EXHIBITION</h1>
-          <div className='text-white flex flex-row justify-center gap-x-2'>
-            <div>MARKETING CAMPAIGN</div>
+          <div className='text-white flex flex-row h-8 justify-center gap-x-2'>
+            <div className='uppercase'>MARKETING CAMPAIGN</div>
             <div className='vertical-line' />
-            <div>SOCIAL MEDIA</div>
+            <div className='uppercase'>SOCIAL MEDIA</div>
           </div>
         </div>
-      </div>
-      <div>
-        <div className="gap-2 flex justify-center">
-          <div className='flex-col'>
-            <div className='max-w-sm '>
-              <p className='text-white text-center'>
-                Your brand needs to reflect who you are and what makes you
-                different. That’s why I use design to take your business to new
-                levels by creating a visual identity that complements your brand
-                values, goals and personality. At visual identity design, I will
-                take care of all the hard stuff so you can focus on what&aposs
-                important.{' '}
-              </p>
-            </div>
-            <div className='text-white text-left justify-center'>
-              <div >Client: Diamond Platinum</div>
-              <div >Designer: Tiffany Chin @ D&P</div>
-              <div >Developer: D&P Marketing Team</div>
-            </div>
+      </section>
+      <section className='text-2xl text-center justify-center flex flex-row text-white pt-2'>
+        <div className='flex flex-col gap-y-8'>
+          <p className='max-w-lg'>
+              Your brand needs to reflect who you are and what makes you
+              different. That’s why I use design to take your business to new
+              levels by creating a visual identity that complements your brand
+              values, goals and personality. At visual identity design, I will
+              take care of all the hard stuff so you can focus on what&aposs
+              important.{' '}
+          </p>
+          <div className='text-white text-center justify-center'>
+            <div >Client: Diamond Platinum</div>
+            <div >Designer: Tiffany Chin @ D&P</div>
+            <div >Developer: D&P Marketing Team</div>
           </div>
         </div>
-      </div>
-      <div className='text-center py-10'>
-        <img
-          alt=""
-          src={
-            'https://imgix.cosmicjs.com/2dd22bb0-8bea-11ed-bac9-7fe1734a16aa-RealIsRare1.jpg'
-          }
-          className='w-1/3'
-          />
-        <img
-          alt=""
-          src={
-            'https://imgix.cosmicjs.com/43bcfae0-8bea-11ed-bac9-7fe1734a16aa-RealIsRare2.jpg'
-          }
-          className='w-1/3'
-          />
-            <img
-          alt=""
-          src={
-            'https://imgix.cosmicjs.com/54430580-8bea-11ed-bac9-7fe1734a16aa-RealIsRare3.jpg'
-          }
-          className='w-1/3'
-          />
-        
-      </div>
-        <div className='relative py-4'>
-        <div >
-          <span
-            className="white-text left-to-right block whiteSpace text-white whitespace-nowrap"
-          >
-            T&C PERSONAL BRANDING . T&C PERSONAL BRANDING
-          </span>
-          <span
-            className="white-text left-to-right block whiteSpace text-white whitespace-nowrap"
-          >
-            CLICK TO VIEW NEXT PROJECT
-          </span>
-        </div>
-        <div className='absolute top-0 left-0 h-full' >
+      </section>
+      <section className='flex flex-row justify-center mx-20'>
+        <div className='py-20 space-y-10'>
           <img
             alt=""
             src={
-              'https://imgix.cosmicjs.com/7e055ed0-8beb-11ed-bac9-7fe1734a16aa-PinkOct1.jpg'
+              'https://imgix.cosmicjs.com/2dd22bb0-8bea-11ed-bac9-7fe1734a16aa-RealIsRare1.jpg'
             }
-            className='w-1/3'
-          />
-          <div
-            className='relative w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-black-600 hover:opacity-1'
-          >
-            <Link href="/work/page/2">VIEW PROJECT</Link>
-          </div>
+            className='w-full lg:w-1/2 block ml-auto mr-auto'
+            />
+          <img
+            alt=""
+            src={
+              'https://imgix.cosmicjs.com/43bcfae0-8bea-11ed-bac9-7fe1734a16aa-RealIsRare2.jpg'
+            }
+            className='w-full lg:w-1/2 block ml-auto mr-auto'
+            />
+          <img
+            alt=""
+            src={
+              'https://imgix.cosmicjs.com/54430580-8bea-11ed-bac9-7fe1734a16aa-RealIsRare3.jpg'
+            }
+            className='w-full lg:w-1/2 block ml-auto mr-auto'
+            />
         </div>
-        </div>
+      </section>
+      <section className='relative h-[90vh]'>
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
+            <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+            </p>
+            <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <span className='reverse text-scrolling'>The Power of Visual Communication</span>
+              <span></span>
+            </p>
+            </div>
+            <div className='absolute top-10 left-0 flex flex-row justify-center w-full h-full'>
+              <img alt='' src={'https://imgix.cosmicjs.com/7e055ed0-8beb-11ed-bac9-7fe1734a16aa-PinkOct1.jpg'} className='md:w-1/3 h-[80vh] sm:w-1/2  max-h-200px' />
+            </div>
+      </section>
     </div>
   );
 }

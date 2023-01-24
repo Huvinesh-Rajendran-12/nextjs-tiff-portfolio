@@ -24,16 +24,16 @@ const NavItems = ({isOpen}:NavItemsProps) => {
 export default function Navbar() {
   const {isOpen, onOpen, onClose} = useDisclosure();
   return (
-    <div className='navbar-border flex bg-black flex-row justify-between px-4 py-2 items-center'>
-        <div>
-            <Link href='/'>
-            <Logo/>
-            </Link>
-        </div>
-        <button className='sm:block md:hidden'>
-            {isOpen ? <CloseIcon/> : <HamburgerIcon/>}
-        </button>
-        <NavItems isOpen={isOpen}/>
+    <header className='navbar-border sticky z-20 top-0 flex bg-black flex-row justify-between px-4 py-2 items-center'>
+      <div>
+          <Link href='/'>
+          <Logo/>
+          </Link>
       </div>
+      <button className='sm:block md:hidden'>
+          {isOpen ? <CloseIcon/> : <HamburgerIcon/>}
+      </button>
+      <NavItems isOpen={isOpen}/>
+    </header>
   )
 }

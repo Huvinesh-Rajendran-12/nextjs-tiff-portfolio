@@ -11,9 +11,15 @@ import Footer from '../components/Footer';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={extendedTheme}>
-      <Navbar/>
-      <Component {...pageProps} />
-      <Footer/>
+      <div className='bg-black text-white overflow-x-hidden overflow-y-scroll h-screen'>
+        <Navbar/>
+        <div className='scroll-container ready'>
+          <main>
+            <Component {...pageProps} />
+          </main>
+          <Footer/>
+        </div>
+      </div>
     </ChakraProvider>
   );
 }

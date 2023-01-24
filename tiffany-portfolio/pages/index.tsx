@@ -8,59 +8,48 @@ import Head from 'next/head';
 
 export default function HomePage(){
     return (
-      <div className='min-h-screen bg-black'>
-          <div className='relative py-20 mt-6'>
-            <div className='w-full overflow-hidden flex flex-row'>
-              <div className='scrollTextContainerRightToLeft'>
-                <div className='text-white text-2xl'>
-                  THE POWER OF VISUAL COMMUNICATION .
-                </div>
-                <div className='text-white text-2xl'>
-                  THE POWER OF VISUAL COMMUNICATION .
-                </div>
-              </div>
+      <div className='flex flex-col'>
+          <section className='relative h-[90vh]'>
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
+            <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+            </p>
+            <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <span className='reverse text-scrolling'>The Power of Visual Communication</span>
+              <span></span>
+            </p>
             </div>
-            <div className='flex overflow-hidden w-full'>
-              <div  className='scrollTextContainerLeftToRight'>
-                <div className='text-white text-2xl'>
-                  THE POWER OF VISUAL COMMUNICATION .
-                </div>
-                <div className='text-white text-2xl'>
-                  THE POWER OF VISUAL COMMUNICATION .
-                </div>
-              </div>
+            <div className='absolute top-10 left-0 flex flex-row justify-center w-full h-full'>
+              <img alt='' src={'https://imgix.cosmicjs.com/b177df10-8dba-11ed-bac9-7fe1734a16aa-TC1.jpeg'} className='md:w-1/3 h-[80vh] sm:w-1/2  max-h-200px' />
             </div>
-            <div className='absolute top-0 left-0 flex flex-row justify-center w-full h-full'>
-              <img alt='' src={'https://imgix.cosmicjs.com/b177df10-8dba-11ed-bac9-7fe1734a16aa-TC1.jpeg'} className='w-1/3  max-h-200px' />
-            </div>
-          </div>
-          <div className='px-3 mt-20'>
+          </section>
+          <section className='mx-auto mt-20 mb-10'>
             <div
-              className='justify-center flex items-center sm:flex-col md:flex-row sm:gap-y-1 md:gap-x-2'
+              className='justify-center flex items-center sm:flex-col md:flex-row sm:gap-y-1 md:gap-x-11'
             >
-              <img alt='' src={'https://imgix.cosmicjs.com/743842a0-8e52-11ed-bac9-7fe1734a16aa-logo.png'} className='w-1/12' />
-              <div className='gap-y-4 flex flex-col'>
-                <div className='text-white max-w-sm'>
-                  <i className='text-center text-md'>
+              <img alt='' src={'https://imgix.cosmicjs.com/743842a0-8e52-11ed-bac9-7fe1734a16aa-logo.png'} className='w-1/12 md:min-w-[15vw]' />
+              <div className='gap-y-6 flex flex-col'>
+                <div className='text-white lg:max-w-lg'>
+                  <i className='text-center text-xl lg:text-2xl'>
                     “In a world where everyone seems to be doing the same thing, it’s time to stand out.”
                   </i>
                 </div>
-                <div className='text-white max-w-sm'>
-                  <p className='text-md'>
+                <div className='text-white lg:max-w-lg'>
+                  <p className='lg:text-2xl'>
                     Your brand needs to reflect who you are and what makes you different. That’s why we use design to take your business to new levels by creating a visual identity that complements your brand values, goals and personality.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className='mt-10'>
-            <div className='py-4 mt-10'>
-              <h1 className='text-2xl flex justify-center text-white'>SELECTED WORK</h1>
+          </section>
+          <section className='lg:mt-[7.90vh] px-3.5 lg:px-[0.97vw]'>
+            <div className='py-2 mt-10'>
+              <h1 className='text-5xl flex justify-center text-white'>SELECTED WORK</h1>
             </div>
-            <div className='flex flex-row mx-20'>
-              <div className='flex-wrap flex'>
-                <div className='basis-1/2 sm:basis-0 gap-x-6 pt-2'>
-                  <div>
+            <div className=''>
+              <div className='flex flex-wrap mx-20'>
+                <div className='lg:w-1/2 w-full gap-x-6 pt-2'>
                     <div className='relative'>
                       <img
                         src={'https://imgix.cosmicjs.com/7137bb90-8bdb-11ed-bac9-7fe1734a16aa-RealIsRare1.jpg'}
@@ -76,7 +65,7 @@ export default function HomePage(){
                     </div>
                     <div className='text-white'>#REALISRARE DIAMOND EXHIBITION </div>
                     <div className='text-white'>2022</div>
-                  </div>
+
                   <div>
                     <div className='relative'>
                       <img alt='' src={'https://imgix.cosmicjs.com/39296d60-8d80-11ed-bac9-7fe1734a16aa-PinkOct1.jpg'} className='w-full' />
@@ -92,7 +81,7 @@ export default function HomePage(){
                     <div className='text-white'>2022</div>
                   </div>
                 </div>
-                <div className='basis-1/2 gap-x-2 pl-6'>
+                <div className='lg:w-1/2 w-full gap-x-2 lg:pl-6'>
                   <div>
                     <div className='relative'>
                       <img alt='' src={'https://imgix.cosmicjs.com/49ac1ca0-8d80-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg'} />
@@ -138,6 +127,8 @@ export default function HomePage(){
                 </div>
               </div>
             </div>
+          </section>
+          <section>
             <div className='py-2'>
               <div className='text-center w-full text-2xl items-center justify-center flex flex-row'>
                 <p className='max-w-sm'>BASED IN KUALA LUMPUR, MALAYSIA. AVAILABLE WORLDWIDE.</p>
@@ -155,26 +146,30 @@ export default function HomePage(){
                 </div>
               </div>
             </div>
-            <div className='py-2'>
-              <div className='relative'>
-                <img alt='' src={'https://imgix.cosmicjs.com/572164d0-8d80-11ed-bac9-7fe1734a16aa-photo2022-10-26-08.23.11.jpeg'} />
-                <div
-                  className='absolute flex w-full h-full justify-center items-center top-0 left-0'
-                >
-                  <div className='flex overflow-hidden w-full'>
-                    <div  className='scrollTextContainerRightToLeft'>
-                      <div className='text-white text-5xl'>
-                        THE POWER OF VISUAL COMMUNICATION .
-                      </div>
-                      <div className='text-white text-5xl'>
-                        THE POWER OF VISUAL COMMUNICATION .
+          </section>
+          <section>
+            <div className='mt-10'>
+              <div className='py-2'>
+                <div className='relative'>
+                  <img alt='' src={'https://imgix.cosmicjs.com/572164d0-8d80-11ed-bac9-7fe1734a16aa-photo2022-10-26-08.23.11.jpeg'} className='w-full' />
+                  <div
+                    className='absolute flex w-full h-full justify-center items-center top-0 left-0'
+                  >
+                    <div className='flex overflow-hidden w-full'>
+                      <div  className='scrollTextContainerRightToLeft'>
+                        <div className='uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+                          THE POWER OF VISUAL COMMUNICATION .
+                        </div>
+                        <div className='uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+                          THE POWER OF VISUAL COMMUNICATION .
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
 )}
 

@@ -14,5 +14,5 @@ type PrimaryButtonType =
 }
 
 export default function PrimaryButton({variant="solid",text="", weight=200, font="primary", color="secondary", bg="", border=0, borderColor="" }: PrimaryButtonType) {
-  return <Button variant={variant} bgColor={bg} borderWidth={border} borderColor={borderColor}><div fontWeight={weight} fontFamily={font} color={color} >{text}</div></Button>;
+  return <button className='rounded-md'><div >{text}</div></button>;
 }

@@ -33,62 +33,78 @@ const Img = (props: imgProps) => {
 
 export default function Work() {
   return (
-    <div>
-    <h1 className="text-center font-bold py-10 text-3xl dark:text-white">Image Gallery With Grid</h1>
-
-<div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
-  <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
-    <div className="w-full row-span-2">
-      <img
-        src="https://imgix.cosmicjs.com/43bcfae0-8bea-11ed-bac9-7fe1734a16aa-RealIsRare2.jpg"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100"/>
-    </div>
-    <div className="w-full col-span-2 row-span-2">
-      <img
-        src="https://imgix.cosmicjs.com/7e055ed0-8beb-11ed-bac9-7fe1734a16aa-PinkOct1.jpg"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-    </div>
-    <div className="w-full ">
-      <img
-        src="https://images.unsplash.com/photo-1489981424607-45c58daf0581?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-    </div>
-    <div className="w-full">
-      <img
-        src="https://imgix.cosmicjs.com/abb42a30-8c10-11ed-bac9-7fe1734a16aa-TC1.jpeg"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-    </div>
-    <div className="w-full col-span-2 row-span-2">
-      <img
-        src="https://imgix.cosmicjs.com/ca11b9e0-8c13-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-    </div>
-   
-    <div className="w-full col-span-2">
-      <img
-        src="https://imgix.cosmicjs.com/490571d0-8d7f-11ed-bac9-7fe1734a16aa-HalfDayTeaHouse2.jpg"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-    </div>
-    <div className="w-full">
-      <img
-        src="https://images.unsplash.com/photo-1489981424607-45c58daf0581?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-    </div>
-    <div className="w-full">
-      <img
-        src="https://imgix.cosmicjs.com/abb42a30-8c10-11ed-bac9-7fe1734a16aa-TC1.jpeg"
-        alt="Photo by Claudio Schwarz on Unsplash"
-        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-    </div>
-  </div>
-</div>
+    <div className='flex flex-col'>
+      <section>
+        <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
+          <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
+          <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
+            <div className="w-full row-span-2">
+              <img
+                src="https://imgix.cosmicjs.com/43bcfae0-8bea-11ed-bac9-7fe1734a16aa-RealIsRare2.jpg"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100"/>
+            </div>
+            <div className="w-full col-span-2 row-span-2">
+              <img
+                src="https://imgix.cosmicjs.com/7e055ed0-8beb-11ed-bac9-7fe1734a16aa-PinkOct1.jpg"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+            </div>
+            <div className="w-full ">
+              <img
+                src="https://images.unsplash.com/photo-1489981424607-45c58daf0581?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+            </div>
+            <div className="w-full">
+              <img
+                src="https://imgix.cosmicjs.com/abb42a30-8c10-11ed-bac9-7fe1734a16aa-TC1.jpeg"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+            </div>
+            <div className="w-full col-span-2 row-span-2">
+              <img
+                src="https://imgix.cosmicjs.com/ca11b9e0-8c13-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+            </div>
+          
+            <div className="w-full col-span-2">
+              <img
+                src="https://imgix.cosmicjs.com/490571d0-8d7f-11ed-bac9-7fe1734a16aa-HalfDayTeaHouse2.jpg"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+            </div>
+            <div className="w-full">
+              <img
+                src="https://images.unsplash.com/photo-1489981424607-45c58daf0581?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+            </div>
+            <div className="w-full">
+              <img
+                src="https://imgix.cosmicjs.com/abb42a30-8c10-11ed-bac9-7fe1734a16aa-TC1.jpeg"
+                alt="Photo by Claudio Schwarz on Unsplash"
+                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
+          <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+          </p>
+        </div>
+      </section>
 </div>
 
   );
