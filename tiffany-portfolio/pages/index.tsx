@@ -1,22 +1,33 @@
 
-import Footer from '../components/Footer';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import { useFontStore } from '../store/store';
+import { getFontConfig } from '../lib/fontAPI';
+import { useEffect } from 'react';
+import { Font } from '../interfaces';
 
+type HomePageProps = {
+  fontAPIData: Font[]
+}
 
-
-export default function HomePage(){
+export default function HomePage({fontAPIData}:HomePageProps){
+  const addFont = useFontStore((state) => state.addFont)
+  addFont(fontAPIData[0])
+  const fontMetadata = useFontStore((state) => state.font?.metadata)
+  useEffect(() => {
+    document.querySelector<HTMLElement>('.font-animation')?.style.setProperty('--font-animation', fontMetadata?.animation.value ?? '')
+    document.querySelector<HTMLElement>('.font-title')?.style.setProperty('--font-title', fontMetadata?.title.value ?? '')
+    document.querySelector<HTMLElement>('.font-content')?.style.setProperty('--font-content', fontMetadata?.content.value ?? '')
+    },[])
     return (
       <div className='flex flex-col'>
           <section className='relative h-[90vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
             <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-              <span className='text-scrolling'>The Power of Visual Communication</span>
-              <span className='text-scrolling'>The Power of Visual Communication</span>
+              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
             </p>
             <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
-              <span className='reverse text-scrolling'>The Power of Visual Communication</span>
+              <span className='reverse text-scrolling font-animation'>The Power of Visual Communication</span>
               <span></span>
             </p>
             </div>
@@ -31,12 +42,12 @@ export default function HomePage(){
               <img alt='' src={'https://imgix.cosmicjs.com/743842a0-8e52-11ed-bac9-7fe1734a16aa-logo.png'} className='w-1/12 md:min-w-[15vw]' />
               <div className='gap-y-6 flex flex-col'>
                 <div className='text-white lg:max-w-lg'>
-                  <i className='text-center text-xl lg:text-2xl'>
+                  <i className='text-center text-xl lg:text-2xl font-content'>
                     “In a world where everyone seems to be doing the same thing, it’s time to stand out.”
                   </i>
                 </div>
                 <div className='text-white lg:max-w-lg'>
-                  <p className='lg:text-2xl'>
+                  <p className='lg:text-2xl font-content'>
                     Your brand needs to reflect who you are and what makes you different. That’s why we use design to take your business to new levels by creating a visual identity that complements your brand values, goals and personality.
                   </p>
                 </div>
@@ -45,7 +56,7 @@ export default function HomePage(){
           </section>
           <section className='lg:mt-[7.90vh] px-3.5 lg:px-[0.97vw]'>
             <div className='py-2 mt-10'>
-              <h1 className='text-5xl flex justify-center text-white'>SELECTED WORK</h1>
+              <h1 className='text-5xl flex justify-center text-white font-title'>SELECTED WORK</h1>
             </div>
             <div className=''>
               <div className='flex flex-wrap mx-20'>
@@ -63,8 +74,8 @@ export default function HomePage(){
                         </Link>
                       </div>
                     </div>
-                    <div className='text-white'>#REALISRARE DIAMOND EXHIBITION </div>
-                    <div className='text-white'>2022</div>
+                    <div className='text-white font-content'>#REALISRARE DIAMOND EXHIBITION </div>
+                    <div className='text-white font-content'>2022</div>
 
                   <div>
                     <div className='relative'>
@@ -77,8 +88,8 @@ export default function HomePage(){
                         </Link>
                       </div>
                     </div>
-                    <div className='text-white'>PINK FOR HOPE</div>
-                    <div className='text-white'>2022</div>
+                    <div className='text-whit font-content'>PINK FOR HOPE</div>
+                    <div className='text-white font-content'>2022</div>
                   </div>
                 </div>
                 <div className='lg:w-1/2 w-full gap-x-2 lg:pl-6'>
@@ -93,8 +104,8 @@ export default function HomePage(){
                         </Link>
                       </div>
                     </div>
-                    <div className='text-white'>VITAVALLY BRANDING</div>
-                    <div className='text-white'>2020</div>
+                    <div className='text-white font-content'>VITAVALLY BRANDING</div>
+                    <div className='text-white font-content'>2020</div>
                   </div>
                   <div>
                     <div className='relative'>
@@ -107,8 +118,8 @@ export default function HomePage(){
                         </Link>
                       </div>
                     </div>
-                    <div className='text-white'>VITAVALLY BRANDING</div>
-                    <div className='text-white'>2020</div>
+                    <div className='text-white font-content'>VITAVALLY BRANDING</div>
+                    <div className='text-white font-content'>2020</div>
                   </div>
                 </div>
                 <div className='pt-2'>
@@ -122,8 +133,8 @@ export default function HomePage(){
                       </Link>
                     </div>
                   </div>
-                  <div className='text-white'>HALF DAY TEA HOUSE</div>
-                  <div className='text-white'>2020</div>
+                  <div className='text-white font-content'>HALF DAY TEA HOUSE</div>
+                  <div className='text-white font-content'>2020</div>
                 </div>
               </div>
             </div>
@@ -131,7 +142,7 @@ export default function HomePage(){
           <section className='py-10'>
             <div className='py-2'>
               <div className='text-center w-full text-5xl items-center justify-center flex flex-row'>
-                <p className='max-w-xl'>BASED IN KUALA LUMPUR, MALAYSIA. AVAILABLE WORLDWIDE.</p>
+                <p className='max-w-xl font-title'>BASED IN KUALA LUMPUR, MALAYSIA. AVAILABLE WORLDWIDE.</p>
               </div>
             </div>
             <div
@@ -139,10 +150,10 @@ export default function HomePage(){
             >
                 <img alt='' src={'https://imgix.cosmicjs.com/79675130-8e52-11ed-bac9-7fe1734a16aa-Pic.jpg'} className='w-1/4' />
               <div className='justify-center'>
-                <div className='font-bold text-lg text-white'>Tiffany Chin</div>
+                <div className='font-bold text-lg text-white font-content'>Tiffany Chin</div>
                 <div className='justify-center items-center'>
-                  <div className='text-white text-md' >INDEPENDENT DESIGNER</div>
-                  <div className='text-white text-md'>DIGITAL MARKETER</div>
+                  <div className='text-white text-md font-content' >INDEPENDENT DESIGNER</div>
+                  <div className='text-white text-md font-content'>DIGITAL MARKETER</div>
                 </div>
               </div>
             </div>
@@ -157,10 +168,10 @@ export default function HomePage(){
                   >
                     <div className='flex overflow-hidden w-full'>
                       <div  className='scrollTextContainerRightToLeft'>
-                        <div className='uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+                        <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                           THE POWER OF VISUAL COMMUNICATION .
                         </div>
-                        <div className='uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+                        <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                           THE POWER OF VISUAL COMMUNICATION .
                         </div>
                       </div>
@@ -173,3 +184,12 @@ export default function HomePage(){
         </div>
 )}
 
+export const getStaticProps = async () => {
+  const fontAPIData = (await getFontConfig())
+  return {
+    props: {
+      fontAPIData
+    }
+  }
+
+}

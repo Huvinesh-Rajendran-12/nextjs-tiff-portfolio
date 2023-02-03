@@ -1,12 +1,22 @@
 import img from "next/image"
+import { useEffect } from "react";
+import { Font } from "../interfaces";
+import { useFontStore } from '../store/store';
 
 export default function AboutPage() {
+  const fontStore = useFontStore((state) => state.font)
+  console.log(fontStore?.metadata.title.value)
+  useEffect(() => {
+    document.querySelector<HTMLElement>('.font-animation')?.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? '')
+    document.querySelector<HTMLElement>('.font-title')?.style.setProperty('--font-title', fontStore?.metadata.title.value ?? '')
+    document.querySelector<HTMLElement>('.font-content')?.style.setProperty('--font-content', fontStore?.metadata.content.value ?? '')
+    },[])
   return (
         <div className='flex flex-col'>
             <section>
                 <div className='py-8 text-center flex justify-center'>
                     <div>
-                        <h1 className='text-white text-5xl'>
+                        <h1 className='text-white text-5xl font-title'>
                             ABOUT
                         </h1>
                     </div>
@@ -21,15 +31,15 @@ export default function AboutPage() {
                 <div className='pt-2 flex justify-center'>
                     <div className="flex-col text-center">
                     <div className="mb-4">
-                        <h1 className='text-white text-xl'>
+                        <h1 className='text-white text-xl font-title'>
                             TIFFANY C.
                         </h1>
                     </div>
                     <div className='pt-4'>
                         <div className="flex-col lg:h-4 items-center lg:flex-row flex space-x-2">
-                            <div autoCapitalize={'true'} className='text-white'>INDEPENDENT GRAPHIC DESIGNER</div>
+                            <div autoCapitalize={'true'} className='text-white font-content'>INDEPENDENT GRAPHIC DESIGNER</div>
                             <div className='vertical-line'></div>
-                            <div className='text-white'>DIGITAL MARKETER</div>
+                            <div className='text-white font-content'>DIGITAL MARKETER</div>
                         </div>
                     </div>
                     </div>
@@ -41,7 +51,7 @@ export default function AboutPage() {
                         className='flex flex-col lg:flex-row space-x-10  justify-center items-center'
                     >
                         <img alt='' src={'https://imgix.cosmicjs.com/743842a0-8e52-11ed-bac9-7fe1734a16aa-logo.png'} className='w-1/6' />
-                        <div className='text-white max-w-sm'>
+                        <div className='text-white max-w-sm font-content'>
                             An established and versatile graphic designer and marketing professional, who is highly self-motivated and enjoys working with clients. Throughout the years, Tiffany’s passion for design and marketing has led her to add massive creative ideas to her client’ businesses. She crafts and cultivates the company’s brand identity, and designs visually appealing promotional materials. Her favourite creative design tools are Adobe Illustrator, Photoshop, and Premiere Pro, allowing her to stay ahead of the tech curve and produce
                             visually stunning results.
                         </div>
@@ -51,8 +61,8 @@ export default function AboutPage() {
             <section>
                 <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
                     <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-                        <span className='text-scrolling'>The Power of Visual Communication</span>
-                        <span className='text-scrolling'>The Power of Visual Communication</span>
+                        <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+                        <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
                     </p>
                 </div>
             </section>

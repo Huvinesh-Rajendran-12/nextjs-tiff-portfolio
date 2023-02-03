@@ -2,10 +2,17 @@
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}'
+    './components/**/*.{js,ts,jsx,tsx}',
+    './lib/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      // fontFamily: {
+      //   title: fontData.metadata.title.value ?? 'Inter',
+      //   content: fontData.metadata.content.value ?? 'Inter',
+      //   animated: fontData.metadata.animated.value ?? 'Inter'
+      // }
+    },
     screens: {
       sm: '480px',
       // => @media (min-width: 640px) { ... }

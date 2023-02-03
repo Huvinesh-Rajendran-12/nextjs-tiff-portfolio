@@ -1,19 +1,28 @@
 
 import ContactButton from '../components/Button';
 import img from 'next/image';
+import { useFontStore } from '../store/store';
+import { useEffect } from 'react';
 
 export default function ServicesPage() {
+  const fontStore = useFontStore((state) => state.font)
+  console.log(fontStore?.metadata.title.value)
+  useEffect(() => {
+    document.querySelector<HTMLElement>('.font-animation')?.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? '')
+    document.querySelector<HTMLElement>('.font-title')?.style.setProperty('--font-title', fontStore?.metadata.title.value ?? '')
+    document.querySelector<HTMLElement>('.font-content')?.style.setProperty('--font-content', fontStore?.metadata.content.value ?? '')
+    },[])
   return (
     <div className='flex flex-col'>
       <section>
         <div className='pt-4'>
           <div className='flex justify-center'>
-            <h1 className='text-5xl'>SERVICES</h1>
+            <h1 className='text-5xl font-title'>SERVICES</h1>
           </div>
           <div className='flex justify-center'>
             <div className='max-w-md'>
               <p
-                className='text-center text-lg py-10 text-white'
+                className='text-center text-lg py-10 text-white font-content'
               >
                 Your brand needs to reflect who you are and what makes you
                 different. That’s why I use design to take your business to new
@@ -122,8 +131,8 @@ export default function ServicesPage() {
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
           <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-            <span className='text-scrolling'>The Power of Visual Communication</span>
-            <span className='text-scrolling'>The Power of Visual Communication</span>
+            <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+            <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
           </p>
         </div>
       </section>
@@ -131,7 +140,7 @@ export default function ServicesPage() {
         <div
           className='text-2xl text-center justify-center flex flex-row text-white pt-2'
         >
-          <p className='max-w-sm'>
+          <p className='max-w-sm font-content'>
             Are you launching a new business or rebranding an existing ones? Do
             you want to transform your social media presence? Let’s talk.
           </p>
