@@ -1,18 +1,27 @@
 
 import Link from 'next/link';
-import { useFontStore } from '../store/store';
+import { useFontStore, useHomePageStore, usePagesStore } from '../store/store';
 import { getFontConfig } from '../lib/fontAPI';
 import { useEffect } from 'react';
-import { Font } from '../interfaces';
+import { Font, HomePage, Page } from '../interfaces';
+import { getHomePageData } from '../lib/homeAPI';
+import { getPagesData } from '../lib/pagesAPI';
 
 type HomePageProps = {
   fontAPIData: Font[]
+  HomePageData: HomePage[]
+  PagesData: Page[]
 }
 
-export default function HomePage({fontAPIData}:HomePageProps){
+export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageProps){
   const addFont = useFontStore((state) => state.addFont)
+  const addHomePageData = useHomePageStore((state) => state.addHomePageData)
+  const addPagesData = usePagesStore((state) => state.addPagesData)
   addFont(fontAPIData[0])
+  addHomePageData(HomePageData[0])
+  addPagesData(PagesData)
   const fontMetadata = useFontStore((state) => state.font?.metadata)
+  const HomePageMetadata = useHomePageStore((state) => state.HomePageData?.metadata)
   useEffect(() => {
     document.querySelector<HTMLElement>('.font-animation')?.style.setProperty('--font-animation', fontMetadata?.animation.value ?? '')
     document.querySelector<HTMLElement>('.font-title')?.style.setProperty('--font-title', fontMetadata?.title.value ?? '')
@@ -23,11 +32,11 @@ export default function HomePage({fontAPIData}:HomePageProps){
           <section className='relative h-[90vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
             <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+              <span className='text-scrolling font-animation'>The Power of Visual Communication{HomePageMetadata?.animation_1}</span>
+              <span className='text-scrolling font-animation'>The Power of Visual Communication{HomePageMetadata?.animation_1}</span>
             </p>
             <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
-              <span className='reverse text-scrolling font-animation'>The Power of Visual Communication</span>
+              <span className='reverse text-scrolling font-animation'>The Power of Visual Communication{HomePageMetadata?.animation_2}</span>
               <span></span>
             </p>
             </div>
@@ -63,7 +72,7 @@ export default function HomePage({fontAPIData}:HomePageProps){
                 <div className='lg:w-1/2 w-full gap-x-6 pt-2'>
                     <div className='relative'>
                       <img
-                        src={'https://imgix.cosmicjs.com/7137bb90-8bdb-11ed-bac9-7fe1734a16aa-RealIsRare1.jpg'}
+                        src={HomePageMetadata?.page_1_pic.imgix_url}
                         className=''
                         alt='' />
                       <div
@@ -79,7 +88,7 @@ export default function HomePage({fontAPIData}:HomePageProps){
 
                   <div>
                     <div className='relative'>
-                      <img alt='' src={'https://imgix.cosmicjs.com/39296d60-8d80-11ed-bac9-7fe1734a16aa-PinkOct1.jpg'} className='w-full' />
+                      <img alt='' src={HomePageMetadata?.page_2_pic.imgix_url} className='w-full' />
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                       >
@@ -95,7 +104,7 @@ export default function HomePage({fontAPIData}:HomePageProps){
                 <div className='lg:w-1/2 w-full gap-x-2 lg:pl-6'>
                   <div>
                     <div className='relative'>
-                      <img alt='' src={'https://imgix.cosmicjs.com/49ac1ca0-8d80-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg'} className='w-full' />
+                      <img alt='' src={HomePageMetadata?.page_3_pic.imgix_url} className='w-full' />
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                       >
@@ -109,7 +118,7 @@ export default function HomePage({fontAPIData}:HomePageProps){
                   </div>
                   <div>
                     <div className='relative'>
-                      <img alt='' src={'https://imgix.cosmicjs.com/49ac1ca0-8d80-11ed-bac9-7fe1734a16aa-Vitavally1.jpeg'} className='w-full' />
+                      <img alt='' src={HomePageMetadata?.page_4_pic.imgix_url} className='w-full' />
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                       >
@@ -124,7 +133,7 @@ export default function HomePage({fontAPIData}:HomePageProps){
                 </div>
                 <div className='pt-2'>
                   <div className='relative'>
-                    <img alt='' src={'https://imgix.cosmicjs.com/4e91c620-8d80-11ed-bac9-7fe1734a16aa-HalfDayTeaHouse1.jpg'} />
+                    <img alt='' src={HomePageMetadata?.page_5_pic.imgix_url} />
                     <div
                       className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                     >
@@ -162,17 +171,17 @@ export default function HomePage({fontAPIData}:HomePageProps){
             <div className='mt-10'>
               <div className='py-2'>
                 <div className='relative'>
-                  <img alt='' src={'https://imgix.cosmicjs.com/572164d0-8d80-11ed-bac9-7fe1734a16aa-photo2022-10-26-08.23.11.jpeg'} className='w-full' />
+                  <img alt='' src={HomePageMetadata?.end_pic.imgix_url} className='w-full' />
                   <div
                     className='absolute flex w-full h-full justify-center items-center top-0 left-0'
                   >
                     <div className='flex overflow-hidden w-full'>
                       <div  className='scrollTextContainerRightToLeft'>
                         <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
-                          THE POWER OF VISUAL COMMUNICATION .
+                          {HomePageMetadata?.animation_3}
                         </div>
                         <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
-                          THE POWER OF VISUAL COMMUNICATION .
+                          {HomePageMetadata?.animation_3}
                         </div>
                       </div>
                     </div>
@@ -186,9 +195,13 @@ export default function HomePage({fontAPIData}:HomePageProps){
 
 export const getStaticProps = async () => {
   const fontAPIData = (await getFontConfig())
+  const HomePageData = (await getHomePageData())
+  const PagesData = (await getPagesData())
   return {
     props: {
-      fontAPIData
+      fontAPIData,
+      HomePageData,
+      PagesData
     }
   }
 
