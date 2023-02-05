@@ -1,7 +1,8 @@
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 import img from 'next/image';
 import Link from 'next/link';
 import PrimaryButton from '../components/Button';
+import { useFontStore } from '../store/store';
 
 interface ChildrenProps {
   children: ReactElement[] | ReactElement;
@@ -32,6 +33,13 @@ const Img = (props: imgProps) => {
 };
 
 export default function Work() {
+  const fontStore = useFontStore((state) => state.font)
+  console.log(fontStore?.metadata.title.value)
+  useEffect(() => {
+    document.querySelector<HTMLElement>('.font-animation')?.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? '')
+    document.querySelector<HTMLElement>('.font-title')?.style.setProperty('--font-title', fontStore?.metadata.title.value ?? '')
+    document.querySelector<HTMLElement>('.font-content')?.style.setProperty('--font-content', fontStore?.metadata.content.value ?? '')
+    },[])
   return (
     <div className='flex flex-col'>
       <section>

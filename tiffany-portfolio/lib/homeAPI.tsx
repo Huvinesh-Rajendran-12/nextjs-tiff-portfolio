@@ -1,0 +1,1 @@
+import Cosmic from 'cosmicjs'
