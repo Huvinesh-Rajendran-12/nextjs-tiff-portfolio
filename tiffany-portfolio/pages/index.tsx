@@ -14,17 +14,17 @@ export default function HomePage({fontAPIData}:HomePageProps){
   addFont(fontAPIData[0])
   const fontMetadata = useFontStore((state) => state.font?.metadata)
   useEffect(() => {
-    document.querySelector<HTMLElement>('.font-animation')?.style.setProperty('--font-animation', fontMetadata?.animation.value ?? '')
-    document.querySelector<HTMLElement>('.font-title')?.style.setProperty('--font-title', fontMetadata?.title.value ?? '')
-    document.querySelector<HTMLElement>('.font-content')?.style.setProperty('--font-content', fontMetadata?.content.value ?? '')
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) =>  e.style.setProperty('--font-animation', fontMetadata?.animation.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontMetadata?.title.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontMetadata?.content.value ?? ''))
     },[])
     return (
       <div className='flex flex-col'>
           <section className='relative h-[90vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-            <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+            <p className='whitespace-nowrap uppercase font-animation font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <span className='text-scrolling'>The Power of Visual Communication</span>
+              <span className='text-scrolling'>The Power of Visual Communication</span>
             </p>
             <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
               <span className='reverse text-scrolling font-animation'>The Power of Visual Communication</span>
