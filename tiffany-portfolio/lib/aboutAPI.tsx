@@ -9,7 +9,7 @@ const bucket = Cosmic().bucket({
   read_key: '3WBPcsWhaRMkz6SlUH2dnFZrGC32r2WeKEDJrktobTD2nD9Nws'
 });
 
-export async function getFontConfig() : Promise<Font[]> {
+export async function getAboutPageData() : Promise<Font[]> {
   const parameters = {
     query: {
       type: 'about',
