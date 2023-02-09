@@ -23,9 +23,9 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
   const fontMetadata = useFontStore((state) => state.font?.metadata)
   const HomePageMetadata = useHomePageStore((state) => state.HomePageData?.metadata)
   useEffect(() => {
-    document.querySelector<HTMLElement>('.font-animation')?.style.setProperty('--font-animation', fontMetadata?.animation.value ?? '')
-    document.querySelector<HTMLElement>('.font-title')?.style.setProperty('--font-title', fontMetadata?.title.value ?? '')
-    document.querySelector<HTMLElement>('.font-content')?.style.setProperty('--font-content', fontMetadata?.content.value ?? '')
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) =>  e.style.setProperty('--font-animation', fontMetadata?.animation.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontMetadata?.title.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontMetadata?.content.value ?? ''))
     },[])
     return (
       <div className='flex flex-col'>
