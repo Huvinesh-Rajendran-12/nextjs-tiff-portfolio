@@ -40,34 +40,29 @@ export default function PageFive() {
       </section>
       <section className='flex flex-row justify-center mx-20'>
         <div className='py-20 space-y-10'>
-        <img
-          alt=""
-          src={
-            pageFiveMetadata?.pic_1.imgix_url
-          }
-          className='w-full lg:w-1/2 block ml-auto mr-auto'
-        />
-        <img
-          alt=""
-          src={
-            pageFiveMetadata?.pic_2.imgix_url
-          }
-          className='w-full lg:w-1/2 block ml-auto mr-auto'
-        />
-        <img
-          alt=""
-          src={
-            pageFiveMetadata?.pic_3.imgix_url
-          }
-          className='w-full lg:w-1/2 block ml-auto mr-auto'
-        />
-        <img
-          alt=""
-          src={
-            pageFiveMetadata?.pic_4.imgix_url
-          }
-          className='w-full lg:w-1/2 block ml-auto mr-auto'
-        />
+         <img
+            alt=""
+            src={
+              pageFiveMetadata?.pic_1.imgix_url
+            }
+            className='w-full lg:w-1/2 block ml-auto mr-auto'
+            />
+          <div className='lg:w-1/2 w-full'>
+            <img alt='' src={pageFiveMetadata?.pic_2.imgix_url}/>
+            <img alt='' src={pageFiveMetadata?.pic_3.imgix_url}/>
+          </div>
+          <video src={pageFiveMetadata?.vid_1}></video>
+          <img
+            alt=""
+            src={
+              pageFiveMetadata?.pic_4.imgix_url
+            }
+            className='w-full lg:w-1/2 block ml-auto mr-auto'
+            />
+          <div className='lg:w-1/2 w-full'>
+            <img alt='' src={pageFiveMetadata?.pic_5.imgix_url}/>
+            <img alt='' src={pageFiveMetadata?.pic_6.imgix_url}/>
+          </div>
         </div>
       </section>
       <section className='relative h-[90vh]'>

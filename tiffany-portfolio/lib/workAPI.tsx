@@ -1,5 +1,5 @@
 import Cosmic from 'cosmicjs'
-import { type HomePage } from '../interfaces'
+import { WorkPage } from '../interfaces'
 
 const BUCKET_SLUG = process.env.BUCKET_SLUG;
 const READ_KEY = process.env.READ_KEY;
@@ -9,16 +9,16 @@ const bucket = Cosmic().bucket({
   read_key: '3WBPcsWhaRMkz6SlUH2dnFZrGC32r2WeKEDJrktobTD2nD9Nws'
 });
 
-export async function getHomePageData() : Promise<HomePage[]> {
+export async function getWorkPageData() : Promise<WorkPage[]> {
   const parameters = {
     query: {
-      type: 'homepage',
-      slug: 'homepage'
+      type: 'work',
+      slug: 'work'
     },
     props: 'title,slug,metadata'
   };
-  const HomePageData = await bucket.getObjects(parameters);
-  return HomePageData.objects;
+  const WorkPageData = await bucket.getObjects(parameters);
+  return WorkPageData.objects;
 }
 
 

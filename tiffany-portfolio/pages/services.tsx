@@ -4,7 +4,7 @@ import img from 'next/image';
 import { useFontStore, useServicesPageStore } from '../store/store';
 import { useEffect } from 'react';
 import { getServicesPageData } from '../lib/servicesAPI';
-import { ServicesPage } from '../interfaces'
+import { type ServicesPage } from '../interfaces'
 
 interface ServicesPageProps {
   ServicesPageData: ServicesPage[]
@@ -188,9 +188,8 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
           <a href="mailto:imtiffanycfy@gmail.com">
             <ContactButton
               text="Contact Me"
-              bg="primary"
-              border={1}
-              borderColor="secondary" />
+              className="border-white border rounded-md py-2 px-2"
+            />
           </a>
         </div>
     </div>

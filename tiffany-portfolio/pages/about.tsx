@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Font } from "../interfaces";
 import { getAboutPageData } from "../lib/aboutAPI";
 import { useAboutPageStore, useFontStore } from '../store/store';
-import { AboutPage } from '../interfaces'
+import { type AboutPage } from '../interfaces'
 
 type AboutPageProps = {
     AboutPageData : AboutPage[]

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useFontStore, useHomePageStore, usePagesStore } from '../store/store';
 import { getFontConfig } from '../lib/fontAPI';
 import { useEffect } from 'react';
-import { Font, HomePage, Page } from '../interfaces';
+import { Font, type HomePage, Page } from '../interfaces';
 import { getHomePageData } from '../lib/homeAPI';
 import { getPagesData } from '../lib/pagesAPI';
 
@@ -35,7 +35,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
               <span className='text-scrolling font-animation'>{HomePageMetadata?.animation_1}</span>
               <span className='text-scrolling font-animation'>{HomePageMetadata?.animation_1}</span>
             </p>
-            <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+            <p className='whitespace-nowrap uppercase font-medium text-[40vw] pt-6 md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
               <span className='reverse text-scrolling font-animation'>{HomePageMetadata?.animation_2}</span>
               <span></span>
             </p>
@@ -101,7 +101,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                     <div className='text-white font-content'>{HomePageMetadata?.page_2_pic_year}</div>
                   </div>
                 </div>
-                <div className='lg:w-1/2 w-full gap-x-2 lg:pl-6'>
+                <div className='lg:w-1/2 w-full gap-x-2 lg:pl-8'>
                   <div>
                     <div className='relative'>
                       <img alt='' src={HomePageMetadata?.page_3_pic.imgix_url} className='w-full' />
@@ -113,8 +113,10 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                         </Link>
                       </div>
                     </div>
-                    <div className='text-white font-content'>{HomePageMetadata?.page_3_pic_title}</div>
-                    <div className='text-white font-content'>{HomePageMetadata?.page_3_pic_year}</div>
+                    <div className='py-3'>
+                      <div className='text-white font-content'>{HomePageMetadata?.page_3_pic_title}</div>
+                      <div className='text-white font-content'>{HomePageMetadata?.page_3_pic_year}</div>
+                    </div>
                   </div>
                   <div>
                     <div className='relative'>
@@ -127,8 +129,10 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                         </Link>
                       </div>
                     </div>
-                    <div className='text-white font-content'>{HomePageMetadata?.page_4_pic_title}</div>
-                    <div className='text-white font-content'>{HomePageMetadata?.page_4_pic_year}</div>
+                    <div>
+                      <div className='text-white font-content'>{HomePageMetadata?.page_4_pic_title}</div>
+                      <div className='text-white font-content'>{HomePageMetadata?.page_4_pic_year}</div>
+                    </div>
                   </div>
                 </div>
                 <div className='pt-2'>
@@ -142,8 +146,10 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                       </Link>
                     </div>
                   </div>
-                  <div className='text-white font-content'>{HomePageMetadata?.page_5_pic_title}</div>
-                  <div className='text-white font-content'>{HomePageMetadata?.page_1_pic_year}</div>
+                  <div>
+                    <div className='text-white font-content'>{HomePageMetadata?.page_5_pic_title}</div>
+                    <div className='text-white font-content'>{HomePageMetadata?.page_1_pic_year}</div>
+                  </div>
                 </div>
               </div>
             </div>
