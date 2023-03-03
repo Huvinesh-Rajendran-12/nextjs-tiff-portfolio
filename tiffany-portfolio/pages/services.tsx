@@ -1,11 +1,20 @@
 
 import ContactButton from '../components/Button';
 import img from 'next/image';
-import { useFontStore } from '../store/store';
+import { useFontStore, useServicesPageStore } from '../store/store';
 import { useEffect } from 'react';
+import { getServicesPageData } from '../lib/servicesAPI';
+import { type ServicesPage } from '../interfaces'
 
-export default function ServicesPage() {
+interface ServicesPageProps {
+  ServicesPageData: ServicesPage[]
+}
+
+export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
+  const addServicesPageData = useServicesPageStore((state) => state.addServicesPageData)
+  addServicesPageData(ServicesPageData[0])
   const fontStore = useFontStore((state) => state.font)
+  const ServicesPageMetadata = useServicesPageStore((state) => state.ServicesPageData?.metadata)
   console.log(fontStore?.metadata.title.value)
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? ''))
@@ -42,7 +51,7 @@ export default function ServicesPage() {
           >
             <img
               alt=""
-              src={'https://imgix.cosmicjs.com/280428d0-8dbd-11ed-bac9-7fe1734a16aa-McGotcha1.jpeg'}
+              src={ServicesPageMetadata?.first_pic.imgix_url}
               className='rounded-md'
             />
             <div>
@@ -122,7 +131,7 @@ export default function ServicesPage() {
             </div>
             <img
               alt=""
-              src={'https://imgix.cosmicjs.com/2c2fd120-8dbd-11ed-bac9-7fe1734a16aa-McGotcha2.jpeg'}
+              src={ServicesPageMetadata?.second_pic.imgix_url}
               className='rounded-md'
             />
           </div>
@@ -179,11 +188,20 @@ export default function ServicesPage() {
           <a href="mailto:imtiffanycfy@gmail.com">
             <ContactButton
               text="Contact Me"
-              bg="primary"
-              border={1}
-              borderColor="secondary" />
+              className="border-white border rounded-md py-2 px-2"
+            />
           </a>
         </div>
     </div>
   );
+}
+
+export const getStaticProps = async () => {
+  const ServicesPageData = (await getServicesPageData())
+  return {
+    props: {
+      ServicesPageData
+    }
+  }
+
 }

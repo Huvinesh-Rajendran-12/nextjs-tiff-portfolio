@@ -56,6 +56,20 @@ export type HomePage = {
         }
         work_page_animation_1: string
         work_page_animation_2: string
+        page_1_pic_title: string
+        page_1_pic_year: string
+        page_2_pic_title: string
+        page_2_pic_year: string
+        page_3_pic_title: string
+        page_3_pic_year: string
+        page_4_pic_title: string
+        page_4_pic_year: string
+        page_5_pic_title: string
+        page_5_pic_year: string
+        logo: {
+            url: string
+            imgix_url: string
+        }
     }
 }
 
@@ -88,8 +102,13 @@ export type Page = {
             url: string
             imgix_url: string
         }
+         pic_6: {
+            url: string
+            imgix_url: string
+        }
         animation_1: string
         animation_2: string
+        vid_1: string
     }
 
 }
@@ -126,6 +145,33 @@ export type ServicesPage = {
             imgix_url: string
         }
         second_pic: {
+            url: string
+            imgix_url: string
+        }
+    }
+}
+
+export type WorkPage = {
+    title: string
+    slug: string
+    metadata: {
+        page_1_pic_1: {
+            url: string
+            imgix_url: string
+        }
+        page_2_pic_1: {
+            url: string
+            imgix_url: string
+        }
+        page_3_pic_1: {
+            url: string
+            imgix_url: string
+        }
+        page_4_pic_1: {
+            url: string
+            imgix_url: string
+        }
+        page_5_pic_1: {
             url: string
             imgix_url: string
         }
