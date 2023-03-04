@@ -44,11 +44,11 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
               <img alt='' src={HomePageMetadata?.new_project_pic.imgix_url} className='md:w-1/3 h-[80vh] sm:w-1/2  max-h-200px' />
             </div>
           </section>
-          <section className='mx-auto mt-20 mb-10'>
+          <section className='mx-auto sm:mx-20 mt-20 mb-10'>
             <div
               className='justify-center flex items-center sm:flex-col md:flex-row sm:gap-y-1 md:gap-x-11'
             >
-              <img alt='' src={HomePageMetadata?.logo.imgix_url} className='w-1/12 md:min-w-[15vw]' />
+              <img alt='' src={HomePageMetadata?.logo.imgix_url} className='w-1/12 md:min-w-[15vw] sm:min-w-[70px]' />
               <div className='gap-y-6 flex flex-col'>
                 <div className='text-white lg:max-w-lg'>
                   <i className='text-center text-xl lg:text-2xl font-content'>
@@ -164,7 +164,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
               className='flex flex-row justify-center py-10 items-center gap-x-4'
             >
                 <img alt='' src={'https://imgix.cosmicjs.com/79675130-8e52-11ed-bac9-7fe1734a16aa-Pic.jpg'} className='w-1/4' />
-              <div className='justify-center'>
+              <div className='justify-center text-center'>
                 <div className='font-bold text-lg text-white font-content'>Tiffany Chin</div>
                 <div className='justify-center items-center'>
                   <div className='text-white text-md font-content uppercase' >INDEPENDENT DESIGNER</div>
