@@ -30,7 +30,7 @@ export default function Work({WorkPageData}:WorkPageProps) {
       </section>
       <section>
         <div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
-          <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
+          <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2 max-h-[1200px]">
             <div className="w-full row-span-2">
               <Link href='/work/page1'>
               <img
@@ -47,7 +47,7 @@ export default function Work({WorkPageData}:WorkPageProps) {
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
               </Link>
             </div>
-            <div className="w-full ">
+            <div className="w-full max-h-[700px] ">
               <img
                 src={""}
                 alt="Photo by Claudio Schwarz on Unsplash"

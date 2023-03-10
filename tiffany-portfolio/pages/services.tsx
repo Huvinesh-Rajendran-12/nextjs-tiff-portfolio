@@ -1,6 +1,5 @@
 
 import ContactButton from '../components/Button';
-import img from 'next/image';
 import { useFontStore, useServicesPageStore } from '../store/store';
 import { useEffect } from 'react';
 import { getServicesPageData } from '../lib/servicesAPI';
@@ -137,8 +136,8 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
         </div>
       </section>
       <section>
-        <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-          <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-4 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+        <div className='overflow-hidden h-full lg:pt-[8.35vh] flex flex-col space-y-6 justify-between lg:block'>
+          <p className='whitespace-nowrap items-center uppercase font-medium text-[30vw] md:text-[25vw] leading-1'> 
             <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
             <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
           </p>

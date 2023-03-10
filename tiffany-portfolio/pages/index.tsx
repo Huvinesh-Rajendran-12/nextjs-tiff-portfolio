@@ -30,18 +30,18 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
     return (
       <div className='flex flex-col'>
           <section className='relative h-[90vh]'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-            <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-              <span className='text-scrolling font-animation'>{HomePageMetadata?.animation_1}</span>
-              <span className='text-scrolling font-animation'>{HomePageMetadata?.animation_1}</span>
-            </p>
-            <p className='whitespace-nowrap uppercase font-medium text-[40vw] pt-6 md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
-              <span className='reverse text-scrolling font-animation'>{HomePageMetadata?.animation_2}</span>
-              <span></span>
-            </p>
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-8 justify-between lg:block'>
+              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+                <span className='text-scrolling font-animation'>{HomePageMetadata?.animation_1}</span>
+                <span className='text-scrolling font-animation'>{HomePageMetadata?.animation_1}</span>
+              </p>
+              <p className='whitespace-nowrap uppercase font-medium text-[40vw] pt-8 lg:mt-16 md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+                <span className='reverse text-scrolling font-animation'>{HomePageMetadata?.animation_2}</span>
+                <span></span>
+              </p>
             </div>
             <div className='absolute top-10 left-0 flex flex-row justify-center w-full h-full'>
-              <img alt='' src={HomePageMetadata?.new_project_pic.imgix_url} className='md:w-1/3 h-[80vh] sm:w-1/2  max-h-200px' />
+              <img alt='' src={HomePageMetadata?.new_project_pic.imgix_url} className='md:w-1/2 h-[80vh] sm:w-1/2  max-h-200px' />
             </div>
           </section>
           <section className='mx-auto sm:mx-20 mt-20 mb-10'>
@@ -70,6 +70,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
             <div className=''>
               <div className='flex flex-wrap mx-20'>
                 <div className='lg:w-1/2 w-full gap-x-6 pt-2'>
+                  <div>
                     <div className='relative'>
                       <img
                         src={HomePageMetadata?.page_1_pic.imgix_url}
@@ -77,15 +78,17 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                         alt='' />
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
-                      >
+                        >
                         <Link href="/work/page1" scroll={true}>
                           VIEW PROJECT
                         </Link>
                       </div>
                     </div>
-                    <div className='text-white font-content uppercase'>{HomePageMetadata?.page_1_pic_title}</div>
-                    <div className='text-white font-content'>{HomePageMetadata?.page_1_pic_year}</div>
-
+                    <div className='py-4'>
+                      <div className='text-white font-content uppercase mt-4'>{HomePageMetadata?.page_1_pic_title}</div>
+                      <div className='text-white font-content'>{HomePageMetadata?.page_1_pic_year}</div>
+                    </div>
+                  </div>
                   <div>
                     <div className='relative'>
                       <img alt='' src={HomePageMetadata?.page_2_pic.imgix_url} className='w-full' />
@@ -97,8 +100,10 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                         </Link>
                       </div>
                     </div>
-                    <div className='text-whit font-content'>{HomePageMetadata?.page_2_pic_title}</div>
-                    <div className='text-white font-content'>{HomePageMetadata?.page_2_pic_year}</div>
+                    <div className='py-4'>
+                      <div className='text-white font-content'>{HomePageMetadata?.page_2_pic_title}</div>
+                      <div className='text-white font-content'>{HomePageMetadata?.page_2_pic_year}</div>
+                    </div>
                   </div>
                 </div>
                 <div className='lg:w-1/2 w-full gap-x-2 lg:pl-8'>
@@ -113,7 +118,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                         </Link>
                       </div>
                     </div>
-                    <div className='py-3'>
+                    <div className='py-4'>
                       <div className='text-white font-content'>{HomePageMetadata?.page_3_pic_title}</div>
                       <div className='text-white font-content'>{HomePageMetadata?.page_3_pic_year}</div>
                     </div>
@@ -129,7 +134,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                         </Link>
                       </div>
                     </div>
-                    <div>
+                    <div className='py-4'>
                       <div className='text-white font-content'>{HomePageMetadata?.page_4_pic_title}</div>
                       <div className='text-white font-content'>{HomePageMetadata?.page_4_pic_year}</div>
                     </div>
@@ -147,7 +152,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                     </div>
                   </div>
                   <div>
-                    <div className='text-white font-content'>{HomePageMetadata?.page_5_pic_title}</div>
+                    <div className='text-white font-conten mt-4'>{HomePageMetadata?.page_5_pic_title}</div>
                     <div className='text-white font-content'>{HomePageMetadata?.page_1_pic_year}</div>
                   </div>
                 </div>
@@ -156,15 +161,15 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
           </section>
           <section className='py-10'>
             <div className='py-2'>
-              <div className='text-center w-full text-5xl items-center justify-center flex flex-row'>
+              <div className='text-center w-full md:text-5xl sm:text-2xl items-center justify-center flex flex-row'>
                 <p className='max-w-xl font-title uppercase'>BASED IN KUALA LUMPUR, MALAYSIA. AVAILABLE WORLDWIDE.</p>
               </div>
             </div>
             <div
-              className='flex flex-row justify-center py-10 items-center gap-x-4'
+              className='flex flex-row sm:flex-col justify-center py-10 items-center gap-x-4 sm:space-y-4'
             >
-                <img alt='' src={'https://imgix.cosmicjs.com/79675130-8e52-11ed-bac9-7fe1734a16aa-Pic.jpg'} className='w-1/4' />
-              <div className='justify-center text-center'>
+                <img alt='' src={'https://imgix.cosmicjs.com/79675130-8e52-11ed-bac9-7fe1734a16aa-Pic.jpg'} className='w-1/4 sm:w-1/3' />
+              <div className='justify-center text-center sm:space-y-2'>
                 <div className='font-bold text-lg text-white font-content'>Tiffany Chin</div>
                 <div className='justify-center items-center'>
                   <div className='text-white text-md font-content uppercase' >INDEPENDENT DESIGNER</div>
@@ -183,10 +188,10 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                   >
                     <div className='flex overflow-hidden w-full'>
                       <div  className='scrollTextContainerRightToLeft'>
-                        <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+                        <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 leading-1'>
                           {HomePageMetadata?.animation_3}
                         </div>
-                        <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+                        <div className='uppercase font-medium font-animation text-[30vw] md:text-[25vw] pb-8 leading-1'>
                           {HomePageMetadata?.animation_3}
                         </div>
                       </div>

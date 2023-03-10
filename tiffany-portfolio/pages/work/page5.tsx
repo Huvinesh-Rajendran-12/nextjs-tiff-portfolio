@@ -6,8 +6,8 @@ import { useFontStore, usePagesStore } from '../../store/store';
 import { useEffect } from 'react';
 export default function PageFive() {
   const fontStore = useFontStore((state) => state.font)
-  const pageFiveMetadata = usePagesStore((state) => state.pagesData ? state.pagesData[4].metadata : undefined)
-  const pageOnePic = usePagesStore((state) => state.pagesData ? state.pagesData[0].metadata.pic_1 : undefined)
+  const pageFiveMetadata = usePagesStore((state) => state.pagesData ? state.pagesData[0].metadata : undefined)
+  const pageOnePic = usePagesStore((state) => state.pagesData ? state.pagesData[4].metadata.pic_1 : undefined)
   console.log(fontStore?.metadata.title.value)
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? ''))
@@ -38,31 +38,39 @@ export default function PageFive() {
           </div>
         </div>
       </section>
-      <section className='flex flex-row justify-center mx-20'>
+            <section className='flex flex-row justify-center mx-20 lg:mx-80'>
         <div className='py-20 space-y-10'>
-         <img
+           <img
             alt=""
             src={
               pageFiveMetadata?.pic_1.imgix_url
             }
-            className='w-full lg:w-1/2 block ml-auto mr-auto'
+            className='w-full block ml-auto mr-auto'
             />
-          <div className='lg:w-1/2 w-full'>
-            <img alt='' src={pageFiveMetadata?.pic_2.imgix_url}/>
-            <img alt='' src={pageFiveMetadata?.pic_3.imgix_url}/>
-          </div>
-          <video src={pageFiveMetadata?.vid_1}></video>
+          <div className='flex'>
+              <div className='w-1/2 p-1'>
+                <img alt='' src={pageFiveMetadata?.pic_2.imgix_url} className='h-full'/>
+              </div>
+              <div className='w-1/2 p-1'>
+                <img alt='' src={pageFiveMetadata?.pic_3.imgix_url} className='h-full'/>
+              </div>
+            </div>
+          {pageFiveMetadata?.vid_1 ?? <video src={pageFiveMetadata?.vid_1}></video>}
           <img
             alt=""
             src={
               pageFiveMetadata?.pic_4.imgix_url
             }
-            className='w-full lg:w-1/2 block ml-auto mr-auto'
+            className='w-full block ml-auto mr-auto'
             />
-          <div className='lg:w-1/2 w-full'>
-            <img alt='' src={pageFiveMetadata?.pic_5.imgix_url}/>
-            <img alt='' src={pageFiveMetadata?.pic_6.imgix_url}/>
-          </div>
+          <div className='flex'>
+              <div className='w-1/2 p-1'>
+                <img alt='' src={pageFiveMetadata?.pic_5.imgix_url} className='h-full'/>
+              </div>
+              <div className='w-1/2 p-1'>
+                <img alt='' src={pageFiveMetadata?.pic_6.imgix_url} className='h-full'/>
+              </div>
+            </div>
         </div>
       </section>
       <section className='relative h-[90vh]'>
@@ -77,7 +85,16 @@ export default function PageFive() {
             </p>
             </div>
             <div className='absolute top-10 left-0 flex flex-row justify-center w-full h-full'>
-              <img alt='' src={pageOnePic?.imgix_url} className='md:w-1/3 h-[80vh] sm:w-1/2  max-h-200px' />
+              <div className='absolute'>
+                <img alt='' src={pageOnePic?.imgix_url} className=' h-[80vh] mx-20  max-h-200px' />
+                  <div
+                    className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
+                    >
+                    <Link href="/work/page1" scroll={true}>
+                      VIEW PROEJCT
+                    </Link>
+                  </div>
+              </div>
             </div>
       </section>
     </div>

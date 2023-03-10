@@ -37,20 +37,14 @@ export default function AboutPage({AboutPageData}: AboutPageProps) {
             </section>
             <section>
                 <div className='pt-2 flex justify-center'>
-                    <div className="flex-col text-center">
-                    <div className="mb-4">
-                        <h1 className='text-white text-xl font-title'>
-                            {AboutPageMetadata?.user_name}
-                        </h1>
-                    </div>
-                    <div className='pt-4'>
-                        <div className="flex-col lg:h-4 items-center lg:flex-row flex space-x-2">
-                            <div autoCapitalize={'true'} className='text-white font-content'>{AboutPageMetadata?.tag_1}</div>
-                            <div className='vertical-line'></div>
-                            <div className='text-white font-content'>{AboutPageMetadata?.tag_2}</div>
+                   <div className='flex flex-col justify-center text-center space-y-2'>
+                        <h1 className='lg:text-2xl sm:text-md font-title'>{AboutPageMetadata?.user_name}</h1>
+                        <div className='text-white flex flex-row h-6 justify-center gap-x-2'>
+                            <div className='uppercase font-content'>{AboutPageMetadata?.tag_1}</div>
+                            <div className='vertical-line' />
+                            <div className='uppercase font-content'>{AboutPageMetadata?.tag_2}</div>
                         </div>
-                    </div>
-                    </div>
+                     </div>
                 </div>
             </section>
             <section className="pt-10">
