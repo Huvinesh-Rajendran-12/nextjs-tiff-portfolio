@@ -47,18 +47,20 @@ export default function AboutPage({AboutPageData}: AboutPageProps) {
                      </div>
                 </div>
             </section>
-            <section className="pt-10">
-                <div className='py-10 px-4'>
-                    <div 
-                        className='flex flex-col lg:flex-row space-x-10  justify-center items-center'
-                    >
-                        <img alt='' src={'https://imgix.cosmicjs.com/743842a0-8e52-11ed-bac9-7fe1734a16aa-logo.png'} className='w-1/6' />
-                        <div className='text-white max-w-sm font-content'>
-                            {AboutPageMetadata?.description}
-                        </div>
-                    </div>
+           <section className='mx-auto sm:mx-20 mt-20 mb-10'>
+            <div
+              className='justify-center flex items-center sm:flex-col md:flex-row sm:gap-y-1 md:gap-x-11'
+            >
+              <img alt='' src={AboutPageMetadata?.logo.imgix_url} className='w-1/12 md:min-w-[15vw] sm:min-w-[70px]' />
+              <div className='gap-y-6 flex flex-col'>
+                <div className='text-white lg:max-w-lg'>
+                  <p className='lg:text-2xl font-content'>
+                    {AboutPageMetadata?.description}
+                  </p>
                 </div>
-            </section>
+              </div>
+            </div>
+          </section>
             <section>
                 <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
                     <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
