@@ -13,6 +13,13 @@ export default function PageTwo() {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? ''))
     document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontStore?.metadata.title.value ?? ''))
     document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontStore?.metadata.content.value ?? ''))
+    if(typeof window !== 'undefined'){
+   window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth"
+        });
+   }
     },[])
   return (
     <div className='flex flex-col'>

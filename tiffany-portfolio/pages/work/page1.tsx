@@ -76,22 +76,22 @@ export default function PageOne() {
       </section>
       <section className='relative h-[90vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation uppercase'>{pageOneMetadata?.animation_1}</span>
                 <span className='text-scrolling font-animation uppercase'>{pageOneMetadata?.animation_1}</span>
               </p>
-              <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[25vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[20vw] lg:text-xxl1 lg:mt-16 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{pageOneMetadata?.animation_2}</span>
                 <span></span>
               </p>
             </div>
             <div className='absolute top-10 left-0 flex flex-row justify-center w-full h-full'>
-              <div className='absolute'>
-                <img alt='' src={pageTwoPic?.imgix_url} className=' h-[80vh] mx-20  max-h-200px' />
+              <div className='absolute max-w-lg'>
+                <img alt='' src={pageTwoPic?.imgix_url} className=' h-[80vh] max-h-200px' />
                   <div
                     className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                     >
-                    <Link href="/work/page2" scroll={true}>
+                    <Link href="/work/page2">
                       VIEW PROEJCT
                     </Link>
                   </div>

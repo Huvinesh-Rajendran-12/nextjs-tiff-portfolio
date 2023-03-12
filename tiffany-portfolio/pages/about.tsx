@@ -53,7 +53,7 @@ export default function AboutPage({AboutPageData}: AboutPageProps) {
             >
               <img alt='' src={AboutPageMetadata?.logo.imgix_url} className='w-1/12 md:min-w-[15vw] sm:min-w-[70px]' />
               <div className='gap-y-6 flex flex-col'>
-                <div className='text-white lg:max-w-lg'>
+                <div className='text-white lg:max-w-xl'>
                   <p className='lg:text-2xl font-content'>
                     {AboutPageMetadata?.description}
                   </p>
@@ -63,7 +63,7 @@ export default function AboutPage({AboutPageData}: AboutPageProps) {
           </section>
             <section>
                 <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-                    <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+                    <p className='whitespace-nowrap mb-6 uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                         <span className='text-scrolling font-animation'>{AboutPageMetadata?.animation_1}</span>
                         <span className='text-scrolling font-animation'>{AboutPageMetadata?.animation_1}</span>
                     </p>
