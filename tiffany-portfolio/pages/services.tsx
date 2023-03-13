@@ -3,41 +3,40 @@ import ContactButton from '../components/Button';
 import { useFontStore, useServicesPageStore } from '../store/store';
 import { useEffect } from 'react';
 import { getServicesPageData } from '../lib/servicesAPI';
-import { type ServicesPage } from '../interfaces'
+import { Font, type ServicesPage } from '../interfaces'
+import { getFontConfig } from '../lib/fontAPI';
 
 interface ServicesPageProps {
   ServicesPageData: ServicesPage[]
+  fontAPIData: Font[]
 }
 
-export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
+export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPageProps) {
+  const ServicesPageMetadata = ServicesPageData[0].metadata
+  const fontDataMetadata = fontAPIData[0].metadata
   const addServicesPageData = useServicesPageStore((state) => state.addServicesPageData)
   addServicesPageData(ServicesPageData[0])
   const fontStore = useFontStore((state) => state.font)
-  const ServicesPageMetadata = useServicesPageStore((state) => state.ServicesPageData?.metadata)
-  console.log(fontStore?.metadata.title.value)
+  // const ServicesPageMetadata = useServicesPageStore((state) => state.ServicesPageData?.metadata)
+  console.log(fontDataMetadata.title.value)
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontStore?.metadata.title.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontStore?.metadata.content.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontDataMetadata.animation.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontDataMetadata.title.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontDataMetadata.content.value ?? ''))
     },[])
   return (
     <div className='flex flex-col'>
       <section>
         <div className='pt-4'>
           <div className='flex justify-center'>
-            <h1 className='text-5xl font-title'>SERVICES</h1>
+            <h1 className='lg:text-5xl sm:text-3xl font-title'>{ServicesPageMetadata.page_title}</h1>
           </div>
           <div className='flex justify-center'>
             <div className='max-w-md'>
               <p
-                className='text-center text-lg py-10 text-white font-content'
+                className='text-center py-10 text-white font-content lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-md'
               >
-                Your brand needs to reflect who you are and what makes you
-                different. That’s why I use design to take your business to new
-                levels by creating a visual identity that complements your brand
-                values, goals and personality. At visual identity design, I will
-                take care of all the hard stuff so you can focus on what's
-                important.
+                {ServicesPageMetadata.page_description}
               </p>
             </div>
           </div>
@@ -56,37 +55,34 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
             <div>
               <h1 className='text-white text-center'>1</h1>
               <h1 className='text-white text-center font-title font-medium py-2'>
-                BRAND IDENTITY
+                {ServicesPageMetadata.first_pic_title}
               </h1>
               <div className='max-w-sm'>
                 <p className='font-content'>
-                  Your brand needs to reflect who you are and what makes you
-                  different. That’s why I use design to take your business to new
-                  levels by creating a visual identity that complements your brand
-                  values, goals and personality.
+                  {ServicesPageMetadata.first_pic_description}
                 </p>
               </div>
-              <h1 className='text-center font-title'>BRAND ASSETS</h1>
+              <h1 className='text-center font-title'>{ServicesPageMetadata.first_pic_list_title}</h1>
               <ul className='list-disc ml-6'>
                 <li>
                   <div className='font-content'>
-                    Brand Moodboard
+                    {ServicesPageMetadata.first_pic_list_item_1}
                   </div>
                 </li>
                 <li>
-                  <div className='font-content'>Logo + Brand Mark</div>
+                  <div className='font-content'>{ServicesPageMetadata.first_pic_list_item_2}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Business Card Design</div>
+                  <div className='font-content'>{ServicesPageMetadata.first_pic_list_item_3}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Brand Icons</div>
+                  <div className='font-content'>{ServicesPageMetadata.first_pic_list_item_4}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Creative Direction</div>
+                  <div className='font-content'>{ServicesPageMetadata.first_pic_list_item_5}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Printed + Digital Collateral</div>
+                  <div className='font-content'>{ServicesPageMetadata.first_pic_list_item_6}</div>
                 </li>
               </ul>
             </div>
@@ -101,33 +97,30 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
             <div className='text-left gap-y-2'>
               <h1 color={'secondary'} className='text-center'>2</h1>
               <h1 className='text-white py-2 text-center'>
-                BRAND IDENTITY
+                {ServicesPageMetadata.second_pic_title}
               </h1>
               <div className='max-w-sm'>
                 <div className='text-white font-content'>
-                  Your brand needs to reflect who you are and what makes you
-                  different. That’s why I use design to take your business to new
-                  levels by creating a visual identity that complements your brand
-                  values, goals and personality.
+                  {ServicesPageMetadata.second_pic_description}
                 </div>
               </div>
-              <h1 className='text-center font-title'>BRAND ASSETS</h1>
+              <h1 className='text-center font-title'>{ServicesPageMetadata.second_pic_list_title}</h1>
               <ol className='list-disc ml-6'>
-                <li color={'secondary'}>Brand Moodboard</li>
+                <li color={'secondary'}>{ServicesPageMetadata.second_pic_list_item_1}</li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Logo + Brand Mark</div>
+                  <div className='font-content'>{ServicesPageMetadata.second_pic_list_item_2}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Business Card Design</div>
+                  <div className='font-content'>{ServicesPageMetadata.second_pic_list_item_3}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Brand Icons</div>
+                  <div className='font-content'>{ServicesPageMetadata.second_pic_list_item_4}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Creative Direction</div>
+                  <div className='font-content'>{ServicesPageMetadata.second_pic_list_item_5}</div>
                 </li>
                 <li color={'secondary'}>
-                  <div className='font-content'>Printed + Digital Collateral</div>
+                  <div className='font-content'>{ServicesPageMetadata.second_pic_list_item_6}</div>
                 </li>
               </ol>
             </div>
@@ -142,8 +135,8 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
       <section>
         <div className='overflow-hidden h-full lg:pt-[8.35vh] flex flex-col space-y-6 justify-between lg:block'>
           <p className='whitespace-nowrap items-center uppercase font-medium text-[15vw] md:text-[20vw] leading-1'> 
-            <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
-            <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+            <span className='text-scrolling font-animation'>{ServicesPageMetadata.animation_1}</span>
+            <span className='text-scrolling font-animation'>{ServicesPageMetadata.animation_1}</span>
           </p>
         </div>
       </section>
@@ -151,9 +144,8 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
         <div
           className='text-2xl text-center justify-center flex flex-row text-white pt-2'
         >
-          <p className='max-w-lg font-content'>
-            Are you launching a new business or rebranding an existing ones? Do
-            you want to transform your social media presence? Let’s talk.
+          <p className='font-content text-center py-10 text-white lg:max-w-lg sm:max-w-sm font-content md:text-lg sm:text-md'>
+            {ServicesPageMetadata.customer_message}
           </p>
         </div>
       </section>
@@ -170,26 +162,26 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
           <div color={'secondary'} className='text-white'>
             <div className='font-content text-lg md:mb-1'>Step 1</div>
             <div className='text-center font-content max-w-[150px]'>
-              Identify your business goals.
+              {ServicesPageMetadata.step_1}
             </div>
           </div>
           <div className='vertical-line' />
           <div color={'secondary'} className='text-white'>
             <div className='font-content text-lg md:mb-1'>Step 2</div>
             <div className='text-center font-content max-w-[150px]'>
-              Creative direction and development.
+              {ServicesPageMetadata.step_2}
             </div>
           </div>
           <div className='vertical-line' />
           <div color={'secondary'} className='text-white'>
             <div className='font-content text-lg md:mb-1'>Step 3</div>
             <div className='text-center font-content max-w-[150px]'>
-              Implementation and finalize.
+              {ServicesPageMetadata.step_3}
             </div>
           </div>
         </div>
       </div>
-        <div className='flex flex-row justify-center py-10 mb-10'>
+        <div className='flex flex-row justify-center md:py-10 sm:py-14 md:mb-10 sm:mb-5'>
           <a href="mailto:imtiffanycfy@gmail.com">
             <ContactButton
               text="Contact Me"
@@ -203,10 +195,13 @@ export default function ServicesPage({ServicesPageData}: ServicesPageProps) {
 
 export const getStaticProps = async () => {
   const ServicesPageData = (await getServicesPageData())
+  const fontAPIData = (await getFontConfig())
   return {
     props: {
-      ServicesPageData
+      ServicesPageData,
+      fontAPIData
     }
   }
 
 }
+

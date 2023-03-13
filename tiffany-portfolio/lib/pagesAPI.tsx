@@ -9,10 +9,11 @@ const bucket = Cosmic().bucket({
   read_key: '3WBPcsWhaRMkz6SlUH2dnFZrGC32r2WeKEDJrktobTD2nD9Nws'
 });
 
-export async function getPagesData() : Promise<Page[]> {
+export async function getPagesData(slug_: string) : Promise<Page[]> {
   const parameters = {
     query: {
       type: 'pages',
+      slug: slug_
     },
     props: 'title,slug,metadata'
   };

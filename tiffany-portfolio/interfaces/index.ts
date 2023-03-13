@@ -106,6 +106,13 @@ export type Page = {
             url: string
             imgix_url: string
         }
+        next_page_pic: {
+            url: string
+            imgix_url: string
+        }
+        client: string
+        designer: string
+        developer: string
         animation_1: string
         animation_2: string
         vid_1: string
@@ -148,6 +155,31 @@ export type ServicesPage = {
             url: string
             imgix_url: string
         }
+        page_title: string
+        page_description: string
+        first_pic_title: string
+        first_pic_description: string
+        first_pic_list_title: string
+        first_pic_list_item_1: string
+        first_pic_list_item_2: string
+        first_pic_list_item_3: string
+        first_pic_list_item_4: string
+        first_pic_list_item_5: string
+        first_pic_list_item_6: string
+        second_pic_title: string
+        second_pic_description: string
+        second_pic_list_title: string
+        second_pic_list_item_1: string
+        second_pic_list_item_2: string
+        second_pic_list_item_3: string
+        second_pic_list_item_4: string
+        second_pic_list_item_5: string
+        second_pic_list_item_6: string
+        animation_1: string
+        customer_message: string
+        step_1: string
+        step_2: string
+        step_3: string
     }
 }
 

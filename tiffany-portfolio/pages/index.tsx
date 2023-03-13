@@ -10,16 +10,14 @@ import { getPagesData } from '../lib/pagesAPI';
 type HomePageProps = {
   fontAPIData: Font[]
   HomePageData: HomePage[]
-  PagesData: Page[]
 }
 
-export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageProps){
+export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
   const addFont = useFontStore((state) => state.addFont)
   const addHomePageData = useHomePageStore((state) => state.addHomePageData)
   const addPagesData = usePagesStore((state) => state.addPagesData)
   addFont(fontAPIData[0])
   addHomePageData(HomePageData[0])
-  addPagesData(PagesData)
   const fontMetadata = useFontStore((state) => state.font?.metadata)
   const HomePageMetadata = useHomePageStore((state) => state.HomePageData?.metadata)
   useEffect(() => {
@@ -79,9 +77,9 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                         >
-                        <Link href="/work/page1" scroll={true}>
+                        <a href="/work/page1">
                           VIEW PROJECT
-                        </Link>
+                        </a>
                       </div>
                     </div>
                     <div className='py-4'>
@@ -95,9 +93,9 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                       >
-                        <Link href="/work/page2" scroll={true}>
+                        <a href="/work/page2">
                           VIEW PROEJCT
-                        </Link>
+                        </a>
                       </div>
                     </div>
                     <div className='py-4'>
@@ -113,9 +111,9 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                       >
-                        <Link href="/work/page3" scroll={true}>
+                        <a href="/work/page3">
                           VIEW PROJECT
-                        </Link>
+                        </a>
                       </div>
                     </div>
                     <div className='py-4'>
@@ -129,9 +127,9 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                       <div
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                       >
-                        <Link href="/work/page4" scroll={true}>
+                        <a href="/work/page4">
                           VIEW PROJECT
-                        </Link>
+                        </a>
                       </div>
                     </div>
                     <div className='py-4'>
@@ -146,9 +144,9 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
                     <div
                       className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
                     >
-                      <Link href="/work/page5" scroll={true}>
+                      <a href="/work/page5">
                         VIEW PROJECT
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div>
@@ -171,7 +169,7 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
               <img alt='' src={'https://imgix.cosmicjs.com/79675130-8e52-11ed-bac9-7fe1734a16aa-Pic.jpg'} className='w-1/4 sm:w-1/3' />
               <div className='justify-center md:text-left text-center sm:space-y-2'>
                 <div className='font-bold text-xl text-white font-title'>TIFFANY C.</div>
-                <div className='flex justify-center items-center md:flex-row md:space-x-2 md:h-3'>
+                <div className='flex justify-center sm:flex-col items-center md:flex-row md:space-x-2 md:h-3'>
                   <div className='text-white text-md font-content uppercase' >INDEPENDENT DESIGNER</div>
                   <div className='vertical-line'></div>
                   <div className='text-white text-md font-content uppercase'>DIGITAL MARKETER</div>
@@ -208,12 +206,10 @@ export default function HomePage({fontAPIData,HomePageData, PagesData}:HomePageP
 export const getStaticProps = async () => {
   const fontAPIData = (await getFontConfig())
   const HomePageData = (await getHomePageData())
-  const PagesData = (await getPagesData())
   return {
     props: {
       fontAPIData,
       HomePageData,
-      PagesData
     }
   }
 

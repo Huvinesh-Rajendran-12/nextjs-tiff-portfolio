@@ -38,8 +38,8 @@ export default function AboutPage({AboutPageData}: AboutPageProps) {
             <section>
                 <div className='pt-2 flex justify-center'>
                    <div className='flex flex-col justify-center text-center space-y-2'>
-                        <h1 className='lg:text-2xl sm:text-md font-title'>{AboutPageMetadata?.user_name}</h1>
-                        <div className='text-white flex flex-row h-6 justify-center gap-x-2'>
+                        <h1 className='lg:text-2xl sm:text-md font-title mb-2'>{AboutPageMetadata?.user_name}</h1>
+                        <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center gap-x-2'>
                             <div className='uppercase font-content'>{AboutPageMetadata?.tag_1}</div>
                             <div className='vertical-line' />
                             <div className='uppercase font-content'>{AboutPageMetadata?.tag_2}</div>
@@ -54,7 +54,7 @@ export default function AboutPage({AboutPageData}: AboutPageProps) {
               <img alt='' src={AboutPageMetadata?.logo.imgix_url} className='w-1/12 md:min-w-[15vw] sm:min-w-[70px]' />
               <div className='gap-y-6 flex flex-col'>
                 <div className='text-white lg:max-w-xl'>
-                  <p className='lg:text-2xl font-content'>
+                  <p className='lg:text-2xl font-content sm:text-center md:text-left'>
                     {AboutPageMetadata?.description}
                   </p>
                 </div>
