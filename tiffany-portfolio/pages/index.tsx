@@ -39,7 +39,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
               </p>
             </div>
             <div className='absolute top-5 left-0 flex flex-row items-center justify-center w-full h-full'>
-              <img alt='' src={HomePageMetadata?.new_project_pic.imgix_url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-3/4 md:h-5/6'/>
+              <img alt='' src={HomePageMetadata?.new_project_pic.imgix_url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
             </div>
           </section>
           <section className='mx-auto sm:mx-20 mt-20 mb-10'>

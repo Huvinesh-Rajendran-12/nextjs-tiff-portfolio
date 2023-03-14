@@ -27,7 +27,7 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
   return (
     <nav className='navbar-border w-full sticky z-20 top-0 flex flex-wrap bg-black justify-between px-4 py-2 items-center'>
-      <div className='md:w-[400px] sm:w-[50px]'>
+      <div className='md:w-[60px] sm:w-[40px]'>
           <Link href='/' className='w-fit'>
             <Logo/>
           </Link>
