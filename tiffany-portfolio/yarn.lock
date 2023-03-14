@@ -1099,6 +1099,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.2.5-canary.0.tgz#d336821162ef0fc8c6e9170e25563b14a68ff446"
   integrity sha512-tT8Xo85c3FsARJr3CEXYhAX94aIQj2Gh5LrbRDRmwcAZQyJrd6gJDZj9dzGCOijeNVn5Kc7iOeQh6WtTUfHDmA==
 
+"@next/swc-darwin-arm64@^13.2.4":
+  version "13.2.4"
+  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.2.4.tgz#5006fca179a36ef3a24d293abadec7438dbb48c6"
+  integrity sha512-S6vBl+OrInP47TM3LlYx65betocKUUlTZDDKzTiRDbsRESeyIkBtZ6Qi5uT2zQs4imqllJznVjFd1bXLx3Aa6A==
+
 "@next/swc-darwin-x64@13.2.5-canary.0":
   version "13.2.5-canary.0"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-x64/-/swc-darwin-x64-13.2.5-canary.0.tgz#5b72eb8e6de3b7f5f9838074d331ee6e97b0b92d"

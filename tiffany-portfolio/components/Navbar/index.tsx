@@ -27,12 +27,12 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
   return (
     <nav className='navbar-border w-full sticky z-20 top-0 flex flex-wrap bg-black justify-between px-4 py-2 items-center'>
-      <div className='w-[400px]'>
+      <div className='md:w-[400px] sm:w-[50px]'>
           <Link href='/' className='w-fit'>
             <Logo/>
           </Link>
       </div>
-      <button className='sm:block md:hidden' onClick={() => {isNavOpen ? setIsNavOpen(false) : setIsNavOpen(true)}}> 
+      <button className='md:hidden' onClick={() => {isNavOpen ? setIsNavOpen(false) : setIsNavOpen(true)}}> 
           {isNavOpen ? <CloseIcon/> : <HamburgerIcon/>}
       </button>
       <NavItems isOpen={isNavOpen}/>

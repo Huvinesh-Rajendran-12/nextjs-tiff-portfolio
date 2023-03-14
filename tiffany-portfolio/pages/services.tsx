@@ -144,7 +144,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
         <div
           className='text-2xl text-center justify-center flex flex-row text-white pt-2'
         >
-          <p className='font-content text-center py-10 text-white lg:max-w-lg sm:max-w-sm font-content md:text-lg sm:text-md'>
+          <p className='font-content text-center py-10 text-white lg:max-w-lg sm:max-w-sm font-content md:text-2xl sm:text-md'>
             {ServicesPageMetadata.customer_message}
           </p>
         </div>

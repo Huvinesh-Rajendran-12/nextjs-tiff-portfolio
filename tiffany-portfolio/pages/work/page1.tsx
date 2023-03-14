@@ -83,11 +83,11 @@ export default function PageOne({pageOneData, fontAPIData}:PageOneProps) {
       </section>
       <section className='relative h-[90vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <p className='whitespace-nowrap uppercase font-medium text-[15vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation uppercase'>{pageOneMetadata?.animation_1}</span>
                 <span className='text-scrolling font-animation uppercase'>{pageOneMetadata?.animation_1}</span>
               </p>
-              <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[20vw] lg:text-xxl1 lg:mt-16 leading-1 lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap uppercase font-medium text-[15vw] md:text-[20vw] lg:text-xxl1 lg:mt-16 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{pageOneMetadata?.animation_2}</span>
                 <span></span>
               </p>

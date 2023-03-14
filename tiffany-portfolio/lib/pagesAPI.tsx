@@ -1,12 +1,10 @@
 import Cosmic from 'cosmicjs'
-import { Font, Page } from '../interfaces'
+import { Page } from '../interfaces'
 
-const BUCKET_SLUG = process.env.BUCKET_SLUG;
-const READ_KEY = process.env.READ_KEY;
 
 const bucket = Cosmic().bucket({
-  slug: 'tiffany-portfolio-production',
-  read_key: '3WBPcsWhaRMkz6SlUH2dnFZrGC32r2WeKEDJrktobTD2nD9Nws'
+  slug: process.env.BUCKET_SLUG,
+  read_key: process.env.BUCKET_READ_KEY
 });
 
 export async function getPagesData(slug_: string) : Promise<Page[]> {
