@@ -1,11 +1,8 @@
 
-import Link from 'next/link';
-import { useFontStore, useHomePageStore, usePagesStore } from '../store/store';
 import { getFontConfig } from '../lib/fontAPI';
 import { useEffect } from 'react';
-import { Font, type HomePage, Page } from '../interfaces';
+import { Font, type HomePage } from '../interfaces';
 import { getHomePageData } from '../lib/homeAPI';
-import { getPagesData } from '../lib/pagesAPI';
 
 type HomePageProps = {
   fontAPIData: Font[]
@@ -13,17 +10,12 @@ type HomePageProps = {
 }
 
 export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
-  const addFont = useFontStore((state) => state.addFont)
-  const addHomePageData = useHomePageStore((state) => state.addHomePageData)
-  const addPagesData = usePagesStore((state) => state.addPagesData)
-  addFont(fontAPIData[0])
-  addHomePageData(HomePageData[0])
-  const fontMetadata = useFontStore((state) => state.font?.metadata)
-  const HomePageMetadata = useHomePageStore((state) => state.HomePageData?.metadata)
+  const HomePageMetadata = HomePageData[0].metadata
+  const fontAPIMetadata = fontAPIData[0].metadata
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) =>  e.style.setProperty('--font-animation', fontMetadata?.animation.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontMetadata?.title.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontMetadata?.content.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) =>  e.style.setProperty('--font-animation', fontAPIMetadata?.animation.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata?.title.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata?.content.value ?? ''))
     },[])
     return (
       <div className='flex flex-col'>

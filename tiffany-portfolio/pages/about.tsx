@@ -6,18 +6,17 @@ import { useAboutPageStore, useFontStore } from '../store/store';
 import { type AboutPage } from '../interfaces'
 
 type AboutPageProps = {
+    fontAPIData: Font[]
     AboutPageData : AboutPage[]
 }
 
-export default function AboutPage({AboutPageData}: AboutPageProps) {
-  const fontStore = useFontStore((state) => state.font)
-  const addAboutPageData = useAboutPageStore((state) => state.addAboutPageData)
-  addAboutPageData(AboutPageData[0])
-  const AboutPageMetadata = useAboutPageStore((state) => state.AboutPageData?.metadata)
+export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
+  const AboutPageMetadata = AboutPageData[0].metadata
+  const fontAPIMetadata = fontAPIData[0].metadata
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontStore?.metadata.title.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontStore?.metadata.content.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontAPIMetadata?.animation.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata?.title.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata?.content.value ?? ''))
     },[])
   return (
         <div className='flex flex-col'>

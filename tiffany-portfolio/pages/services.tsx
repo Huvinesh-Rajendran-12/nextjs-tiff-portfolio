@@ -14,11 +14,7 @@ interface ServicesPageProps {
 export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPageProps) {
   const ServicesPageMetadata = ServicesPageData[0].metadata
   const fontDataMetadata = fontAPIData[0].metadata
-  const addServicesPageData = useServicesPageStore((state) => state.addServicesPageData)
-  addServicesPageData(ServicesPageData[0])
-  const fontStore = useFontStore((state) => state.font)
   // const ServicesPageMetadata = useServicesPageStore((state) => state.ServicesPageData?.metadata)
-  console.log(fontDataMetadata.title.value)
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontDataMetadata.animation.value ?? ''))
     document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontDataMetadata.title.value ?? ''))

@@ -11,6 +11,7 @@
     "prettier-format": "prettier --config .prettierrc 'pages/**/*.tsx' --write"
   },
   "dependencies": {
+    "@builder.io/react": "^2.1.0",
     "@chakra-ui/icons": "^2.0.16",
     "@chakra-ui/react": "^2.4.7",
     "@emotion/core": "^11.0.0",
