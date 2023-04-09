@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { HomePage, AboutPage, Font, Page, ServicesPage } from '../interfaces'
+import { TypeHomepage } from '../interfaces/contentful'
+import { Entry } from 'contentful'
 
 
 interface fontStoreState {
@@ -8,8 +10,8 @@ interface fontStoreState {
 }
 
 interface HomePageStoreState {
-    HomePageData: HomePage | undefined
-    addHomePageData: (homePage: HomePage) => void
+    HomePageData: Entry<TypeHomepage> | undefined
+    addHomePageData: (homePage: Entry<TypeHomepage>) => void
 }
 
 interface AboutPageStoreState {
