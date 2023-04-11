@@ -1,0 +1,132 @@
+{
+    "contentTypes":[
+        {
+            "name": "Font",
+            "description": "",
+            "displayField": "animationFont",
+            "fields": [
+                {
+                "id": "animationFont",
+                "name": "AnimationFont",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "in": [
+                        "Playfair Display",
+                        "Baskervville",
+                        "Roboto",
+                        "Roboto Condensed",
+                        "Source Sans Pro",
+                        "Nothing You Could Do",
+                        "Allison",
+                        "Vujahday Script"
+                    ]
+                    }
+                ],
+                "defaultValue": {
+                    "en-US": "Playfair Display"
+                },
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "titleFont",
+                "name": "TitleFont",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "in": [
+                        "Baskervville",
+                        "Playfair Display",
+                        "Roboto",
+                        "Roboto Condensed",
+                        "Nothing You Could Do",
+                        "Vujahday Script",
+                        "Source Sans Pro",
+                        "Allison"
+                    ]
+                    }
+                ],
+                "defaultValue": {
+                    "en-US": "Playfair Display"
+                },
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "contentFont",
+                "name": "ContentFont",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "in": [
+                        "Baskervville",
+                        "Playfair Display",
+                        "Roboto",
+                        "Roboto Condensed",
+                        "Vujahday Script",
+                        "Nothing You Could Do",
+                        "Source Sans Pro",
+                        "Allison"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                }
+            ],
+            "sys": {
+                "space": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "dxk9chpx8htb"
+                }
+                },
+                "id": "font",
+                "type": "ContentType",
+                "createdAt": "2023-04-09T19:57:16.562Z",
+                "updatedAt": "2023-04-10T01:19:20.537Z",
+                "environment": {
+                "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                }
+                },
+                "publishedVersion": 15,
+                "publishedAt": "2023-04-10T01:19:20.537Z",
+                "firstPublishedAt": "2023-04-09T19:57:17.238Z",
+                "createdBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "updatedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "publishedCounter": 8,
+                "version": 16,
+                "publishedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                }
+            }
+        }
+    ]
+}

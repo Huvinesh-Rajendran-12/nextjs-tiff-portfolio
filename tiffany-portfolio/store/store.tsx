@@ -1,5 +1,7 @@
 import { create } from 'zustand'
-import { HomePage, AboutPage, Font, Page, ServicesPage } from '../interfaces'
+import { 
+  AboutPage, Font, Page, ServicesPage 
+} from '../interfaces'
 import { TypeHomepage } from '../interfaces/contentful'
 import { Entry } from 'contentful'
 
@@ -21,7 +23,9 @@ interface AboutPageStoreState {
 
 interface ServicesPageStoreState {
     ServicesPageData: ServicesPage | undefined
-    addServicesPageData: (servicesPage: ServicesPage) => void
+    addServicesPageData: (
+      servicesPage: ServicesPage
+      ) => void
 }
 
 interface PagesStoreState {
@@ -30,19 +34,25 @@ interface PagesStoreState {
 }
 
 
-export const useFontStore = create<fontStoreState>()((set) => ({
+export const useFontStore = create<fontStoreState>()(
+  (set) => ({
   font: undefined,
   addFont: (font) => set((state) => ({ font: font })),
 }))
 
-export const useHomePageStore = create<HomePageStoreState>()((set) => ({
+export const useHomePageStore = create<HomePageStoreState>()
+(
+  (set) => ({
   HomePageData: undefined,
-  addHomePageData: (homePage) => set((state) => ({ HomePageData: homePage })),
+  addHomePageData: (homePage) => 
+    set((state) => ({ HomePageData: homePage })),
 }))
 
-export const useAboutPageStore = create<AboutPageStoreState>()((set) => ({
+export const useAboutPageStore = create<AboutPageStoreState>()
+((set) => ({
   AboutPageData: undefined,
-  addAboutPageData: (aboutPage) => set((state) => ({ AboutPageData: aboutPage })),
+  addAboutPageData: (aboutPage) => 
+  set((state) => ({ AboutPageData: aboutPage })),
 }))
 
 export const usePagesStore = create<PagesStoreState>()((set) => ({

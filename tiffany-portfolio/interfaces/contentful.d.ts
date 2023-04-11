@@ -1,4 +1,4 @@
-import type { Asset, Entry, EntryFields } from "contentful";
+import type { Asset, EntryFields } from "contentful";
 
 export interface TypeHomepageFields {
     animation1?: EntryFields.Symbol;
@@ -31,3 +31,11 @@ export interface TypeHomepageFields {
 }
 
 export type TypeHomepage = TypeHomepageFields;
+
+export interface TypeFontFields {
+    animationFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    titleFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    contentFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+}
+
+export type TypeFont = TypeFontFields;

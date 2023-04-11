@@ -1,4 +1,3 @@
-import { useDisclosure } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Logo from '../Logo'
 import Link from 'next/link';

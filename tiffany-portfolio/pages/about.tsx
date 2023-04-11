@@ -1,22 +1,22 @@
-import img from "next/image"
 import { useEffect } from "react";
-import { Font } from "../interfaces";
 import { getAboutPageData } from "../lib/aboutAPI";
-import { useAboutPageStore, useFontStore } from '../store/store';
 import { type AboutPage } from '../interfaces'
+import { getFontData } from "./api/api";
+import { Entry } from "contentful";
+import { TypeFont } from "../interfaces/contentful";
 
 type AboutPageProps = {
-    fontAPIData: Font[]
+    fontAPIData: Entry<TypeFont>
     AboutPageData : AboutPage[]
 }
 
 export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
   const AboutPageMetadata = AboutPageData[0].metadata
-  const fontAPIMetadata = fontAPIData[0].metadata
+  const fontAPIMetadata = fontAPIData.fields
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontAPIMetadata?.animation.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata?.title.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata?.content.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontAPIMetadata.animationFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata.titleFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata.contentFont ?? ''))
     },[])
   return (
         <div className='flex flex-col'>
@@ -83,10 +83,12 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
 }
 
 export const getStaticProps = async () => {
+  const fontAPIData = (await getFontData())
   const AboutPageData = (await getAboutPageData())
   return {
     props: {
-      AboutPageData
+      AboutPageData,
+      fontAPIData
     }
   }
 

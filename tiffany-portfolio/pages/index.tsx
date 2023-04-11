@@ -3,22 +3,22 @@ import { getFontConfig } from '../lib/fontAPI';
 import { useEffect } from 'react';
 import { Font, type HomePage } from '../interfaces';
 // import { getHomePageData } from '../lib/homeAPI';
-import { getHomePageData } from './api/homePage'
+import { getHomePageData, getFontData } from './api/api'
 import { Entry } from 'contentful';
-import { TypeHomepage } from '../interfaces/contentful';
+import { TypeFont, TypeHomepage } from '../interfaces/contentful';
 
 type HomePageProps = {
-  fontAPIData: Font[]
+  fontAPIData: Entry<TypeFont>
   HomePageData: Entry<TypeHomepage>
 }
 
 export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
   const HomePageMetadata = HomePageData.fields
-  const fontAPIMetadata = fontAPIData[0].metadata
+  const fontAPIMetadata = fontAPIData.fields
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) =>  e.style.setProperty('--font-animation', fontAPIMetadata?.animation.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata?.title.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata?.content.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) =>  e.style.setProperty('--font-animation', fontAPIMetadata.animationFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata.titleFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata.contentFont ?? ''))
     },[])
     return (
       <div className='flex flex-col'>
@@ -199,7 +199,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
 )}
 
 export const getStaticProps = async () => {
-  const fontAPIData = (await getFontConfig())
+  const fontAPIData = (await getFontData())
   const HomePageData = (await getHomePageData())
   return {
     props: {
