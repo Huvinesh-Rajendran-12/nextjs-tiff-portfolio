@@ -2270,7 +2270,7 @@ copy-to-clipboard@3.3.3:
 
 cosmicjs@^4.3.1:
   version "4.3.1"
-  resolved "https://registry.npmjs.org/cosmicjs/-/cosmicjs-4.3.1.tgz"
+  resolved "https://registry.yarnpkg.com/cosmicjs/-/cosmicjs-4.3.1.tgz#d8962caecc6d3d23647f84b0f7d39b72898913d1"
   integrity sha512-l+6FvVW/SV5cUQ8EKIK1CpimfNKwo8/E5oIdIKseSorL+zxJ+HBsOGqUSk2+1K8bySc4bYGal2L4Q9SsdUrpoQ==
   dependencies:
     axios "^0.21.1"
