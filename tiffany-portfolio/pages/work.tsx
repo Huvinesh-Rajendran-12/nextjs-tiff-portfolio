@@ -1,30 +1,28 @@
-import { ReactElement, useEffect } from 'react';
-import img from 'next/image';
-import Link from 'next/link';
-import PrimaryButton from '../components/Button';
-import { useFontStore } from '../store/store';
-import { getWorkPageData } from '../lib/workAPI';
-import { WorkPage } from '../interfaces';
+import { useEffect } from 'react';
+import { TypeFont, TypeWork } from '../interfaces/contentful';
+import { Entry } from 'contentful';
+import { getFontData, getWorkPageData } from './api/api';
 
 interface WorkPageProps {
-  WorkPageData: WorkPage[]
+  WorkPageData: Entry<TypeWork>
+  fontAPIData: Entry<TypeFont>
 }
 
-export default function Work({WorkPageData}:WorkPageProps) {
-  const fontStore = useFontStore((state) => state.font)
-  console.log(fontStore?.metadata.title.value)
+export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
+  const fontAPIMetadata = fontAPIData.fields
+  const WorkPageMetaData = WorkPageData.fields
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontStore?.metadata.animation.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontStore?.metadata.title.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontStore?.metadata.content.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontAPIMetadata.animationFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata.titleFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata.contentFont ?? ''))
     },[])
   return (
     <div className='flex flex-col'>
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
           <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+              <span className='text-scrolling font-animation'>{WorkPageMetaData.animation1}</span>
+              <span className='text-scrolling font-animation'>{WorkPageMetaData.animation1}</span>
           </p>
         </div>
       </section>
@@ -32,64 +30,75 @@ export default function Work({WorkPageData}:WorkPageProps) {
         <div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
           <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2 max-h-[1200px]">
             <div className="w-full row-span-2">
-              <Link href='/work/page1'>
-              <img
-                src={WorkPageData[0].metadata.page_1_pic_1.imgix_url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100"/>
-              </Link>
+              <div className='h-full'>
+                <img
+                  src={WorkPageMetaData.pic1?.fields.file.url}
+                  alt="Photo by Claudio Schwarz on Unsplash"
+                  className="inset-0 h-full w-full object-cover object-center rounded"/>
+                <div
+                  className='flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
+                  >
+                  <a href={`/work/${WorkPageMetaData.pic1Page}`}>
+                    VIEW PROEJCT
+                  </a>
+              </div>
+              </div>
             </div>
             <div className="w-full col-span-2 row-span-2">
-              <Link href='/work/page2'>
+              <a href={`/work/${WorkPageMetaData.pic2Page}`}>
               <img
-                src={WorkPageData[0].metadata.page_2_pic_1.imgix_url}
+                src={WorkPageMetaData.pic2?.fields.file.url}
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </Link>
+              </a>
             </div>
             <div className="w-full max-h-[700px] ">
+              <a href={`/work/${WorkPageMetaData.pic3Page}`}>
               <img
-                src={""}
+                src={WorkPageMetaData.pic3?.fields.file.url}
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+              </a>
             </div>
             <div className="w-full">
-              <Link href='/work/page3'>
+              <a href={`/work/${WorkPageMetaData.pic4Page}`}>
               <img
-                src={WorkPageData[0].metadata.page_3_pic_1.imgix_url}
+                src={WorkPageMetaData.pic4?.fields.file.url}
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </Link>
+              </a>
             </div>
             <div className="w-full col-span-2 row-span-2">
-              <Link href='/work/page4'>
+              <a href={`/work/${WorkPageMetaData.pic5Page}`}>
               <img
-                src={WorkPageData[0].metadata.page_4_pic_1.imgix_url}
+                src={WorkPageMetaData.pic5?.fields.file.url}
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </Link>
+              </a>
             </div>
             <div className="w-full col-span-2">
-              <Link href='/work/page5'>
+              <a href={`/work/${WorkPageMetaData.pic6Page}`}>
               <img
-                src={WorkPageData[0].metadata.page_5_pic_1.imgix_url}
+                src={WorkPageMetaData.pic6?.fields.file.url}
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </Link>
+              </a>
             </div>
             <div className="w-full">
+              <a href={`/work/${WorkPageMetaData.pic7Page}`}>
               <img
-                src="https://images.unsplash.com/photo-1489981424607-45c58daf0581?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                src={WorkPageMetaData.pic7?.fields.file.url}
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+              </a>
             </div>
             <div className="w-full">
-              <Link href='/work/page3'>
+              <a href={`/work/${WorkPageMetaData.pic8Page}`}>
               <img
-                src={WorkPageData[0].metadata.page_3_pic_1.imgix_url}
+                src={WorkPageMetaData.pic8?.fields.file.url}
                 alt="Photo by Claudio Schwarz on Unsplash"
                 className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -97,8 +106,8 @@ export default function Work({WorkPageData}:WorkPageProps) {
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
           <p className='whitespace-nowrap mb-6 uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
-              <span className='text-scrolling font-animation'>The Power of Visual Communication</span>
+              <span className='text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
+              <span className='text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
           </p>
         </div>
       </section>
@@ -109,9 +118,11 @@ export default function Work({WorkPageData}:WorkPageProps) {
 
 export const getStaticProps = async () => {
   const WorkPageData = (await getWorkPageData())
+  const fontAPIData = (await getFontData())
   return {
     props: {
-      WorkPageData
+      WorkPageData,
+      fontAPIData
     }
   }
 

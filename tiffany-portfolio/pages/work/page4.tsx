@@ -1,30 +1,24 @@
 
-import PrimaryButton from '../../components/Button';
-import Link from 'next/link';
-import img from 'next/image';
-import { useFontStore, usePagesStore } from '../../store/store';
 import { useEffect } from 'react';
-import { getPagesData } from '../../lib/pagesAPI';
-import { Font, Page } from '../../interfaces';
-import { getFontConfig } from '../../lib/fontAPI';
+import { Entry } from 'contentful';
+import { TypeFont, TypePages } from '../../interfaces/contentful';
+import { getPage4Data, getFontData } from '../api/api';
 
 type PageFourProps = {
-  pageFourData: Page[]
-  fontAPIData: Font[]
+  pageFourData: Entry<TypePages>
+  fontAPIData: Entry<TypeFont>
 }
 
 
 export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
-  const fontMetadata = fontAPIData[0].metadata
-  const pageFourMetadata = pageFourData[0].metadata
-  const fontStore = useFontStore((state) => state.font)
+  const fontMetadata = fontAPIData.fields
+  const pageFourMetadata = pageFourData.fields
   // const pageFourMetadata = usePagesStore((state) => state.pagesData ? state.pagesData[1].metadata : undefined)
   // const pageFivePic = usePagesStore((state) => state.pagesData ? state.pagesData[0].metadata.pic_1 : undefined)
-  console.log(fontStore?.metadata.title.value)
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontMetadata.animation.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontMetadata.title.value ?? ''))
-    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontMetadata.content.value ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontMetadata.animationFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontMetadata.titleFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontMetadata.contentFont ?? ''))
     },[])
   return (
     <div className='flex flex-col'>
@@ -32,21 +26,21 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
         <div className='flex flex-col justify-center text-center space-y-2'>
           <h1 className='lg:text-5xl sm:text-3xl uppercase font-title'>{pageFourMetadata?.title}</h1>
           <div className='text-white flex flex-row h-6 justify-center gap-x-2'>
-            <div className='uppercase font-content'>{pageFourMetadata?.tag_1}</div>
+            <div className='uppercase font-content'>{pageFourMetadata?.pageTag1}</div>
             <div className='vertical-line' />
-            <div className='uppercase font-content'>{pageFourMetadata?.tag_2}</div>
+            <div className='uppercase font-content'>{pageFourMetadata?.pageTag2}</div>
           </div>
         </div>
       </section>
       <section className='text-2xl text-center justify-center flex flex-row text-white pt-2'>
         <div className='flex flex-col gap-y-8'>
           <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
-              {pageFourMetadata?.description}{' '}
+              {pageFourMetadata?.pageDescription?.content[0].value}{' '}
           </p>
           <div className='text-white text-center justify-center'>
-            <div className='font-content md:text-lg sm:text-sm'>Client: {pageFourMetadata.client}</div>
-            <div className='font-content md:text-lg sm:text-sm'>Designer: {pageFourMetadata.designer}</div>
-            <div className='font-content md:text-lg sm:text-sm'>Developer: {pageFourMetadata.developer}</div>
+            <div className='font-content md:text-lg sm:text-sm'>Client: {pageFourMetadata.projectClient}</div>
+            <div className='font-content md:text-lg sm:text-sm'>Designer: {pageFourMetadata.projectDesigner}</div>
+            <div className='font-content md:text-lg sm:text-sm'>Developer: {pageFourMetadata.projectDeveloper}</div>
           </div>
         </div>
       </section>
@@ -55,32 +49,32 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
            <img
             alt=""
             src={
-              pageFourMetadata?.pic_1.imgix_url
+              pageFourMetadata.pic1?.fields.file.url
             }
             className='w-full block ml-auto mr-auto'
             />
           <div className='flex'>
               <div className='w-1/2 p-1'>
-                <img alt='' src={pageFourMetadata?.pic_2.imgix_url} className='h-full'/>
+                <img alt='' src={pageFourMetadata.pic2?.fields.file.url} className='h-full'/>
               </div>
               <div className='w-1/2 p-1'>
-                <img alt='' src={pageFourMetadata?.pic_3.imgix_url} className='h-full'/>
+                <img alt='' src={pageFourMetadata.pic3?.fields.file.url} className='h-full'/>
               </div>
             </div>
-          {pageFourMetadata.vid_1 ? <iframe width={'100%'} height="500"  src={pageFourMetadata.vid_1}></iframe> : undefined}
+          {pageFourMetadata.videoUrl? <iframe width={'100%'} height="500"  src={pageFourMetadata.videoUrl}></iframe> : undefined}
           <img
             alt=""
             src={
-              pageFourMetadata?.pic_4.imgix_url
+              pageFourMetadata.pic4?.fields.file.url
             }
             className='w-full block ml-auto mr-auto'
             />
           <div className='flex'>
               <div className='w-1/2 p-1'>
-                <img alt='' src={pageFourMetadata?.pic_5.imgix_url} className='h-full'/>
+                <img alt='' src={pageFourMetadata.pic5?.fields.file.url} className='h-full'/>
               </div>
               <div className='w-1/2 p-1'>
-                <img alt='' src={pageFourMetadata?.pic_6.imgix_url} className='h-full'/>
+                <img alt='' src={pageFourMetadata.pic6?.fields.file.url} className='h-full'/>
               </div>
             </div>
         </div>
@@ -88,17 +82,17 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
       <section className='relative h-[90vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
             <p className='whitespace-nowrap uppercase font-medium text-[15vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-              <span className='text-scrolling font-animation'>{pageFourMetadata?.animation_1}</span>
-              <span className='text-scrolling font-animation'>{pageFourMetadata?.animation_1}</span>
+              <span className='text-scrolling font-animation'>{pageFourMetadata?.animation1}</span>
+              <span className='text-scrolling font-animation'>{pageFourMetadata?.animation1}</span>
             </p>
             <p className='whitespace-nowrap uppercase font-medium text-[15vw] md:text-[20vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
-              <span className='reverse text-scrolling font-animation'>{pageFourMetadata?.animation_2}</span>
+              <span className='reverse text-scrolling font-animation'>{pageFourMetadata?.animation2}</span>
               <span></span>
             </p>
             </div>
             <div className='absolute top-10 left-0 flex flex-row justify-center w-full h-full'>
               <div className='absolute md:max-w-lg sm:max-w-sm sm:mx-10'>
-                <img alt='' src={pageFourMetadata?.next_page_pic.imgix_url} className=' h-[80vh] max-h-200px' />
+                <img alt='' src={pageFourMetadata.nextPagePic?.fields.file.url} className=' h-[80vh] max-h-200px' />
                   <div
                     className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                     >
@@ -114,8 +108,8 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
 }
 
 export const getStaticProps = async () => {
-  const pageFourData = (await getPagesData('page-4'))
-  const fontAPIData = (await getFontConfig())
+  const pageFourData = (await getPage4Data())
+  const fontAPIData = (await getFontData())
   return {
     props: {
       pageFourData,

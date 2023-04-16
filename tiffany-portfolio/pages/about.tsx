@@ -1,17 +1,17 @@
 import { useEffect } from "react";
-import { getAboutPageData } from "../lib/aboutAPI";
+import { getAboutPageData } from "./api/api";
 import { type AboutPage } from '../interfaces'
 import { getFontData } from "./api/api";
 import { Entry } from "contentful";
-import { TypeFont } from "../interfaces/contentful";
+import { TypeAboutPage, TypeFont } from "../interfaces/contentful";
 
 type AboutPageProps = {
     fontAPIData: Entry<TypeFont>
-    AboutPageData : AboutPage[]
+    AboutPageData : Entry<TypeAboutPage>
 }
 
 export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
-  const AboutPageMetadata = AboutPageData[0].metadata
+  const AboutPageMetadata = AboutPageData.fields
   const fontAPIMetadata = fontAPIData.fields
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontAPIMetadata.animationFont ?? ''))
@@ -31,17 +31,17 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
             </section>
             <section>
                 <div className="flex justify-center">
-                    <img alt='' src={AboutPageMetadata?.profile_picture.imgix_url} className='w-1/4 rounded-md min-w-[300px]' />
+                    <img alt='' src={AboutPageMetadata.userProfilePic?.fields.file.url} className='w-1/4 rounded-md min-w-[300px]' />
                 </div>
             </section>
             <section>
                 <div className='pt-2 flex justify-center'>
                    <div className='flex flex-col justify-center text-center space-y-2'>
-                        <h1 className='lg:text-2xl sm:text-md font-title mb-2'>{AboutPageMetadata?.user_name}</h1>
+                        <h1 className='lg:text-2xl sm:text-md font-title mb-2'>{AboutPageMetadata.userName}</h1>
                         <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center gap-x-2'>
-                            <div className='uppercase font-content'>{AboutPageMetadata?.tag_1}</div>
+                            <div className='uppercase font-content'>{AboutPageMetadata.userTag1}</div>
                             <div className='vertical-line' />
-                            <div className='uppercase font-content'>{AboutPageMetadata?.tag_2}</div>
+                            <div className='uppercase font-content'>{AboutPageMetadata.userTag2}</div>
                         </div>
                      </div>
                 </div>
@@ -50,11 +50,11 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
             <div
               className='justify-center flex items-center sm:flex-col md:flex-row sm:gap-y-1 md:gap-x-11'
             >
-              <img alt='' src={AboutPageMetadata?.logo.imgix_url} className='w-1/12 md:min-w-[15vw] sm:min-w-[70px]' />
+              <img alt='' src={AboutPageMetadata.logo?.fields.file.url} className='w-1/12 md:min-w-[15vw] sm:min-w-[70px]' />
               <div className='gap-y-6 flex flex-col'>
                 <div className='text-white lg:max-w-xl'>
                   <p className='lg:text-2xl font-content sm:text-center md:text-left'>
-                    {AboutPageMetadata?.description}
+                    {AboutPageMetadata.description?.content?.[0].content?.[0].value}
                   </p>
                 </div>
               </div>
@@ -63,8 +63,8 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
             <section>
                 <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
                     <p className='whitespace-nowrap mb-6 uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-                        <span className='text-scrolling font-animation'>{AboutPageMetadata?.animation_1}</span>
-                        <span className='text-scrolling font-animation'>{AboutPageMetadata?.animation_1}</span>
+                        <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
+                        <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
                     </p>
                 </div>
             </section>
