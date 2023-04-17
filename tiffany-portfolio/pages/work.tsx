@@ -28,77 +28,198 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
       </section>
       <section>
         <div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
-          <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2 max-h-[1200px]">
-            <div className="w-full row-span-2">
-              <div className='h-full'>
-                <img
-                  src={WorkPageMetaData.pic1?.fields.file.url}
-                  alt="Photo by Claudio Schwarz on Unsplash"
-                  className="inset-0 h-full w-full object-cover object-center rounded"/>
-                <div
-                  className='flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
-                  >
-                  <a href={`/work/${WorkPageMetaData.pic1Page}`}>
-                    VIEW PROEJCT
-                  </a>
-              </div>
+          <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2 max-h-[1400px]">
+            <div className="w-full h-full row-span-2">
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic1Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic1?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
               </div>
             </div>
-            <div className="w-full col-span-2 row-span-2">
-              <a href={`/work/${WorkPageMetaData.pic2Page}`}>
-              <img
-                src={WorkPageMetaData.pic2?.fields.file.url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </a>
+            <div className="w-full h-full col-span-2 row-span-2">
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic2Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic2?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center items-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
             <div className="w-full max-h-[700px] ">
-              <a href={`/work/${WorkPageMetaData.pic3Page}`}>
-              <img
-                src={WorkPageMetaData.pic3?.fields.file.url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </a>
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic3Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic3?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
             <div className="w-full">
-              <a href={`/work/${WorkPageMetaData.pic4Page}`}>
-              <img
-                src={WorkPageMetaData.pic4?.fields.file.url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </a>
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic4Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic4?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
             <div className="w-full col-span-2 row-span-2">
-              <a href={`/work/${WorkPageMetaData.pic5Page}`}>
-              <img
-                src={WorkPageMetaData.pic5?.fields.file.url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </a>
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic5Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic5?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
             <div className="w-full col-span-2">
-              <a href={`/work/${WorkPageMetaData.pic6Page}`}>
-              <img
-                src={WorkPageMetaData.pic6?.fields.file.url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </a>
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic6Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic6?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
             <div className="w-full">
-              <a href={`/work/${WorkPageMetaData.pic7Page}`}>
-              <img
-                src={WorkPageMetaData.pic7?.fields.file.url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </a>
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic7Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic7?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
             <div className="w-full">
-              <a href={`/work/${WorkPageMetaData.pic8Page}`}>
-              <img
-                src={WorkPageMetaData.pic8?.fields.file.url}
-                alt="Photo by Claudio Schwarz on Unsplash"
-                className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
-              </a>
+              <div className="flex h-full items-center justify-center">
+                <a className="relative h-full w-full bg-gray-900 group" 
+                    href={`/work/${WorkPageMetaData.pic8Page}`}>
+                    <img className="absolute inset-0 object-cover 
+                                w-full h-full group-hover:opacity-50"
+                        src={WorkPageMetaData.pic8?.fields.file.url} />
+                    <div className="relative p-5">
+                        <div className='mt-40'>
+                            <div className="transition-all transform 
+                                translate-y-8 opacity-0 
+                                group-hover:opacity-100 
+                                group-hover:translate-y-0">
+                                <div className="flex justify-center">
+                                    <p className="text-lg text-white">
+                                        View Project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>

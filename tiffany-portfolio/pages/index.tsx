@@ -21,12 +21,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
     return (
       <div className='flex flex-col'>
           <section className='relative md:h-[90vh]'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col md:space-y-8 justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col md:space-y-4 justify-between lg:block'>
+              <p className='whitespace-nowrap uppercase font-medium md:text-[18vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
               </p>
-              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:pt-8 lg:mt-16 md:text-[20vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap uppercase font-medium md:text-[18vw] md:pt-8 lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{HomePageMetadata.animation2}</span>
                 <span></span>
               </p>
@@ -180,10 +180,10 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                   >
                     <div className='flex overflow-hidden w-full'>
                       <div  className='scrollTextContainerRightToLeft'>
-                        <div className='uppercase font-medium font-animation text-[15vw] md:text-[20vw] pb-8 leading-1'>
+                        <div className='uppercase font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
                           {HomePageMetadata.animation3}
                         </div>
-                        <div className='uppercase font-medium font-animation text-[15vw] md:text-[20vw] pb-8 leading-1'>
+                        <div className='uppercase font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
                           {HomePageMetadata.animation3}
                         </div>
                       </div>

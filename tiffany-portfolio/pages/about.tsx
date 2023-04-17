@@ -35,8 +35,8 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
                 </div>
             </section>
             <section>
-                <div className='pt-2 flex justify-center'>
-                   <div className='flex flex-col justify-center text-center space-y-2'>
+                <div className='pt-8 flex justify-center'>
+                   <div className='flex flex-col justify-center text-center'>
                         <h1 className='lg:text-2xl sm:text-md font-title mb-2'>{AboutPageMetadata.userName}</h1>
                         <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center gap-x-2'>
                             <div className='uppercase font-content'>{AboutPageMetadata.userTag1}</div>
