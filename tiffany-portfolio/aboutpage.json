@@ -1,0 +1,161 @@
+{
+    "contentTypes": [
+        {
+            "name": "About Page",
+            "description": "Page about the user",
+            "displayField": "userName",
+            "fields": [
+                {
+                "id": "userName",
+                "name": "User Name",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "userProfilePic",
+                "name": "User Profile Pic",
+                "type": "Link",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false,
+                "linkType": "Asset"
+                },
+                {
+                "id": "userTag1",
+                "name": "User tag 1",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "userTag2",
+                "name": "User tag 2",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "logo",
+                "name": "Logo",
+                "type": "Link",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false,
+                "linkType": "Asset"
+                },
+                {
+                "id": "description",
+                "name": "description",
+                "type": "RichText",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "enabledNodeTypes": [
+                        "heading-1",
+                        "heading-2",
+                        "heading-3",
+                        "heading-4",
+                        "heading-5",
+                        "heading-6",
+                        "ordered-list",
+                        "unordered-list",
+                        "hr",
+                        "blockquote",
+                        "embedded-entry-block",
+                        "embedded-asset-block",
+                        "table",
+                        "hyperlink",
+                        "entry-hyperlink",
+                        "asset-hyperlink",
+                        "embedded-entry-inline"
+                    ]
+                    },
+                    {
+                    "enabledMarks": [
+                        "bold",
+                        "italic",
+                        "underline",
+                        "code",
+                        "superscript",
+                        "subscript"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "animation",
+                "name": "animation",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                }
+            ],
+            "sys": {
+                "space": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "dxk9chpx8htb"
+                }
+                },
+                "id": "aboutPage",
+                "type": "ContentType",
+                "createdAt": "2023-04-09T13:01:05.053Z",
+                "updatedAt": "2023-04-11T04:17:23.599Z",
+                "environment": {
+                "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                }
+                },
+                "publishedVersion": 9,
+                "publishedAt": "2023-04-11T04:17:23.599Z",
+                "firstPublishedAt": "2023-04-09T13:01:05.585Z",
+                "createdBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "updatedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "publishedCounter": 5,
+                "version": 10,
+                "publishedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                }
+            }
+        }
+    ]
+}

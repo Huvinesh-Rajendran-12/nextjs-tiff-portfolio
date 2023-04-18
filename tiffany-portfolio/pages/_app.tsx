@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
       <div className='bg-black text-white overflow-x-hidden overflow-y-scroll h-screen'>
         <Navbar/>
-        <div className='scroll-container ready'>
+        <div className='scroll-container scroll-smooth ready'>
           <main>
             <Component {...pageProps} />
           </main>

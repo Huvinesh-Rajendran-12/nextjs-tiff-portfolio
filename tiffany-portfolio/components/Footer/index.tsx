@@ -4,18 +4,18 @@ import {
     
     export default function Footer() {
       return (
-      <footer className='footer-border pt-2 justify-between px-4 flex flex-row'>
-          <p className='text-white text-sm'>
+      <footer className='footer-border pt-2 md:justify-between px-4 flex md:flex-row flex-col-reverse sm:justify-center'>
+          <p className='text-white text-sm sm:justify-center flex'>
             &copy; {new Date().getFullYear()} TIFFANYCFY. All rights reserved.
           </p>
-          <div className='flex gap-x-8 flex-row'>
+          <div className='flex gap-x-8 flex-row sm:justify-center sm:mb-4'>
             <div className='vertical-line'></div>
             <a href='https://www.linkedIn.com/in/tiffanycfy'>
               <Icon
                 as={FaLinkedin}
                 color={'secondary'}
-                h={['1em','2em','2em','2em']}
-                w={['1em','2em','2em','2em']}
+                h={['1em','1em','2em','2em']}
+                w={['1em','1em','2em','2em']}
                 aria-label="LinkedIn"
                 />
             </a>

@@ -1,7 +1,5 @@
 
-import { getFontConfig } from '../lib/fontAPI';
 import { useEffect } from 'react';
-import { Font, type HomePage } from '../interfaces';
 // import { getHomePageData } from '../lib/homeAPI';
 import { getHomePageData, getFontData } from './api/api'
 import { Entry } from 'contentful';
@@ -23,12 +21,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
     return (
       <div className='flex flex-col'>
           <section className='relative md:h-[90vh]'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col md:space-y-8 justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col md:space-y-4 justify-between lg:block'>
+              <p className='whitespace-nowrap uppercase font-medium md:text-[18vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
               </p>
-              <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:pt-8 lg:mt-16 md:text-[20vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap uppercase font-medium md:text-[18vw] md:pt-8 lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{HomePageMetadata.animation2}</span>
                 <span></span>
               </p>
@@ -45,12 +43,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
               <div className='gap-y-6 flex flex-col'>
                 <div className='text-white lg:max-w-lg'>
                   <i className='text-center text-xl lg:text-2xl font-content'>
-                    “In a world where everyone seems to be doing the same thing, it’s time to stand out.”
+                    {HomePageMetadata.description?.content?.[0].content?.[0].value}
                   </i>
                 </div>
                 <div className='text-white lg:max-w-lg'>
                   <p className='lg:text-2xl font-content'>
-                    Your brand needs to reflect who you are and what makes you different. That’s why we use design to take your business to new levels by creating a visual identity that complements your brand values, goals and personality.
+                    {HomePageMetadata.description?.content?.[1].content?.[0].value}
                   </p>
                 </div>
               </div>
@@ -89,7 +87,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                       >
                         <a href="/work/page2">
-                          VIEW PROEJCT
+                          VIEW PROJECT
                         </a>
                       </div>
                     </div>
@@ -155,19 +153,19 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
           <section className='py-10'>
             <div className='py-2'>
               <div className='text-center w-full md:text-5xl sm:text-2xl items-center justify-center flex flex-row'>
-                <p className='max-w-xl font-title uppercase'>BASED IN KUALA LUMPUR, MALAYSIA. AVAILABLE WORLDWIDE.</p>
+                <p className='max-w-xl font-title uppercase'>{HomePageMetadata.marketingPhrase}</p>
               </div>
             </div>
             <div
               className='flex md:flex-row sm:flex-col justify-center py-10 items-center gap-x-4 sm:space-y-4'
             >
-              <img alt='' src={'https://imgix.cosmicjs.com/79675130-8e52-11ed-bac9-7fe1734a16aa-Pic.jpg'} className='w-1/4 sm:w-1/3' />
+              <img alt='' src={HomePageMetadata.userProfilePic?.fields.file.url} className='w-1/4 sm:w-1/3' />
               <div className='justify-center md:text-left text-center sm:space-y-2'>
-                <div className='font-bold text-xl text-white font-title'>TIFFANY C.</div>
+                <div className='font-bold text-xl text-white font-title'>{HomePageMetadata.userName}</div>
                 <div className='flex justify-center sm:flex-col items-center md:flex-row md:space-x-2 md:h-3'>
-                  <div className='text-white text-md font-content uppercase' >INDEPENDENT DESIGNER</div>
+                  <div className='text-white text-md font-content uppercase' >{HomePageMetadata.tag1}</div>
                   <div className='vertical-line'></div>
-                  <div className='text-white text-md font-content uppercase'>DIGITAL MARKETER</div>
+                  <div className='text-white text-md font-content uppercase'>{HomePageMetadata.tag2}</div>
                 </div>
               </div>
             </div>
@@ -182,10 +180,10 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                   >
                     <div className='flex overflow-hidden w-full'>
                       <div  className='scrollTextContainerRightToLeft'>
-                        <div className='uppercase font-medium font-animation text-[15vw] md:text-[20vw] pb-8 leading-1'>
+                        <div className='uppercase font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
                           {HomePageMetadata.animation3}
                         </div>
-                        <div className='uppercase font-medium font-animation text-[15vw] md:text-[20vw] pb-8 leading-1'>
+                        <div className='uppercase font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
                           {HomePageMetadata.animation3}
                         </div>
                       </div>

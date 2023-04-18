@@ -1,0 +1,353 @@
+{
+    "contentTypes": [
+        {
+            "name": "Services",
+            "description": "Services page",
+            "displayField": "pageTitle",
+            "fields": [
+                {
+                "id": "pageTitle",
+                "name": "page title",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "pageDescription",
+                "name": "page description",
+                "type": "RichText",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "enabledNodeTypes": [
+                        "heading-1",
+                        "heading-2",
+                        "heading-3",
+                        "heading-4",
+                        "heading-5",
+                        "heading-6",
+                        "ordered-list",
+                        "unordered-list",
+                        "hr",
+                        "blockquote",
+                        "embedded-entry-block",
+                        "embedded-asset-block",
+                        "table",
+                        "hyperlink",
+                        "entry-hyperlink",
+                        "asset-hyperlink",
+                        "embedded-entry-inline"
+                    ]
+                    },
+                    {
+                    "enabledMarks": [
+                        "bold",
+                        "italic",
+                        "underline",
+                        "code",
+                        "superscript",
+                        "subscript"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "firstServicePic",
+                "name": "first service pic",
+                "type": "Link",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false,
+                "linkType": "Asset"
+                },
+                {
+                "id": "firstServiceTitle",
+                "name": "first service title",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "firstServiceDescription",
+                "name": "first service description",
+                "type": "RichText",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "enabledNodeTypes": [
+                        "heading-1",
+                        "heading-2",
+                        "heading-3",
+                        "heading-4",
+                        "heading-5",
+                        "heading-6",
+                        "ordered-list",
+                        "unordered-list",
+                        "hr",
+                        "blockquote",
+                        "embedded-entry-block",
+                        "embedded-asset-block",
+                        "table",
+                        "hyperlink",
+                        "entry-hyperlink",
+                        "asset-hyperlink",
+                        "embedded-entry-inline"
+                    ]
+                    },
+                    {
+                    "enabledMarks": [
+                        "bold",
+                        "italic",
+                        "underline",
+                        "code",
+                        "superscript",
+                        "subscript"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "firstServiceListTitle",
+                "name": "first service list title",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "firstServiceListItems",
+                "name": "first service list items",
+                "type": "RichText",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "enabledMarks": [],
+                    "message": "Marks are not allowed"
+                    },
+                    {
+                    "enabledNodeTypes": [
+                        "unordered-list"
+                    ],
+                    "message": "Only unordered list nodes are allowed"
+                    },
+                    {
+                    "nodes": {}
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "secondServicePic",
+                "name": "second service pic",
+                "type": "Link",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false,
+                "linkType": "Asset"
+                },
+                {
+                "id": "secondServiceTitle",
+                "name": "second service title",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "secondServiceDescription",
+                "name": "second service description",
+                "type": "RichText",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "enabledNodeTypes": [
+                        "heading-1",
+                        "heading-2",
+                        "heading-3",
+                        "heading-4",
+                        "heading-5",
+                        "heading-6",
+                        "ordered-list",
+                        "unordered-list",
+                        "hr",
+                        "blockquote",
+                        "embedded-entry-block",
+                        "embedded-asset-block",
+                        "table",
+                        "hyperlink",
+                        "entry-hyperlink",
+                        "asset-hyperlink",
+                        "embedded-entry-inline"
+                    ]
+                    },
+                    {
+                    "enabledMarks": [
+                        "bold",
+                        "italic",
+                        "underline",
+                        "code",
+                        "superscript",
+                        "subscript"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "secondServiceListTitle",
+                "name": "second service list title",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "secondServiceListItems",
+                "name": "second service list items",
+                "type": "RichText",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "enabledMarks": [],
+                    "message": "Marks are not allowed"
+                    },
+                    {
+                    "enabledNodeTypes": [
+                        "unordered-list"
+                    ],
+                    "message": "Only unordered list nodes are allowed"
+                    },
+                    {
+                    "nodes": {}
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "animation",
+                "name": "animation",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "customerMessage",
+                "name": "customer message",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "step1",
+                "name": "Step 1",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "step2",
+                "name": "step 2",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "step3",
+                "name": "step 3",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                }
+            ],
+            "sys": {
+                "space": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "dxk9chpx8htb"
+                }
+                },
+                "id": "services",
+                "type": "ContentType",
+                "createdAt": "2023-04-11T15:40:54.328Z",
+                "updatedAt": "2023-04-16T00:50:43.220Z",
+                "environment": {
+                "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                }
+                },
+                "publishedVersion": 23,
+                "publishedAt": "2023-04-16T00:50:43.220Z",
+                "firstPublishedAt": "2023-04-11T15:40:54.886Z",
+                "createdBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "updatedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "publishedCounter": 12,
+                "version": 24,
+                "publishedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                }
+            }
+        }
+    ]
+}
