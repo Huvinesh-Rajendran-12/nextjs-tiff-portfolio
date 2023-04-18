@@ -1,6 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import { getFontConfig } from '../lib/fontAPI';
-import { useFontStore } from '../store/store';
 
 export default function Document() {
   

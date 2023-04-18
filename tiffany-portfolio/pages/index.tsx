@@ -43,12 +43,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
               <div className='gap-y-6 flex flex-col'>
                 <div className='text-white lg:max-w-lg'>
                   <i className='text-center text-xl lg:text-2xl font-content'>
-                    “In a world where everyone seems to be doing the same thing, it’s time to stand out.”
+                    {HomePageMetadata.description?.content?.[0].content?.[0].value}
                   </i>
                 </div>
                 <div className='text-white lg:max-w-lg'>
                   <p className='lg:text-2xl font-content'>
-                    Your brand needs to reflect who you are and what makes you different. That’s why we use design to take your business to new levels by creating a visual identity that complements your brand values, goals and personality.
+                    {HomePageMetadata.description?.content?.[1].content?.[0].value}
                   </p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                         className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                       >
                         <a href="/work/page2">
-                          VIEW PROEJCT
+                          VIEW PROJECT
                         </a>
                       </div>
                     </div>

@@ -76,8 +76,8 @@ export default function PageOne({pageOneData, fontAPIData}:PageOneProps) {
           </div>
         </div>
       </section>
-      <section className='relative h-[90vh]'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
+      <section className='relative md:h-[90vh] sm:h-[50vh]'>
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col md:space-y-6 sm:space-y-2 md:justify-between lg:block'>
               <p className='whitespace-nowrap uppercase font-medium text-[15vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation uppercase'>{pageOneMetadata.animation1}</span>
                 <span className='text-scrolling font-animation uppercase'>{pageOneMetadata.animation1}</span>
@@ -89,7 +89,7 @@ export default function PageOne({pageOneData, fontAPIData}:PageOneProps) {
             </div>
             <div className='absolute top-10 left-0 flex flex-row justify-center md:w-full w-full h-full'>
               <div className='absolute md:max-w-lg sm:max-w-sm sm:mx-10'>
-                <img alt='' src={pageOneMetadata.nextPagePic?.fields.file.url} className='h-[80vh] max-h-200px' />
+                <img alt='' src={pageOneMetadata.nextPagePic?.fields.file.url} className='md:h-[80vh] sm:h-[40vh] max-h-200px' />
                   <div
                     className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                     >
