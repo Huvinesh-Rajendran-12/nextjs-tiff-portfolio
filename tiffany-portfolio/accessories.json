@@ -1,0 +1,67 @@
+{
+    "contentTypes":[
+        {
+            "name": "acessories",
+            "description": "",
+            "fields": [
+                {
+                "id": "favicon",
+                "name": "favicon",
+                "type": "Link",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false,
+                "linkType": "Asset"
+                }
+            ],
+            "sys": {
+                "space": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "dxk9chpx8htb"
+                }
+                },
+                "id": "acessories",
+                "type": "ContentType",
+                "createdAt": "2023-04-20T23:13:36.195Z",
+                "updatedAt": "2023-04-20T23:13:36.773Z",
+                "environment": {
+                "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                }
+                },
+                "publishedVersion": 1,
+                "publishedAt": "2023-04-20T23:13:36.773Z",
+                "firstPublishedAt": "2023-04-20T23:13:36.773Z",
+                "createdBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "updatedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                },
+                "publishedCounter": 1,
+                "version": 2,
+                "publishedBy": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "User",
+                    "id": "4OzeU8KuYXPm8PQsILHU4I"
+                }
+                }
+            }
+        }
+    ]
+}

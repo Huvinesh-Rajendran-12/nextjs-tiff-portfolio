@@ -2,7 +2,7 @@
 import * as dotenv from 'dotenv'
 dotenv.config()
 import * as contentful from 'contentful';
-import { TypeFont, TypeHomepage, TypeAboutPage, TypeServices, TypeWork } from '../../interfaces/contentful';
+import { TypeFont, TypeHomepage, TypeAboutPage, TypeServices, TypeWork, TypeAcessories } from '../../interfaces/contentful';
 
 export const client = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE_ID ?? '',
@@ -48,4 +48,8 @@ export async function getServicesPageData() : Promise<contentful.Entry<TypeServi
 
 export async function getWorkPageData() : Promise<contentful.Entry<TypeWork>> {
   return await client.getEntry<TypeWork>(process.env.WORK_PAGE_ENTRY_ID ?? '')
+}
+
+export async function getAcccessoryData() : Promise<contentful.Entry<TypeAcessories>> {
+  return await client.getEntry<TypeAcessories>(process.env.ACCESSORIES_PAGE_ENTRY_ID ?? '')
 }
