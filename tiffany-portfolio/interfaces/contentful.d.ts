@@ -118,3 +118,9 @@ export interface TypeWorkFields {
 }
 
 export type TypeWork = TypeWorkFields;
+
+export interface TypeAcessoriesFields {
+    favicon?: Asset;
+}
+
+export type TypeAcessories = TypeAcessoriesFields
