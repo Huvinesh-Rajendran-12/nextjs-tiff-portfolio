@@ -21,13 +21,13 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
     return (
       <div className='flex flex-col'>
           <section className='relative lg:h-[90vh] sm:h-[35vh] md:h-[50vh]'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-4 justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium sm:mt-6 sm:text-[70px] md:text-[18vw] lg:pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
+              <p className='whitespace-nowrap uppercase font-medium sm:mt-6 sm:text-[100px] md:text-[18vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
                 <span>{'  '}</span>
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
               </p>
-              <p className='whitespace-nowrap uppercase font-medium sm:text-[70px] md:text-[18vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap uppercase font-medium sm:text-[100px] md:text-[18vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{HomePageMetadata.animation2}</span>
                 <span></span>
               </p>

@@ -20,16 +20,16 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
     <div className='flex flex-col'>
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-          <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+          <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
               <span className='text-scrolling font-animation'>{WorkPageMetaData.animation1}</span>
               <span className='text-scrolling font-animation'>{WorkPageMetaData.animation1}</span>
           </p>
         </div>
       </section>
-      <section>
-        <div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
-          <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2 max-h-[1400px]">
-            <div className="w-full h-full row-span-2">
+      <section className='md:mt-20'>
+        <div className="container lg:px-32 md:px-4 py-8 mx-auto items-center">
+          <div className="grid md:grid-cols-4 grid-rows-4 grid-flow-col gap-2 max-h-[1400px]">
+            <div className="w-full h-full md:row-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
                     href={`/work/${WorkPageMetaData.pic1Page}`}>
@@ -53,7 +53,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                 </a>
               </div>
             </div>
-            <div className="w-full h-full col-span-2 row-span-2">
+            <div className="w-full h-full md:col-span-2 md:row-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
                     href={`/work/${WorkPageMetaData.pic2Page}`}>
@@ -77,7 +77,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                 </a>
               </div>
             </div>
-            <div className="w-full max-h-[700px] ">
+            <div className="w-full max-h-[700px]">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
                     href={`/work/${WorkPageMetaData.pic3Page}`}>
@@ -125,7 +125,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                 </a>
               </div>
             </div>
-            <div className="w-full col-span-2 row-span-2">
+            <div className="w-full md:col-span-2 md:row-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
                     href={`/work/${WorkPageMetaData.pic5Page}`}>
@@ -149,7 +149,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                 </a>
               </div>
             </div>
-            <div className="w-full col-span-2">
+            <div className="w-full md:col-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
                     href={`/work/${WorkPageMetaData.pic6Page}`}>
@@ -226,7 +226,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
       </section>
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-          <p className='whitespace-nowrap mb-6 uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+          <p className='whitespace-nowrap mb-6 uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
               <span className='text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
               <span className='text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
           </p>

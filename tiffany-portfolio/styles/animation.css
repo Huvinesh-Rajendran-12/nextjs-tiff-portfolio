@@ -1,6 +1,7 @@
 .text-scrolling {
   display: inline-block;
   animation: scrolling 40s linear infinite;
+  animation-delay: 0s;
 }
 
 .text-scrolling.reverse {

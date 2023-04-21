@@ -38,10 +38,10 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
                 <div className='pt-8 flex justify-center'>
                    <div className='flex flex-col justify-center text-center'>
                         <h1 className='lg:text-2xl sm:text-md font-title mb-2'>{AboutPageMetadata.userName}</h1>
-                        <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center gap-x-2'>
-                            <div className='uppercase font-content'>{AboutPageMetadata.userTag1}</div>
+                        <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center mt-0 sm:mt-5 gap-x-2'>
+                            <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag1}</div>
                             <div className='vertical-line' />
-                            <div className='uppercase font-content'>{AboutPageMetadata.userTag2}</div>
+                            <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag2}</div>
                         </div>
                      </div>
                 </div>
@@ -50,34 +50,24 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
             <div
               className='justify-center flex items-center sm:flex-col md:flex-row sm:gap-y-1 md:gap-x-11'
             >
-              <img alt='' src={AboutPageMetadata.logo?.fields.file.url} className='w-1/12 md:min-w-[15vw] sm:min-w-[70px]' />
+              <img alt='' src={AboutPageMetadata.logo?.fields.file.url} className='w-1/12 lg:max-w-[50px] md:min-w-[15vw] sm:min-w-[70px]' />
               <div className='gap-y-6 flex flex-col'>
-                <div className='text-white lg:max-w-xl'>
-                  <p className='lg:text-2xl font-content sm:text-center md:text-left'>
+                <div className='text-white lg:max-w-xl md:max-w-sm'>
+                  <p className='lg:text-lg sm:text-md font-content sm:text-left md:text-left'>
                     {AboutPageMetadata.description?.content?.[0].content?.[0].value}
                   </p>
                 </div>
               </div>
             </div>
           </section>
-            <section>
-                <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-                    <p className='whitespace-nowrap mb-6 uppercase font-medium text-[30vw] md:text-[25vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
-                        <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
-                        <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
-                    </p>
-                </div>
-            </section>
-            {/* <div  className='flex overflow-hidden'>
-                <div  className='scrollTextContainerRightToLeft'>
-                    <div  className='text-white text-xl'>
-                    i help you move forward with design & creativity
-                    </div>
-                    <div className='text-white text-xl'>
-                    i help you move forward with design & creativity
-                    </div>
-                </div>
-            </div> */}
+          <section>
+              <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
+                  <p className='whitespace-nowrap mb-12 uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+                      <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
+                      <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
+                  </p>
+              </div>
+          </section>
         </div>
   )
 }
