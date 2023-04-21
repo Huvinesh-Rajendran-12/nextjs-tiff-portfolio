@@ -93,7 +93,7 @@ export default function PageThree({pageThreeData,fontAPIData}:PageThreeProps) {
                 className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                 >
                 <a href="/work/page4">
-                  VIEW PROEJCT
+                  VIEW PROJECT
                 </a>
               </div>
             </div>
