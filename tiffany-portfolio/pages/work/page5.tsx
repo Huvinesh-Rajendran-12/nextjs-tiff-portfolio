@@ -84,14 +84,14 @@ export default function PageFive({pageFiveData,fontAPIData}:PageFiveProps) {
             </div>
         </div>
       </section>
-      <section className='relative lg:h-[90vh] sm:h-[35vh] md:h-[50vh] sm:mb-10'>
+      <section className='relative lg:h-[90vh] sm:h-[40vh] md:h-[50vh] sm:mb-10'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-4 justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium sm:mt-6 text-[40vw] md:text-[18vw] lg:pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+              <p className='whitespace-nowrap uppercase font-medium sm:mt-6 text-[100px] md:text-[18vw] lg:pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{pageFiveMetadata.animation1}</span>
                 <span>{'  '}</span>
                 <span className='text-scrolling font-animation'>{pageFiveMetadata.animation1}</span>
               </p>
-              <p className='whitespace-nowrap uppercase font-medium text-[40vw] md:text-[18vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap uppercase font-medium text-[100px] md:text-[18vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{pageFiveMetadata.animation2}</span>
                 <span></span>
               </p>

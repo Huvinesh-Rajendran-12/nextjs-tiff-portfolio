@@ -24,7 +24,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
           <Head>
             <title>TIFFANYCFY</title>
           </Head>
-          <section className='relative lg:h-[90vh] sm:h-[35vh] md:h-[50vh]'>
+          <section className='relative lg:h-[90vh] sm:h-[40vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
               <p className='whitespace-nowrap uppercase font-medium sm:mt-6 sm:text-[100px] md:text-[18vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
