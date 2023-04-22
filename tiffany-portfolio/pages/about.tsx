@@ -4,6 +4,7 @@ import { type AboutPage } from '../interfaces'
 import { getFontData } from "./api/api";
 import { Entry } from "contentful";
 import { TypeAboutPage, TypeFont } from "../interfaces/contentful";
+import Head from "next/head";
 
 type AboutPageProps = {
     fontAPIData: Entry<TypeFont>
@@ -20,6 +21,9 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
     },[])
   return (
         <div className='flex flex-col'>
+            <Head>
+              <title>TIFFANYCFY / ABOUT</title>
+            </Head>
             <section>
                 <div className='py-8 text-center flex justify-center'>
                     <div>

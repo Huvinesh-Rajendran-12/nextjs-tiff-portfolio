@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { getPage1Data, getFontData } from '../api/api';
 import { Entry } from 'contentful';
 import { TypeFont, TypePages } from '../../interfaces/contentful';
+import Head from 'next/head';
 
 type PageOneProps = {
   pageOneData: Entry<TypePages>
@@ -19,6 +20,9 @@ export default function PageOne({pageOneData, fontAPIData}:PageOneProps) {
     },[])
   return (
     <div className="flex flex-col">
+      <Head>
+        <title>TIFFANYCFY / WORK / {pageOneMetadata?.title}</title>
+      </Head>
       <section className='py-10 lg:pt-[9.88vh] lg:pb-[5vh] px-5 lg:px-[8.89vw]'>
         <div className='flex flex-col justify-center text-center space-y-8'>
           <h1 className='lg:text-5xl sm:text-3xl font-title'>{pageOneMetadata.title}</h1>

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Entry } from 'contentful';
 import { TypeFont, TypePages } from '../../interfaces/contentful';
 import { getPage4Data, getFontData } from '../api/api';
+import Head from 'next/head';
 
 type PageFourProps = {
   pageFourData: Entry<TypePages>
@@ -22,6 +23,9 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
     },[])
   return (
     <div className='flex flex-col'>
+      <Head>
+        <title>TIFFANYCFY / WORK / {pageFourMetadata?.title}</title>
+      </Head>
       <section className='py-10 lg:pt-[9.88vh] lg:pb-[5vh] px-5 lg:px-[8.89vw]'>
         <div className='flex flex-col justify-center text-center space-y-8'>
           <h1 className='lg:text-5xl sm:text-3xl uppercase font-title'>{pageFourMetadata?.title}</h1>

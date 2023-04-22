@@ -4,6 +4,7 @@ import ContactButton from '../components/Button';
 import { useEffect } from 'react';
 import { TypeFont, TypeServices } from '../interfaces/contentful';
 import { getFontData, getServicesPageData } from './api/api';
+import Head from 'next/head';
 
 interface ServicesPageProps {
   ServicesPageData: Entry<TypeServices>
@@ -21,6 +22,9 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
     },[])
   return (
     <div className='flex flex-col'>
+      <Head>
+        <title>TIFFANYCFY / SERVICES</title>
+      </Head>
       <section>
         <div className='pt-4'>
           <div className='flex justify-center'>

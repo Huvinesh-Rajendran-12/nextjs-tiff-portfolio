@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { TypeFont, TypeWork } from '../interfaces/contentful';
 import { Entry } from 'contentful';
 import { getFontData, getWorkPageData } from './api/api';
+import Head from 'next/head';
 
 interface WorkPageProps {
   WorkPageData: Entry<TypeWork>
@@ -18,6 +19,9 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
     },[])
   return (
     <div className='flex flex-col'>
+      <Head>
+        <title>TIFFANYCFY / WORK</title>
+      </Head>
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
           <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
