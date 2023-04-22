@@ -60,10 +60,10 @@ export default function PageFive({pageFiveData,fontAPIData}:PageFiveProps) {
             />
           <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageFiveMetadata?.pic2?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFiveMetadata?.pic2?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 mt-0'>
-                <img alt='' src={pageFiveMetadata?.pic3?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFiveMetadata?.pic3?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
           {pageFiveMetadata.videoUrl ? <iframe width={'100%'} height="500"  src={pageFiveMetadata.videoUrl}></iframe> : undefined}
@@ -76,10 +76,10 @@ export default function PageFive({pageFiveData,fontAPIData}:PageFiveProps) {
             />
           <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageFiveMetadata?.pic5?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFiveMetadata?.pic5?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 mt-0'>
-                <img alt='' src={pageFiveMetadata?.pic6?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFiveMetadata?.pic6?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
         </div>

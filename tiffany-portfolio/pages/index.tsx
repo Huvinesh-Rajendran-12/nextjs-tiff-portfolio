@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { getHomePageData, getFontData } from './api/api'
 import { Entry } from 'contentful';
 import { TypeFont, TypeHomepage } from '../interfaces/contentful';
+import Head from 'next/head';
 
 type HomePageProps = {
   fontAPIData: Entry<TypeFont>
@@ -20,6 +21,9 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
     },[])
     return (
       <div className='flex flex-col'>
+          <Head>
+            <title>TIFFANYCFY</title>
+          </Head>
           <section className='relative lg:h-[90vh] sm:h-[35vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
               <p className='whitespace-nowrap uppercase font-medium sm:mt-6 sm:text-[100px] md:text-[18vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
