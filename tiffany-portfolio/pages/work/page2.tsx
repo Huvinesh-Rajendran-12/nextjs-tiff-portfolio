@@ -52,10 +52,10 @@ export default function PageTwo({pageTwoData, fontAPIData}:PageOneProps) {
               />
             <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageTwoMetadata.pic2?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageTwoMetadata.pic2?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-                <img alt='' src={pageTwoMetadata.pic3?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageTwoMetadata.pic3?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
             {pageTwoMetadata.videoUrl ? <iframe width={'100%'} height="500"  src={pageTwoMetadata.videoUrl}></iframe> : undefined}
@@ -68,10 +68,10 @@ export default function PageTwo({pageTwoData, fontAPIData}:PageOneProps) {
               />
             <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageTwoMetadata.pic5?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageTwoMetadata.pic5?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-                <img alt='' src={pageTwoMetadata.pic6?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageTwoMetadata.pic6?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
         </div>

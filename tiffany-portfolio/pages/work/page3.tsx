@@ -51,10 +51,10 @@ export default function PageThree({pageThreeData,fontAPIData}:PageThreeProps) {
             />
           <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageThreeMetadata.pic2?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageThreeMetadata.pic2?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-                <img alt='' src={pageThreeMetadata.pic3?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageThreeMetadata.pic3?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
           {pageThreeMetadata.videoUrl ? <iframe width={'100%'} height="500"  src={pageThreeMetadata.videoUrl}></iframe> : undefined}
@@ -67,10 +67,10 @@ export default function PageThree({pageThreeData,fontAPIData}:PageThreeProps) {
             />
           <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageThreeMetadata.pic5?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageThreeMetadata.pic5?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-                <img alt='' src={pageThreeMetadata.pic6?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageThreeMetadata.pic6?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
         </div>

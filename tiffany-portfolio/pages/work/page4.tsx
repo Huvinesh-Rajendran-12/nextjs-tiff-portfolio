@@ -55,10 +55,10 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
             />
           <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageFourMetadata.pic2?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFourMetadata.pic2?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-                <img alt='' src={pageFourMetadata.pic3?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFourMetadata.pic3?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
           {pageFourMetadata.videoUrl? <iframe width={'100%'} height="500"  src={pageFourMetadata.videoUrl}></iframe> : undefined}
@@ -71,10 +71,10 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
             />
           <div className='flex sm:flex-col md:flex-row'>
               <div className='md:w-1/2 w-full'>
-                <img alt='' src={pageFourMetadata.pic5?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFourMetadata.pic5?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
               <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-                <img alt='' src={pageFourMetadata.pic6?.fields.file.url} className='h-full rounded-md'/>
+                <img alt='' src={pageFourMetadata.pic6?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
               </div>
             </div>
         </div>
