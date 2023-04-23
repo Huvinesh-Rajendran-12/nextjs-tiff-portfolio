@@ -14,7 +14,6 @@ interface ServicesPageProps {
 export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPageProps) {
   const ServicesPageMetadata = ServicesPageData.fields
   const fontDataMetadata = fontAPIData.fields
-  console.log(fontDataMetadata.animationFont)
   // const ServicesPageMetadata = useServicesPageStore((state) => state.ServicesPageData?.metadata)
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontDataMetadata.animationFont ?? ''))

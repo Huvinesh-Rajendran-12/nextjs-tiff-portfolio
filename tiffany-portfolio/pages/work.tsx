@@ -12,7 +12,6 @@ interface WorkPageProps {
 export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
   const fontAPIMetadata = fontAPIData.fields
   const WorkPageMetaData = WorkPageData.fields
-  console.log('WorkPageMetaData',WorkPageMetaData)
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontAPIMetadata.animationFont ?? ''))
     document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata.titleFont ?? ''))
@@ -246,7 +245,6 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
 export const getStaticProps = async () => {
   const WorkPageDataItems = (await getWorkPageData())
   const WorkPageData = WorkPageDataItems.items[0]
-  console.log(WorkPageData)
   const fontAPIData = (await getFontData())
   return {
     props: {

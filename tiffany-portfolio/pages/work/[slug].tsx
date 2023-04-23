@@ -10,7 +10,6 @@ type PageOneProps = {
 }
 
 export default function PageOne({pageData, fontAPIData}:PageOneProps) {
-  console.log('pageData',pageData)
   const pageMetadata = pageData.fields
   const fontMetadata = fontAPIData.fields
   useEffect(() => {
