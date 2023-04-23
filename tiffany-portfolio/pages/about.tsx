@@ -41,8 +41,8 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
             <section>
                 <div className='pt-8 flex justify-center'>
                    <div className='flex flex-col justify-center text-center'>
-                        <h1 className='lg:text-2xl sm:text-md font-title mb-2'>{AboutPageMetadata.userName}</h1>
-                        <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center mt-0 sm:mt-5 gap-x-2'>
+                        <h1 className='lg:text-2xl sm:text-md font-title mb-1'>{AboutPageMetadata.userName}</h1>
+                        <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center mt-0 sm:mt-2 gap-x-2'>
                             <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag1}</div>
                             {/* <div className='vertical-line' />
                             <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag2}</div> */}

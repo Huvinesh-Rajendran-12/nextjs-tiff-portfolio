@@ -167,7 +167,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
           <a href="mailto:imtiffanycfy@gmail.com">
             <ContactButton
               text="Contact Me"
-              className="border-white border py-2 px-2 font-contact"
+              className="border-white border py-2 px-4 font-contact"
             />
           </a>
         </div>

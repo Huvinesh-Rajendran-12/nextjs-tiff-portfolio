@@ -26,7 +26,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
           <Head>
             <title>TIFFANYCFY</title>
           </Head>
-          <section className='relative lg:h-[90vh] sm:h-[40vh] md:h-[50vh]'>
+          <section className='relative lg:h-[90vh] sm:h-[45vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
               <p className='whitespace-nowrap uppercase font-medium sm:mt-6 sm:text-[100px] md:text-[18vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
@@ -69,31 +69,31 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
               <div className='flex flex-wrap mx-20'>
                 <div className='md:w-1/2 w-full gap-x-6'>
                   <div>
-                    <div className='relative'>
+                    <div className='relative group'>
                       <img
                         src={HomePageMetadata?.pic1Reference?.fields.pic1?.fields.file.url}
                         className=''
                         alt='' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 group-hover:opacity-80'
                         >
-                        <a href={`/work/${HomePageMetadata.pic1Reference?.fields.slug}`} className='font-view'>
+                        <a href={`/work/${HomePageMetadata.pic1Reference?.fields.slug}`} className='font-view transition-all transform translate-y-8 group-hover:translate-y-0'>
                           VIEW PROJECT
                         </a>
                       </div>
                     </div>
                     <div className='py-4'>
-                      <div className='text-white font-subtitle mt-4'>{HomePageMetadata?.pic1Reference?.fields.title}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic1Reference?.fields.title}</div>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic1Reference?.fields.year}</div>
                     </div>
                   </div>
                   <div>
-                    <div className='relative'>
+                    <div className='relative group'>
                       <img alt='' src={HomePageMetadata?.pic2Reference?.fields.pic1?.fields.file.url} className='w-full' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-80'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  group-hover:opacity-80'
                       >
-                        <a href={`/work/${HomePageMetadata.pic2Reference?.fields.slug}`} className='font-view'>
+                        <a href={`/work/${HomePageMetadata.pic2Reference?.fields.slug}`} className='font-view transition-all transform translate-y-8 group-hover:translate-y-0'>
                           VIEW PROJECT
                         </a>
                       </div>
@@ -106,12 +106,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                 </div>
                 <div className='md:w-1/2 w-full gap-x-2 md:pl-8'>
                   <div>
-                    <div className='relative'>
+                    <div className='relative group'>
                       <img alt='' src={HomePageMetadata?.pic3Reference?.fields.pic1?.fields.file.url} className='w-full' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 group-hover:opacity-80'
                       >
-                        <a href={`/work/${HomePageMetadata.pic3Reference?.fields.slug}`} className='font-view'>
+                        <a href={`/work/${HomePageMetadata.pic3Reference?.fields.slug}`} className='font-view transition-all transform translate-y-8 group-hover:translate-y-0'>
                           VIEW PROJECT
                         </a>
                       </div>
@@ -122,12 +122,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                     </div>
                   </div>
                   <div>
-                    <div className='relative'>
+                    <div className='relative group'>
                       <img alt='' src={HomePageMetadata?.pic4Reference?.fields.pic1?.fields.file.url} className='w-full' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 group-hover:opacity-80'
                       >
-                        <a href={`/work/${HomePageMetadata.pic4Reference?.fields.slug}`} className='font-view'>
+                        <a href={`/work/${HomePageMetadata.pic4Reference?.fields.slug}`} className='font-view transition-all transform translate-y-8 group-hover:translate-y-0'>
                           VIEW PROJECT
                         </a>
                       </div>
@@ -139,12 +139,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                   </div>
                 </div>
                 <div className='pt-2'>
-                  <div className='relative'>
+                  <div className='relative group'>
                     <img alt='' src={HomePageMetadata?.pic5Reference?.fields.pic1?.fields.file.url} />
                     <div
-                      className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
+                      className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 group-hover:opacity-80'
                     >
-                      <a href={`/work/${HomePageMetadata.pic5Reference?.fields.slug}`} className='font-view'>
+                      <a href={`/work/${HomePageMetadata.pic5Reference?.fields.slug}`} className='font-view transition-all transform translate-y-8 group-hover:translate-y-0'>
                         VIEW PROJECT
                       </a>
                     </div>

@@ -10,7 +10,7 @@ import {
           </p>
           <div className='flex gap-x-8 flex-row sm:justify-center sm:pr-4 md:pr-0 sm:mb-4'>
             <div className='vertical-line'></div>
-            <a href='https://www.linkedIn.com/in/tiffanycfy'>
+            <a href='https://www.linkedIn.com/in/tiffanycfy' target='_blank'>
               <Icon
                 as={FaLinkedin}
                 color={'secondary'}
@@ -19,7 +19,7 @@ import {
                 aria-label="LinkedIn"
                 />
             </a>
-            <a href='https://www.instagram.com/tiffanycfy'>
+            <a href='https://www.instagram.com/tiffanycfy' target='_blank'>
               <Icon 
                 as={FaInstagram}
                 color={'secondary'} 
@@ -28,7 +28,7 @@ import {
                 aria-label="GitHub" 
                 />
             </a>
-            <a href='https://www.twitter.com/tiffanycfy'>
+            <a href='https://www.twitter.com/tiffanycfy' target='_blank'>
               <Icon 
                 as={FaTwitter} 
                 color={'secondary'} 
@@ -37,7 +37,7 @@ import {
                 aria-label="Twitter" 
                 />
             </a>
-            <a href='https://www.behance.net/tiffanycfy'>
+            <a href='https://www.behance.net/tiffanycfy' target='_blank'>
               <Icon 
                 as={FaBehance} 
                 color={'secondary'} 
