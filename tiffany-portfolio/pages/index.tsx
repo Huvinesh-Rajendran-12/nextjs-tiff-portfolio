@@ -25,14 +25,6 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
       <div className='flex flex-col'>
           <Head>
             <title>TIFFANYCFY</title>
-            <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png"/>
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-            <link rel="manifest" href="/site.webmanifest"/>
-            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
-            <meta name="description" content="Tiffany C. is a Malaysian creative designer and marketing professional, specialising in graphic design, branding, and social media marketing. With expertise in developing and refining brand identities, she creates promotional materials that communicate her clients' messages effectively, enhancing their online presence and driving revenue growth."></meta>
-            <meta property="og:title" content="TIFFANYCFY" />
-            <meta property="og:description" content="Tiffany C. is a Malaysian creative designer and marketing professional, specialising in graphic design, branding, and social media marketing. With expertise in developing and refining brand identities, she creates promotional materials that communicate her clients' messages effectively, enhancing their online presence and driving revenue growth." />
           </Head>
           <section className='relative lg:h-[90vh] sm:h-[45vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
