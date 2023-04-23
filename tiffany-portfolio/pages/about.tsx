@@ -22,10 +22,10 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
   return (
         <div className='flex flex-col'>
             <Head>
-              <title>TIFFANYCFY / ABOUT</title>
+              <title>TIFFANYCFY | ABOUT</title>
             </Head>
             <section>
-                <div className='py-8 text-center flex justify-center'>
+                <div className='py-8 mt-4 text-center flex justify-center'>
                     <div>
                         <h1 className='text-white text-5xl font-title'>
                             ABOUT
@@ -35,7 +35,7 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
             </section>
             <section>
                 <div className="flex justify-center">
-                    <img alt='' src={AboutPageMetadata.userProfilePic?.fields.file.url} className='w-1/4 rounded-md min-w-[300px]' />
+                    <img alt='' src={AboutPageMetadata.userProfilePic?.fields.file.url} className='w-1/4 min-w-[300px]' />
                 </div>
             </section>
             <section>
@@ -44,8 +44,8 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
                         <h1 className='lg:text-2xl sm:text-md font-title mb-2'>{AboutPageMetadata.userName}</h1>
                         <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center mt-0 sm:mt-5 gap-x-2'>
                             <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag1}</div>
-                            <div className='vertical-line' />
-                            <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag2}</div>
+                            {/* <div className='vertical-line' />
+                            <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag2}</div> */}
                         </div>
                      </div>
                 </div>

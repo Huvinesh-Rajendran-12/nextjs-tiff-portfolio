@@ -123,6 +123,26 @@ body {
   font-family: var(--font-animation);
 }
 
+.font-subtitle {
+  font-family: var(--font-subtitle);
+}
+
+.font-view {
+  font-family: var(--font-view);
+}
+
+.font-contact {
+  font-family: var(--font-contact);
+}
+
+.font-navbar {
+  font-family: Playfair Display;
+}
+
+.font-footer {
+  font-family: Playfair Display;
+}
+
 
 
 a {

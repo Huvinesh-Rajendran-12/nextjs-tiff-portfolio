@@ -1,24 +1,30 @@
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Logo from '../Logo'
-import Link from 'next/link';
 import { useState } from 'react';
+import { TypeFont } from '../../interfaces/contentful';
+import { Entry } from 'contentful';
 
 interface NavItemsProps {
   isOpen: boolean
+  className: string
 }
 
-const NavItems = ({isOpen}:NavItemsProps) => {
+const NavItems = ({isOpen, className}:NavItemsProps) => {
   const smallDisplay = isOpen ? 'sm:flex sm:flex-col w-full' : 'sm:hidden';
   return (
     <div
       className={`md:h-8 block md:flex md:flex-row items-center ${smallDisplay} md:w-fit md:gap-x-5`}
     >
       <div className='vertical-line'></div>
-      <Link href='/about'>About</Link>
-      <Link href='/work'>Work</Link>
-      <Link href='/services'>Services</Link>
+      <a href='/about' className={className}>About</a>
+      <a href='/work' className={className}>Work</a>
+      <a href='/services' className={className}>Services</a>
     </div>
   )
+}
+
+type NavbarProps = {
+  fontAPIData: Entry<TypeFont>
 }
 
 export default function Navbar() {
@@ -27,14 +33,16 @@ export default function Navbar() {
   return (
     <nav className='navbar-border w-full sticky z-20 top-0 flex flex-wrap bg-black justify-between px-4 py-2 items-center'>
       <div className='md:w-[60px] sm:w-[40px]'>
-          <Link href='/' className='w-fit'>
+          <a href='/' className='w-fit'>
             <Logo/>
-          </Link>
+          </a>
       </div>
       <button className='md:hidden' onClick={() => {isNavOpen ? setIsNavOpen(false) : setIsNavOpen(true)}}> 
           {isNavOpen ? <CloseIcon/> : <HamburgerIcon/>}
       </button>
-      <NavItems isOpen={isNavOpen}/>
+      <NavItems isOpen={isNavOpen} className='font-navbar' />
     </nav>
   )
 }
+
+
