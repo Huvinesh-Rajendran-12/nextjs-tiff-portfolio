@@ -29,10 +29,10 @@ export default function PageFour({pageFourData,fontAPIData}:PageFourProps) {
       <section className='py-10 lg:pt-[9.88vh] lg:pb-[5vh] px-5 lg:px-[8.89vw]'>
         <div className='flex flex-col justify-center text-center space-y-8'>
           <h1 className='lg:text-5xl sm:text-3xl uppercase font-title'>{pageFourMetadata?.title}</h1>
-          <div className='text-white flex flex-row h-6 justify-center gap-x-2'>
+          <div className='text-white flex flex-row justify-center gap-x-2'>
             <div className='uppercase font-content'>{pageFourMetadata?.pageTag1}</div>
-            <div className='vertical-line' />
-            <div className='uppercase font-content'>{pageFourMetadata?.pageTag2}</div>
+            {/* <div className='vertical-line' />
+            <div className='uppercase font-content'>{pageFourMetadata?.pageTag2}</div> */}
           </div>
         </div>
       </section>

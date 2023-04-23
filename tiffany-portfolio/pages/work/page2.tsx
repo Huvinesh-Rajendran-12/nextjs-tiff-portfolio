@@ -28,8 +28,8 @@ export default function PageTwo({pageTwoData, fontAPIData}:PageOneProps) {
           <h1 className='lg:text-5xl sm:text-3xl font-title'>{pageTwoMetadata.title}</h1>
           <div className='text-white flex flex-row h-6 justify-center gap-x-2'>
             <div className='uppercase font-content'>{pageTwoMetadata.pageTag1}</div>
-            <div className='vertical-line' />
-            <div className='uppercase font-content'>{pageTwoMetadata.pageTag2}</div>
+            {/* <div className='vertical-line' />
+            <div className='uppercase font-content'>{pageTwoMetadata.pageTag2}</div> */}
           </div>
         </div>
       </section>

@@ -32,15 +32,15 @@ export default function PageFive({pageFiveData,fontAPIData}:PageFiveProps) {
           <h1 className='lg:text-5xl sm:text-3xl uppercase font-title'>{pageFiveMetadata?.title}</h1>
           <div className='text-white flex flex-row h-6 justify-center gap-x-2'>
             <div className='uppercase font-content'>{pageFiveMetadata?.pageTag1}</div>
-            <div className='vertical-line' />
-            <div className='uppercase font-content'>{pageFiveMetadata?.pageTag2}</div>
+            {/* <div className='vertical-line' />
+            <div className='uppercase font-content'>{pageFiveMetadata?.pageTag2}</div> */}
           </div>
         </div>
       </section>
       <section className='text-2xl text-center justify-center flex flex-row text-white pt-2'>
         <div className='flex flex-col gap-y-8'>
           <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
-              {pageFiveMetadata?.pageDescription?.content[0].value}{' '}
+              {pageFiveMetadata?.pageDescription?.content?.[0].content?.[0].value}{' '}
           </p>
           <div className='text-white text-center justify-center'>
             <div className='font-content md:text-lg sm:text-sm'>Client: {pageFiveMetadata?.projectClient}</div>
