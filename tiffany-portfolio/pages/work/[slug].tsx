@@ -50,16 +50,16 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
           <img
             alt=""
             src={
-              pageMetadata?.pic1?.fields.file.url
+              pageMetadata?.pic1?.fields?.file?.url
             }
             className='w-full block ml-auto mr-auto'
             />
           <div className='flex sm:flex-col md:flex-row'>
             <div className='md:w-1/2 w-full'>
-              <img alt='' src={pageMetadata?.pic2?.fields.file.url} className='h-full max-h-[550px]'/>
+              <img alt='' src={pageMetadata?.pic2?.fields?.file?.url} className='h-full max-h-[550px]'/>
             </div>
             <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-              <img alt='' src={pageMetadata?.pic3?.fields.file.url} className='h-full max-h-[550px]'/>
+              <img alt='' src={pageMetadata?.pic3?.fields?.file?.url} className='h-full max-h-[550px]'/>
             </div>
           </div>
           {pageMetadata?.videoUrl ? <iframe width={'100%'} height="500"  src={pageMetadata?.videoUrl}></iframe> : undefined}
@@ -72,10 +72,10 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
             />
           <div className='flex sm:flex-col md:flex-row'>
             <div className='md:w-1/2 w-full'>
-              <img alt='' src={pageMetadata?.pic5?.fields.file.url} className='h-full sm:max-h-[550px]'/>
+              <img alt='' src={pageMetadata?.pic5?.fields?.file?.url} className='h-full sm:max-h-[550px]'/>
             </div>
             <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-              <img alt='' src={pageMetadata?.pic6?.fields.file.url} className='h-full sm:max-h-[550px]'/>
+              <img alt='' src={pageMetadata?.pic6?.fields?.file?.url} className='h-full sm:max-h-[550px]'/>
             </div>
           </div>
         </div>
@@ -93,11 +93,11 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
               </p>
             </div>
             <div className='absolute top-8 left-0 flex flex-row items-center justify-center w-full h-full'>
-              <img alt='' src={pageMetadata?.nextPage.fields.pic1?.fields.file.url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
+              <img alt='' src={pageMetadata?.nextPage?.fields?.pic1?.fields?.file.url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
               <div
                 className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                 >
-                <a href={`/work/${pageMetadata?.nextPage.fields.slug}`} className=''>
+                <a href={`/work/${pageMetadata?.nextPage?.fields?.slug}`} className=''>
                   VIEW PROJECT
                 </a>
               </div>
@@ -118,7 +118,7 @@ export async function getStaticPaths() {
   const pageSlugData = (await getPageSlugList())
   // Get the paths we want to pre-render based on posts
   const paths = pageSlugData.items.map((page) => ({
-    params: { slug: page.fields?.slug },
+    params: { slug: page?.fields?.slug },
   }));
   // Set fallback to blocking. Now any new post added post build will SSR
   // to ensure SEO. It will then be static for all subsequent requests
