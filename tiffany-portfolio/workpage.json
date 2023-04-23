@@ -26,252 +26,92 @@
                 "omitted": false
                 },
                 {
-                "id": "pic1",
-                "name": "pic 1",
+                "id": "pic1Reference",
+                "name": "pic 1 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
+                "linkType": "Entry"
                 },
                 {
-                "id": "pic1Page",
-                "name": "pic 1 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
-                },
-                {
-                "id": "pic2",
-                "name": "pic 2",
+                "id": "pic2Reference",
+                "name": "pic 2 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
+                "linkType": "Entry"
                 },
                 {
-                "id": "pic2Page",
-                "name": "pic 2 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
-                },
-                {
-                "id": "pic3",
-                "name": "pic 3",
+                "id": "pic3Reference",
+                "name": "pic 3 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
+                "linkType": "Entry"
                 },
                 {
-                "id": "pic3Page",
-                "name": "pic 3 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
-                },
-                {
-                "id": "pic4",
-                "name": "pic4",
+                "id": "pic4Reference",
+                "name": "pic 4 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
+                "linkType": "Entry"
                 },
                 {
-                "id": "pic4Page",
-                "name": "pic 4 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
-                },
-                {
-                "id": "pic5",
-                "name": "pic5 ",
+                "id": "pic5Reference",
+                "name": "pic 5 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
+                "linkType": "Entry"
                 },
                 {
-                "id": "pic5Page",
-                "name": "pic 5 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
-                },
-                {
-                "id": "pic6",
-                "name": "pic6",
+                "id": "pic6Reference",
+                "name": "pic 6 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
+                "linkType": "Entry"
                 },
                 {
-                "id": "pic6Page",
-                "name": "pic 6 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
-                },
-                {
-                "id": "pic7",
-                "name": "pic7",
+                "id": "pic7Reference",
+                "name": "pic 7 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
+                "linkType": "Entry"
                 },
                 {
-                "id": "pic7Page",
-                "name": "pic 7 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
-                },
-                {
-                "id": "pic8",
-                "name": "pic8",
+                "id": "pic8Reference",
+                "name": "pic 8 reference",
                 "type": "Link",
                 "localized": false,
                 "required": false,
                 "validations": [],
                 "disabled": false,
                 "omitted": false,
-                "linkType": "Asset"
-                },
-                {
-                "id": "pic8Page",
-                "name": "pic 8 page",
-                "type": "Symbol",
-                "localized": false,
-                "required": false,
-                "validations": [
-                    {
-                    "in": [
-                        "page1",
-                        "page2",
-                        "page3",
-                        "page4",
-                        "page5"
-                    ]
-                    }
-                ],
-                "disabled": false,
-                "omitted": false
+                "linkType": "Entry"
                 }
             ],
             "sys": {
@@ -285,7 +125,7 @@
                 "id": "work",
                 "type": "ContentType",
                 "createdAt": "2023-04-16T00:59:33.499Z",
-                "updatedAt": "2023-04-16T01:17:56.321Z",
+                "updatedAt": "2023-04-23T09:34:11.309Z",
                 "environment": {
                 "sys": {
                     "id": "master",
@@ -293,8 +133,8 @@
                     "linkType": "Environment"
                 }
                 },
-                "publishedVersion": 15,
-                "publishedAt": "2023-04-16T01:17:56.321Z",
+                "publishedVersion": 29,
+                "publishedAt": "2023-04-23T09:34:11.309Z",
                 "firstPublishedAt": "2023-04-16T00:59:34.030Z",
                 "createdBy": {
                 "sys": {
@@ -310,8 +150,8 @@
                     "id": "4OzeU8KuYXPm8PQsILHU4I"
                 }
                 },
-                "publishedCounter": 8,
-                "version": 16,
+                "publishedCounter": 15,
+                "version": 30,
                 "publishedBy": {
                 "sys": {
                     "type": "Link",

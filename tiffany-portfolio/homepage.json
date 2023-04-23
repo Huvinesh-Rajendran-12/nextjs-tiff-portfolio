@@ -1,365 +1,268 @@
 {
-    "contentTypes": [ {
-  "name": "Homepage",
-  "description": "Main page of the application",
-  "displayField": "animation1",
-  "fields": [
+  "contentTypes": [ 
     {
-      "id": "animation1",
-      "name": "Animation1",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "animation2",
-      "name": "Animation2",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "newProjectImage",
-      "name": "New Project Image",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "logo",
-      "name": "Logo",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "description",
-      "name": "Description",
-      "type": "RichText",
-      "localized": false,
-      "required": false,
-      "validations": [
+      "name": "Homepage",
+      "description": "Main page of the application",
+      "displayField": "animation1",
+      "fields": [
         {
-          "enabledNodeTypes": [
-            "heading-1",
-            "heading-2",
-            "heading-3",
-            "heading-4",
-            "heading-5",
-            "heading-6",
-            "ordered-list",
-            "unordered-list",
-            "hr",
-            "blockquote",
-            "embedded-entry-block",
-            "embedded-asset-block",
-            "table",
-            "hyperlink",
-            "entry-hyperlink",
-            "asset-hyperlink",
-            "embedded-entry-inline"
-          ]
+          "id": "animation1",
+          "name": "Animation1",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
         },
         {
-          "enabledMarks": [
-            "bold",
-            "italic",
-            "underline",
-            "code",
-            "superscript",
-            "subscript"
-          ]
+          "id": "animation2",
+          "name": "Animation2",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "newProjectImage",
+          "name": "New Project Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ]
+            },
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "pic1Reference",
+          "name": "pic 1 reference",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "pic2Reference",
+          "name": "pic 2 reference",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "pic3Reference",
+          "name": "pic 3 reference",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "pic4Reference",
+          "name": "pic 4 reference",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "pic5Reference",
+          "name": "pic 5 reference",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "marketingPhrase",
+          "name": "Marketing Phrase",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "userProfilePic",
+          "name": "User Profile Pic",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "userName",
+          "name": "User Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "tag1",
+          "name": "Tag 1",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "tag2",
+          "name": "Tag 2",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "endPic",
+          "name": "End Pic ",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "animation3",
+          "name": "Animation 3",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
         }
       ],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page1Pic",
-      "name": "Page 1 Pic",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "page1PicTitle",
-      "name": "Page 1 Pic Title",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page1PicYear",
-      "name": "Page 1 Pic Year",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page2Pic",
-      "name": "Page 2 Pic",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "page2PicTitle",
-      "name": "Page 2 Pic Title",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page2PicYear",
-      "name": "Page 2 Pic Year",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page3Pic",
-      "name": "Page 3 Pic",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "page3PicTitle",
-      "name": "Page 3 Pic Title",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page3PicYear",
-      "name": "Page 3 Pic Year",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page4Pic",
-      "name": "Page 4 Pic",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "page4PicTitle",
-      "name": "Page 4 Pic Title",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page4PicYear",
-      "name": "Page 4 Pic Year",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page5Pic",
-      "name": "Page 5 Pic",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "page5PicTitle",
-      "name": "Page 5 Pic Title",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "page5PicYear",
-      "name": "Page 5 Pic Year",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "marketingPhrase",
-      "name": "Marketing Phrase",
-      "type": "Text",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "userProfilePic",
-      "name": "User Profile Pic",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "userName",
-      "name": "User Name",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "tag1",
-      "name": "Tag 1",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "tag2",
-      "name": "Tag 2",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    },
-    {
-      "id": "endPic",
-      "name": "End Pic ",
-      "type": "Link",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false,
-      "linkType": "Asset"
-    },
-    {
-      "id": "animation3",
-      "name": "Animation 3",
-      "type": "Symbol",
-      "localized": false,
-      "required": false,
-      "validations": [],
-      "disabled": false,
-      "omitted": false
-    }
-  ],
-  "sys": {
-    "space": {
       "sys": {
-        "type": "Link",
-        "linkType": "Space",
-        "id": "dxk9chpx8htb"
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dxk9chpx8htb"
+          }
+        },
+        "id": "homepage",
+        "type": "ContentType",
+        "createdAt": "2023-04-09T12:25:46.276Z",
+        "updatedAt": "2023-04-23T09:35:28.639Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2023-04-23T09:35:28.639Z",
+        "firstPublishedAt": "2023-04-09T12:25:46.853Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4OzeU8KuYXPm8PQsILHU4I"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4OzeU8KuYXPm8PQsILHU4I"
+          }
+        },
+        "publishedCounter": 17,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4OzeU8KuYXPm8PQsILHU4I"
+          }
+        }
       }
-    },
-    "id": "homepage",
-    "type": "ContentType",
-    "createdAt": "2023-04-09T12:25:46.276Z",
-    "updatedAt": "2023-04-09T12:59:50.007Z",
-    "environment": {
-      "sys": {
-        "id": "master",
-        "type": "Link",
-        "linkType": "Environment"
-      }
-    },
-    "publishedVersion": 15,
-    "publishedAt": "2023-04-09T12:59:50.007Z",
-    "firstPublishedAt": "2023-04-09T12:25:46.853Z",
-    "createdBy": {
-      "sys": {
-        "type": "Link",
-        "linkType": "User",
-        "id": "4OzeU8KuYXPm8PQsILHU4I"
-      }
-    },
-    "updatedBy": {
-      "sys": {
-        "type": "Link",
-        "linkType": "User",
-        "id": "4OzeU8KuYXPm8PQsILHU4I"
-      }
-    },
-    "publishedCounter": 8,
-    "version": 16,
-    "publishedBy": {
-      "sys": {
-        "type": "Link",
-        "linkType": "User",
-        "id": "4OzeU8KuYXPm8PQsILHU4I"
-      }
-    }
-  }
-} ] }
+    } 
+  ] 
+}

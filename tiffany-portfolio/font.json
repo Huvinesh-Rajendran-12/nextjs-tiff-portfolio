@@ -21,7 +21,8 @@
                         "Source Sans Pro",
                         "Nothing You Could Do",
                         "Allison",
-                        "Vujahday Script"
+                        "Vujahday Script",
+                        "Playfair Display italic"
                     ]
                     }
                 ],
@@ -47,7 +48,8 @@
                         "Nothing You Could Do",
                         "Vujahday Script",
                         "Source Sans Pro",
-                        "Allison"
+                        "Allison",
+                        "Playfair Display italic"
                     ]
                     }
                 ],
@@ -73,7 +75,80 @@
                         "Vujahday Script",
                         "Nothing You Could Do",
                         "Source Sans Pro",
-                        "Allison"
+                        "Allison",
+                        "Playfair Display italic"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "headerFooterFont",
+                "name": "HeaderFooterFont",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "in": [
+                        "Playfair Display",
+                        "Roboto Condensed",
+                        "Vujahday Script",
+                        "Roboto",
+                        "Baskervville",
+                        "Source Sans Pro",
+                        "Nothing You Could Do",
+                        "Allison",
+                        "Playfair Display italic"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "homePageSubtitle",
+                "name": "HomePageSubtitle",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "in": [
+                        "Baskervville",
+                        "Playfair Display",
+                        "Source Sans Pro",
+                        "Nothing You Could Do",
+                        "Allison",
+                        "Roboto",
+                        "Roboto Condensed",
+                        "Vujahday Script",
+                        "Playfair Display italic"
+                    ]
+                    }
+                ],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "viewProjectContactMeFont",
+                "name": "ViewProjectContactMeFont",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [
+                    {
+                    "in": [
+                        "Playfair Display",
+                        "Playfair Display italic",
+                        "Source Sans Pro",
+                        "Baskervville",
+                        "Roboto",
+                        "Roboto Condensed",
+                        "Allison",
+                        "Vujahday Script",
+                        "Nothing You Could Do"
                     ]
                     }
                 ],
@@ -92,7 +167,7 @@
                 "id": "font",
                 "type": "ContentType",
                 "createdAt": "2023-04-09T19:57:16.562Z",
-                "updatedAt": "2023-04-10T01:19:20.537Z",
+                "updatedAt": "2023-04-23T05:46:21.530Z",
                 "environment": {
                 "sys": {
                     "id": "master",
@@ -100,8 +175,8 @@
                     "linkType": "Environment"
                 }
                 },
-                "publishedVersion": 15,
-                "publishedAt": "2023-04-10T01:19:20.537Z",
+                "publishedVersion": 19,
+                "publishedAt": "2023-04-23T05:46:21.530Z",
                 "firstPublishedAt": "2023-04-09T19:57:17.238Z",
                 "createdBy": {
                 "sys": {
@@ -117,8 +192,8 @@
                     "id": "4OzeU8KuYXPm8PQsILHU4I"
                 }
                 },
-                "publishedCounter": 8,
-                "version": 16,
+                "publishedCounter": 10,
+                "version": 20,
                 "publishedBy": {
                 "sys": {
                     "type": "Link",

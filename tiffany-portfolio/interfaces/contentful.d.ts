@@ -6,21 +6,11 @@ export interface TypeHomepageFields {
     newProjectImage?: Asset;
     logo?: Asset;
     description?: EntryFields.RichText;
-    page1Pic?: Asset;
-    page1PicTitle?: EntryFields.Symbol;
-    page1PicYear?: EntryFields.Symbol;
-    page2Pic?: Asset;
-    page2PicTitle?: EntryFields.Symbol;
-    page2PicYear?: EntryFields.Symbol;
-    page3Pic?: Asset;
-    page3PicTitle?: EntryFields.Symbol;
-    page3PicYear?: EntryFields.Symbol;
-    page4Pic?: Asset;
-    page4PicTitle?: EntryFields.Symbol;
-    page4PicYear?: EntryFields.Symbol;
-    page5Pic?: Asset;
-    page5PicTitle?: EntryFields.Symbol;
-    page5PicYear?: EntryFields.Symbol;
+    pic1Reference?: Entry<Record<string, any>>;
+    pic2Reference?: Entry<Record<string, any>>;
+    pic3Reference?: Entry<Record<string, any>>;
+    pic4Reference?: Entry<Record<string, any>>;
+    pic5Reference?: Entry<Record<string, any>>;
     marketingPhrase?: EntryFields.Text;
     userProfilePic?: Asset;
     userName?: EntryFields.Symbol;
@@ -33,9 +23,12 @@ export interface TypeHomepageFields {
 export type TypeHomepage = TypeHomepageFields;
 
 export interface TypeFontFields {
-    animationFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
-    titleFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
-    contentFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    animationFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display italic" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    titleFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display italic" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    contentFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display italic" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    headerFooterFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display italic" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    homePageSubtitle?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display italic" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
+    viewProjectContactMeFont?: "Allison" | "Baskervville" | "Nothing You Could Do" | "Playfair Display italic" | "Playfair Display" | "Roboto Condensed" | "Roboto" | "Source Sans Pro" | "Vujahday Script";
 }
 
 export type TypeFont = TypeFontFields;
@@ -54,6 +47,8 @@ export type TypeAboutPage = TypeAboutPageFields;
 
 export interface TypePagesFields {
     title?: EntryFields.Symbol;
+    year?: EntryFields.Symbol;
+    slug?: EntryFields.Symbol;
     pageTag1?: EntryFields.Symbol;
     pageTag2?: EntryFields.Symbol;
     pageDescription?: EntryFields.RichText;
@@ -70,6 +65,7 @@ export interface TypePagesFields {
     animation1?: EntryFields.Symbol;
     animation2?: EntryFields.Symbol;
     nextPagePic?: Asset;
+    nextPage?: Entry<Record<string, any>>;
 }
 
 export type TypePages = TypePagesFields;
@@ -99,22 +95,14 @@ export type TypeServices = TypeServicesFields;
 export interface TypeWorkFields {
     animation1?: EntryFields.Symbol;
     animation2?: EntryFields.Symbol;
-    pic1?: Asset;
-    pic1Page?: "page1" | "page2" | "page3" | "page4" | "page5";
-    pic2?: Asset;
-    pic2Page?: "page1" | "page2" | "page3" | "page4" | "page5";
-    pic3?: Asset;
-    pic3Page?: "page1" | "page2" | "page3" | "page4" | "page5";
-    pic4?: Asset;
-    pic4Page?: "page1" | "page2" | "page3" | "page4" | "page5";
-    pic5?: Asset;
-    pic5Page?: "page1" | "page2" | "page3" | "page4" | "page5";
-    pic6?: Asset;
-    pic6Page?: "page1" | "page2" | "page3" | "page4" | "page5";
-    pic7?: Asset;
-    pic7Page?: "page1" | "page2" | "page3" | "page4" | "page5";
-    pic8?: Asset;
-    pic8Page?: "page1" | "page2" | "page3" | "page4" | "page5";
+    pic1Reference?: Entry<Record<string, any>>;
+    pic2Reference?: Entry<Record<string, any>>;
+    pic3Reference?: Entry<Record<string, any>>;
+    pic4Reference?: Entry<Record<string, any>>;
+    pic5Reference?: Entry<Record<string, any>>;
+    pic6Reference?: Entry<Record<string, any>>;
+    pic7Reference?: Entry<Record<string, any>>;
+    pic8Reference?: Entry<Record<string, any>>;
 }
 
 export type TypeWork = TypeWorkFields;

@@ -16,6 +16,26 @@
                 "omitted": false
                 },
                 {
+                "id": "year",
+                "name": "year",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
+                "id": "slug",
+                "name": "slug",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+                },
+                {
                 "id": "pageTag1",
                 "name": "Page tag 1",
                 "type": "Symbol",
@@ -213,6 +233,17 @@
                 "disabled": false,
                 "omitted": false,
                 "linkType": "Asset"
+                },
+                {
+                "id": "nextPage",
+                "name": "next page",
+                "type": "Link",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false,
+                "linkType": "Entry"
                 }
             ],
             "sys": {
@@ -226,7 +257,7 @@
                 "id": "pages",
                 "type": "ContentType",
                 "createdAt": "2023-04-09T13:02:10.337Z",
-                "updatedAt": "2023-04-11T15:23:02.920Z",
+                "updatedAt": "2023-04-23T09:17:57.269Z",
                 "environment": {
                 "sys": {
                     "id": "master",
@@ -234,8 +265,8 @@
                     "linkType": "Environment"
                 }
                 },
-                "publishedVersion": 7,
-                "publishedAt": "2023-04-11T15:23:02.920Z",
+                "publishedVersion": 29,
+                "publishedAt": "2023-04-23T09:17:57.269Z",
                 "firstPublishedAt": "2023-04-09T13:02:10.848Z",
                 "createdBy": {
                 "sys": {
@@ -251,8 +282,8 @@
                     "id": "4OzeU8KuYXPm8PQsILHU4I"
                 }
                 },
-                "publishedCounter": 4,
-                "version": 8,
+                "publishedCounter": 15,
+                "version": 30,
                 "publishedBy": {
                 "sys": {
                     "type": "Link",

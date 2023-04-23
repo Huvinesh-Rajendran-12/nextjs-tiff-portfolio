@@ -18,6 +18,8 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) =>  e.style.setProperty('--font-animation', fontAPIMetadata.animationFont ?? ''))
     document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata.titleFont ?? ''))
     document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata.contentFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-subtitle')?.forEach((e) => e.style.setProperty('--font-subtitle', fontAPIMetadata.homePageSubtitle ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-view')?.forEach((e) => e.style.setProperty('--font-view', fontAPIMetadata.viewProjectContactMeFont ?? ''))
     },[])
     return (
       <div className='flex flex-col'>
@@ -69,87 +71,87 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                   <div>
                     <div className='relative'>
                       <img
-                        src={HomePageMetadata.page1Pic?.fields.file.url}
+                        src={HomePageMetadata?.pic1Reference?.fields.pic1?.fields.file.url}
                         className=''
                         alt='' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
                         >
-                        <a href="/work/page1">
+                        <a href={`/work/${HomePageMetadata.pic1Reference?.fields.slug}`} className='font-view'>
                           VIEW PROJECT
                         </a>
                       </div>
                     </div>
                     <div className='py-4'>
-                      <div className='text-white font-content uppercase mt-4'>{HomePageMetadata.page1PicTitle}</div>
-                      <div className='text-white font-content'>{HomePageMetadata.page1PicYear}</div>
+                      <div className='text-white font-subtitle mt-4'>{HomePageMetadata?.pic1Reference?.fields.title}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic1Reference?.fields.year}</div>
                     </div>
                   </div>
                   <div>
                     <div className='relative'>
-                      <img alt='' src={HomePageMetadata.page2Pic?.fields.file.url} className='w-full' />
+                      <img alt='' src={HomePageMetadata?.pic2Reference?.fields.pic1?.fields.file.url} className='w-full' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-80'
                       >
-                        <a href="/work/page2">
+                        <a href={`/work/${HomePageMetadata.pic2Reference?.fields.slug}`} className='font-view'>
                           VIEW PROJECT
                         </a>
                       </div>
                     </div>
                     <div className='py-4'>
-                      <div className='text-white font-content'>{HomePageMetadata.page2PicTitle}</div>
-                      <div className='text-white font-content'>{HomePageMetadata.page2PicYear}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic2Reference?.fields.title}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic2Reference?.fields.year}</div>
                     </div>
                   </div>
                 </div>
                 <div className='md:w-1/2 w-full gap-x-2 md:pl-8'>
                   <div>
                     <div className='relative'>
-                      <img alt='' src={HomePageMetadata.page3Pic?.fields.file.url} className='w-full' />
+                      <img alt='' src={HomePageMetadata?.pic3Reference?.fields.pic1?.fields.file.url} className='w-full' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
                       >
-                        <a href="/work/page3">
+                        <a href={`/work/${HomePageMetadata.pic3Reference?.fields.slug}`} className='font-view'>
                           VIEW PROJECT
                         </a>
                       </div>
                     </div>
                     <div className='py-4'>
-                      <div className='text-white font-content'>{HomePageMetadata.page3PicTitle}</div>
-                      <div className='text-white font-content'>{HomePageMetadata.page3PicYear}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic3Reference?.fields.title}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic3Reference?.fields.year}</div>
                     </div>
                   </div>
                   <div>
                     <div className='relative'>
-                      <img alt='' src={HomePageMetadata.page4Pic?.fields.file.url} className='w-full' />
+                      <img alt='' src={HomePageMetadata?.pic4Reference?.fields.pic1?.fields.file.url} className='w-full' />
                       <div
-                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
+                        className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
                       >
-                        <a href="/work/page4">
+                        <a href={`/work/${HomePageMetadata.pic4Reference?.fields.slug}`} className='font-view'>
                           VIEW PROJECT
                         </a>
                       </div>
                     </div>
                     <div className='py-4'>
-                      <div className='text-white font-content'>{HomePageMetadata.page4PicTitle}</div>
-                      <div className='text-white font-content'>{HomePageMetadata.page4PicYear}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic4Reference?.fields.title}</div>
+                      <div className='text-white font-subtitle'>{HomePageMetadata?.pic4Reference?.fields.year}</div>
                     </div>
                   </div>
                 </div>
                 <div className='pt-2'>
                   <div className='relative'>
-                    <img alt='' src={HomePageMetadata.page5Pic?.fields.file.url} />
+                    <img alt='' src={HomePageMetadata?.pic5Reference?.fields.pic1?.fields.file.url} />
                     <div
-                      className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-60'
+                      className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900 hover:opacity-80'
                     >
-                      <a href="/work/page5">
+                      <a href={`/work/${HomePageMetadata.pic5Reference?.fields.slug}`} className='font-view'>
                         VIEW PROJECT
                       </a>
                     </div>
                   </div>
                   <div>
-                    <div className='text-white font-conten mt-4'>{HomePageMetadata.page5PicTitle}</div>
-                    <div className='text-white font-content'>{HomePageMetadata.page5PicYear}</div>
+                    <div className='text-white font-subtitle mt-4'>{HomePageMetadata?.pic5Reference?.fields.title}</div>
+                    <div className='text-white font-subtitle'>{HomePageMetadata?.pic5Reference?.fields.year}</div>
                   </div>
                 </div>
               </div>
@@ -203,7 +205,8 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
 
 export const getStaticProps = async () => {
   const fontAPIData = (await getFontData())
-  const HomePageData = (await getHomePageData())
+  const HomePageDataItems = (await getHomePageData())
+  const HomePageData = HomePageDataItems.items[0]
   return {
     props: {
       fontAPIData,

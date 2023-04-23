@@ -12,15 +12,17 @@ interface WorkPageProps {
 export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
   const fontAPIMetadata = fontAPIData.fields
   const WorkPageMetaData = WorkPageData.fields
+  console.log('WorkPageMetaData',WorkPageMetaData)
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontAPIMetadata.animationFont ?? ''))
     document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontAPIMetadata.titleFont ?? ''))
     document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontAPIMetadata.contentFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-view')?.forEach((e) => e.style.setProperty('--font-view', fontAPIMetadata.viewProjectContactMeFont ?? ''))
     },[])
   return (
     <div className='flex flex-col'>
       <Head>
-        <title>TIFFANYCFY / WORK</title>
+        <title>TIFFANYCFY | WORK</title>
       </Head>
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
@@ -36,10 +38,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full h-full md:row-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic1Page}`}>
+                    href={`/work/${WorkPageMetaData?.pic1Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic1?.fields.file.url} />
+                        src={WorkPageMetaData?.pic1Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -47,7 +49,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -60,10 +62,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full h-full md:col-span-2 md:row-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic2Page}`}>
+                    href={`/work/${WorkPageMetaData?.pic2Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic2?.fields.file.url} />
+                        src={WorkPageMetaData?.pic2Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -71,7 +73,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center items-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -84,10 +86,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full max-h-[700px]">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic3Page}`}>
+                    href={`/work/${WorkPageMetaData?.pic3Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic3?.fields.file.url} />
+                        src={WorkPageMetaData?.pic3Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -95,7 +97,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -108,10 +110,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic4Page}`}>
+                    href={`/work/${WorkPageMetaData?.pic4Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic4?.fields.file.url} />
+                        src={WorkPageMetaData?.pic4Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -119,7 +121,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -132,10 +134,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full md:col-span-2 md:row-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic5Page}`}>
+                    href={`/work/${WorkPageMetaData.pic5Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic5?.fields.file.url} />
+                        src={WorkPageMetaData?.pic5Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -143,7 +145,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -156,10 +158,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full md:col-span-2">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic6Page}`}>
+                    href={`/work/${WorkPageMetaData?.pic6Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic6?.fields.file.url} />
+                        src={WorkPageMetaData?.pic6Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -167,7 +169,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -180,10 +182,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic7Page}`}>
+                    href={`/work/${WorkPageMetaData?.pic7Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic7?.fields.file.url} />
+                        src={WorkPageMetaData?.pic7Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -191,7 +193,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -204,10 +206,10 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
             <div className="w-full">
               <div className="flex h-full items-center justify-center">
                 <a className="relative h-full w-full bg-gray-900 group" 
-                    href={`/work/${WorkPageMetaData.pic8Page}`}>
+                    href={`/work/${WorkPageMetaData?.pic8Reference?.fields.slug}`}>
                     <img className="absolute inset-0 object-cover 
                                 w-full h-full group-hover:opacity-50"
-                        src={WorkPageMetaData.pic8?.fields.file.url} />
+                        src={WorkPageMetaData?.pic8Reference?.fields.pic8?.fields.file.url} />
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
@@ -215,7 +217,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white">
+                                    <p className="text-lg text-white font-view">
                                         View Project.
                                     </p>
                                 </div>
@@ -242,7 +244,9 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
 }
 
 export const getStaticProps = async () => {
-  const WorkPageData = (await getWorkPageData())
+  const WorkPageDataItems = (await getWorkPageData())
+  const WorkPageData = WorkPageDataItems.items[0]
+  console.log(WorkPageData)
   const fontAPIData = (await getFontData())
   return {
     props: {

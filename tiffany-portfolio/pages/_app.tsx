@@ -4,11 +4,12 @@ import '../styles/main.css';
 import type { AppProps } from 'next/app';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { getFontData } from './api/api';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
       <div className='bg-black text-white overflow-x-hidden overflow-y-scroll h-screen'>
-        <Navbar/>
+        <Navbar />
         <div className='scroll-container scroll-smooth ready'>
           <main>
             <Component {...pageProps} />
