@@ -5,7 +5,7 @@ import {
     export default function Footer() {
       return (
       <footer className='footer-border pt-2 md:justify-between px-4 flex md:flex-row flex-col-reverse sm:justify-center'>
-          <p className='text-white text-sm sm:justify-center flex font-footer items-center'>
+          <p className='text-white text-sm sm:justify-center flex font-footer items-center md:mb-2'>
             &copy; {new Date().getFullYear()} TIFFANYCFY. All rights reserved.
           </p>
           <div className='flex gap-x-8 flex-row sm:justify-center sm:pr-4 md:pr-0 sm:mb-4'>
