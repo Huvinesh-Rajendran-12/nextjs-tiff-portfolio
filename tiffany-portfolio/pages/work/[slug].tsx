@@ -35,6 +35,13 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
       </section>
       <section className='text-center justify-center flex flex-row text-white'>
         <div className='flex flex-col gap-y-8 mx-10'>
+          {/* {pageMetadata?.pageDescription?.content?.[0].content?.map((item)=> {
+            return (
+                <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
+                    {item.content?.[0].content?.[0].value}
+                </p>
+            )
+          })} */}
           <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
               {pageMetadata?.pageDescription?.content?.[0].content?.[0].value}{' '}
           </p>
@@ -54,12 +61,12 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
             }
             className='w-full block ml-auto mr-auto'
             />
-          <div className='flex sm:flex-col md:flex-row'>
+          <div className='flex sm:flex-col md:flex-row md:gap-x-4'>
             <div className='md:w-1/2 w-full'>
-              <img alt='' src={pageMetadata?.pic2?.fields?.file?.url} className='h-full max-h-[550px]'/>
+              <img alt='' src={pageMetadata?.pic2?.fields?.file?.url} className='h-full w-full max-h-[550px]'/>
             </div>
-            <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-              <img alt='' src={pageMetadata?.pic3?.fields?.file?.url} className='h-full max-h-[550px]'/>
+            <div className='md:w-1/2 w-full sm:mt-10 md:mt-0'>
+              <img alt='' src={pageMetadata?.pic3?.fields?.file?.url} className='h-full w-full max-h-[550px]'/>
             </div>
           </div>
           {pageMetadata?.videoUrl ? <iframe width={'100%'} height="500"  src={pageMetadata?.videoUrl}></iframe> : undefined}
@@ -70,12 +77,12 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
             }
             className='w-full block ml-auto mr-auto'
             />
-          <div className='flex sm:flex-col md:flex-row'>
+          <div className='flex sm:flex-col md:flex-row md:gap-x-4'>
             <div className='md:w-1/2 w-full'>
-              <img alt='' src={pageMetadata?.pic5?.fields?.file?.url} className='h-full sm:max-h-[550px]'/>
+              <img alt='' src={pageMetadata?.pic5?.fields?.file?.url} className='h-full w-full sm:max-h-[550px]'/>
             </div>
-            <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-              <img alt='' src={pageMetadata?.pic6?.fields?.file?.url} className='h-full sm:max-h-[550px]'/>
+            <div className='md:w-1/2 w-full sm:mt-10 md:mt-0'>
+              <img alt='' src={pageMetadata?.pic6?.fields?.file?.url} className='h-full w-full sm:max-h-[550px]'/>
             </div>
           </div>
         </div>
