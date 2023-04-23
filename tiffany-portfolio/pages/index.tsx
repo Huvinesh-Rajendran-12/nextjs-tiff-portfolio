@@ -65,9 +65,9 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
             <div className='py-2 mt-10'>
               <h1 className='md:text-5xl sm:text-2xl flex justify-center text-white font-title'>SELECTED WORK</h1>
             </div>
-            <div className='mt-6'>
+            <div className='mt-10'>
               <div className='flex flex-wrap mx-20'>
-                <div className='md:w-1/2 w-full gap-x-6 pt-2'>
+                <div className='md:w-1/2 w-full gap-x-6'>
                   <div>
                     <div className='relative'>
                       <img

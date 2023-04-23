@@ -50,7 +50,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center items-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
                                     <p className="text-lg text-white font-view">
-                                        View Project.
+                                        VIEW PROJECT
                                     </p>
                                 </div>
                             </div>

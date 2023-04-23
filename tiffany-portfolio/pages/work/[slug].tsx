@@ -17,6 +17,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontMetadata.animationFont ?? ''))
     document.querySelectorAll<HTMLElement>('.font-title')?.forEach((e) => e.style.setProperty('--font-title', fontMetadata.titleFont ?? ''))
     document.querySelectorAll<HTMLElement>('.font-content')?.forEach((e) => e.style.setProperty('--font-content', fontMetadata.contentFont ?? ''))
+    document.querySelectorAll<HTMLElement>('.font-view')?.forEach((e) => e.style.setProperty('--font-view', fontMetadata.viewProjectContactMeFont ?? ''))
     },[])
   return (
     <div className="flex flex-col">
@@ -52,14 +53,14 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
             src={
               pageMetadata?.pic1?.fields.file.url
             }
-            className='w-full block ml-auto mr-auto rounded-md'
+            className='w-full block ml-auto mr-auto'
             />
           <div className='flex sm:flex-col md:flex-row'>
             <div className='md:w-1/2 w-full'>
-              <img alt='' src={pageMetadata?.pic2?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
+              <img alt='' src={pageMetadata?.pic2?.fields.file.url} className='h-full max-h-[550px]'/>
             </div>
             <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-              <img alt='' src={pageMetadata?.pic3?.fields.file.url} className='h-full max-h-[550px] rounded-md'/>
+              <img alt='' src={pageMetadata?.pic3?.fields.file.url} className='h-full max-h-[550px]'/>
             </div>
           </div>
           {pageMetadata?.videoUrl ? <iframe width={'100%'} height="500"  src={pageMetadata?.videoUrl}></iframe> : undefined}
@@ -68,14 +69,14 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
             src={
               pageMetadata?.pic4?.fields.file.url
             }
-            className='w-full block ml-auto mr-auto rounded-md'
+            className='w-full block ml-auto mr-auto'
             />
           <div className='flex sm:flex-col md:flex-row'>
             <div className='md:w-1/2 w-full'>
-              <img alt='' src={pageMetadata?.pic5?.fields.file.url} className='h-full sm:max-h-[550px] rounded-md'/>
+              <img alt='' src={pageMetadata?.pic5?.fields.file.url} className='h-full sm:max-h-[550px]'/>
             </div>
             <div className='md:w-1/2 w-full md:pl-4 sm:mt-10 md:mt-0'>
-              <img alt='' src={pageMetadata?.pic6?.fields.file.url} className='h-full sm:max-h-[550px] rounded-md'/>
+              <img alt='' src={pageMetadata?.pic6?.fields.file.url} className='h-full sm:max-h-[550px]'/>
             </div>
           </div>
         </div>
@@ -97,7 +98,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
               <div
                 className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                 >
-                <a href={`/work/${pageMetadata?.nextPage.fields.slug}`}>
+                <a href={`/work/${pageMetadata?.nextPage.fields.slug}`} className=''>
                   VIEW PROJECT
                 </a>
               </div>

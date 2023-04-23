@@ -9,8 +9,6 @@ type DocumentPageProps = {
 }
 
 export default function Document({AccessoryData}:DocumentPageProps) {
-  // console.log('Accessory data',AccessoryData)
-  // const AccessoryDataMetadata = AccessoryData.fields
   return (
     <Html lang="en">
       <Head>
