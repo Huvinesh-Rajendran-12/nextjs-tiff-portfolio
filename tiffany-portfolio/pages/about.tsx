@@ -35,7 +35,7 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
             </section>
             <section>
                 <div className="flex justify-center">
-                    <img alt='' src={AboutPageMetadata.userProfilePic?.fields.file.url} className='w-1/4 rounded-md min-w-[300px]' />
+                    <img alt='' src={AboutPageMetadata.userProfilePic?.fields.file.url} className='w-1/4 min-w-[300px]' />
                 </div>
             </section>
             <section>
