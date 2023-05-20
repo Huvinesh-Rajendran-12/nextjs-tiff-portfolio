@@ -25,6 +25,9 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
       <div className='flex flex-col'>
           <Head>
             <title>TIFFANYCFY</title>
+            <meta name="description" content="This is an example of a
+                meta description. This will often show up in search results."/>
+            <meta name="keywords" content="seo, search engine optimization"/>
           </Head>
           <section className='relative lg:h-[90vh] sm:h-[45vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
