@@ -235,15 +235,14 @@
                 "linkType": "Asset"
                 },
                 {
-                "id": "nextPage",
-                "name": "next page",
-                "type": "Link",
+                "id": "nextPageSlug",
+                "name": "next page slug",
+                "type": "Symbol",
                 "localized": false,
-                "required": false,
+                "required": true,
                 "validations": [],
                 "disabled": false,
-                "omitted": false,
-                "linkType": "Entry"
+                "omitted": false
                 }
             ],
             "sys": {
@@ -257,7 +256,7 @@
                 "id": "pages",
                 "type": "ContentType",
                 "createdAt": "2023-04-09T13:02:10.337Z",
-                "updatedAt": "2023-04-23T09:17:57.269Z",
+                "updatedAt": "2023-05-20T18:42:07.540Z",
                 "environment": {
                 "sys": {
                     "id": "master",
@@ -265,8 +264,8 @@
                     "linkType": "Environment"
                 }
                 },
-                "publishedVersion": 29,
-                "publishedAt": "2023-04-23T09:17:57.269Z",
+                "publishedVersion": 35,
+                "publishedAt": "2023-05-20T18:42:07.540Z",
                 "firstPublishedAt": "2023-04-09T13:02:10.848Z",
                 "createdBy": {
                 "sys": {
@@ -282,8 +281,8 @@
                     "id": "4OzeU8KuYXPm8PQsILHU4I"
                 }
                 },
-                "publishedCounter": 15,
-                "version": 30,
+                "publishedCounter": 18,
+                "version": 36,
                 "publishedBy": {
                 "sys": {
                     "type": "Link",

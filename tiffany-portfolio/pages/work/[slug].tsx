@@ -11,6 +11,7 @@ type PageOneProps = {
 
 export default function PageOne({pageData, fontAPIData}:PageOneProps) {
   const pageMetadata = pageData.fields
+  console.log(pageMetadata.nextPageSlug)
   const fontMetadata = fontAPIData.fields
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.font-animation')?.forEach((e) => e.style.setProperty('--font-animation', fontMetadata.animationFont ?? ''))
@@ -36,12 +37,12 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
       <section className='text-center justify-center flex flex-row text-white'>
         <div className='flex flex-col gap-y-8 mx-10'>
           {
-            pageMetadata?.pageDescription?.content?.[0].content?.map((item)=> {
-            return(
-             <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
-                {item.content?.[0].content?.[0].value}
-             </p> 
-            )
+            pageMetadata?.pageDescription?.content?.map((item)=> {
+              return(
+                <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
+                    {item.content?.[0].value}
+                </p> 
+              )
             })
           }
           {/* <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
@@ -102,11 +103,11 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
               </p>
             </div>
             <div className='absolute top-8 left-0 flex flex-row items-center justify-center w-full h-full'>
-              <img alt='' src={pageMetadata?.nextPage?.fields?.pic1?.fields?.file.url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
+              <img alt='' src={pageMetadata?.nextPagePic?.fields?.file.url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
               <div
                 className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                 >
-                <a href={`/work/${pageMetadata?.nextPage?.fields?.slug}`} className='font-view'>
+                <a href={`/work/${pageMetadata.nextPageSlug}`} className='font-view'>
                   VIEW PROJECT
                 </a>
               </div>
@@ -138,6 +139,7 @@ export const getStaticProps = async ({params}:StaticProps) => {
   // const pageOneData = usePagesStore((state) => state.pagesData ? state.pagesData[4] : undefined)
   const pageDataItems = (await getPageBySlug(params.slug))
   const pageData = pageDataItems.items[0]
+  console.log('pageData',pageData.fields.nextPageSlug)
   const fontAPIData = (await getFontData())
   return {
     props: {

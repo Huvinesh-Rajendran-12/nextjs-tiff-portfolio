@@ -25,6 +25,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
       <div className='flex flex-col'>
           <Head>
             <title>TIFFANYCFY</title>
+            <meta name='description' content='Tiffany C. is a Malaysian creative designer and marketing professional, specialising in graphic design, branding, and social media marketing. With expertise in developing and refining brand identities, she creates promotional materials that communicate her clients messages effectively, enhancing their brand awareness and driving conversions.'/>
           </Head>
           <section className='relative lg:h-[90vh] sm:h-[45vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
@@ -70,9 +71,9 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                 <div className='md:w-1/2 w-full gap-x-6'>
                   <div>
                     <div className='relative group'>
-                      <a href={`/work/${HomePageMetadata.pic1Reference?.fields.slug}`}>
+                      <a href={`/work/${HomePageMetadata?.pic1Reference?.fields?.slug}`}>
                         <img
-                          src={HomePageMetadata?.pic1Reference?.fields.pic1?.fields.file.url}
+                          src={HomePageMetadata?.pic1Reference?.fields?.pic1?.fields?.file?.url}
                           className=''
                           alt='' />
                         <div
@@ -114,9 +115,9 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                 <div className='md:w-1/2 w-full gap-x-2 md:pl-8'>
                   <div>
                     <div className='relative group'>
-                      <a href={`/work/${HomePageMetadata.pic3Reference?.fields.slug}`}>
+                      <a href={`/work/${HomePageMetadata.pic3Reference?.fields?.slug}`}>
                         <img
-                          src={HomePageMetadata?.pic3Reference?.fields.pic1?.fields.file.url}
+                          src={HomePageMetadata?.pic3Reference?.fields.pic1?.fields?.file?.url}
                           className=''
                           alt='' />
                         <div
@@ -135,9 +136,9 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                   </div>
                   <div>
                     <div className='relative group'>
-                      <a href={`/work/${HomePageMetadata.pic4Reference?.fields.slug}`}>
+                      <a href={`/work/${HomePageMetadata.pic4Reference?.fields?.slug}`}>
                         <img
-                          src={HomePageMetadata?.pic4Reference?.fields.pic1?.fields.file.url}
+                          src={HomePageMetadata?.pic4Reference?.fields.pic1?.fields?.file?.url}
                           className=''
                           alt='' />
                         <div
@@ -203,7 +204,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
             <div className='mt-10'>
               <div className='py-2'>
                 <div className='relative'>
-                  <img alt='' src={HomePageMetadata.endPic?.fields.file.url} className='w-full max-h-[600px]' />
+                  <img alt='' src={HomePageMetadata?.endPic?.fields.file.url} className='w-full max-h-[600px]' />
                   <div
                     className='absolute flex w-full h-full justify-center items-center top-0 left-0'
                   >

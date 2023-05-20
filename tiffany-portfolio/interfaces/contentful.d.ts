@@ -65,7 +65,7 @@ export interface TypePagesFields {
     animation1?: EntryFields.Symbol;
     animation2?: EntryFields.Symbol;
     nextPagePic?: Asset;
-    nextPage?: Entry<Record<string, any>>;
+    nextPageSlug: EntryFields.Symbol;
 }
 
 export type TypePages = TypePagesFields;
