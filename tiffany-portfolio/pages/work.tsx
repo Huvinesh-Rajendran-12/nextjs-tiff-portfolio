@@ -46,9 +46,9 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                             <div className="transition-all transform 
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
-                                group-hover:translate-y-0">
+                                group-hover:translate-y-0 sm:group-hover:-translate-y-20">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
@@ -70,9 +70,9 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                             <div className="transition-all transform 
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
-                                group-hover:translate-y-0">
+                                group-hover:translate-y-0 sm:group-hover:-translate-y-20">
                                 <div className="flex justify-center items-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
@@ -90,13 +90,13 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 w-full h-full group-hover:opacity-50"
                         src={WorkPageMetaData?.pic3Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
-                        <div className='mt-40'>
+                        <div className='mt-20'>
                             <div className="transition-all transform 
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
-                                group-hover:translate-y-0">
+                                group-hover:translate-y-2">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
@@ -114,13 +114,13 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 w-full h-full group-hover:opacity-50"
                         src={WorkPageMetaData?.pic4Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
-                        <div className='mt-40'>
+                        <div className='mt-20'>
                             <div className="transition-all transform 
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
@@ -142,9 +142,9 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                             <div className="transition-all transform 
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
-                                group-hover:translate-y-0">
+                                group-hover:translate-y-0 sm:group-hover:-translate-y-20">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
@@ -162,13 +162,13 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 w-full h-full group-hover:opacity-50"
                         src={WorkPageMetaData?.pic6Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
-                        <div className='mt-40'>
+                        <div className='mt-20'>
                             <div className="transition-all transform 
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
@@ -186,13 +186,13 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                                 w-full h-full group-hover:opacity-50"
                         src={WorkPageMetaData?.pic7Reference?.fields.pic1?.fields.file.url} />
                     <div className="relative p-5">
-                        <div className='mt-40'>
+                        <div className='mt-20'>
                             <div className="transition-all transform 
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
@@ -212,11 +212,11 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
                     <div className="relative p-5">
                         <div className='mt-40'>
                             <div className="transition-all transform 
-                                translate-y-8 opacity-0 
+                                translate-y-4 opacity-0 
                                 group-hover:opacity-100 
-                                group-hover:translate-y-0">
+                                group-hover:-translate-y-20">
                                 <div className="flex justify-center">
-                                    <p className="text-lg text-white font-view">
+                                    <p className="text-lg text-white font-view sm:text-center">
                                         VIEW PROJECT
                                     </p>
                                 </div>
