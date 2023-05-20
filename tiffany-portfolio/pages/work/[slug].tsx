@@ -36,12 +36,12 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
       <section className='text-center justify-center flex flex-row text-white'>
         <div className='flex flex-col gap-y-8 mx-10'>
           {
-            pageMetadata?.pageDescription?.content?.map((item)=> {
-              return(
-                <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
-                    {item.content?.[0].value}
-                </p> 
-              )
+            pageMetadata?.pageDescription?.content?.[0].content?.map((item)=> {
+            return(
+             <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
+                {item.content?.[0].content?.[0].value}
+             </p> 
+            )
             })
           }
           {/* <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>

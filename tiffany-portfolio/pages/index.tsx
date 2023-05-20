@@ -25,8 +25,6 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
       <div className='flex flex-col'>
           <Head>
             <title>TIFFANYCFY</title>
-            <meta name="description" content="Tiffany C. is a Malaysian creative designer and marketing professional, specialising in graphic design, branding, and social media marketing. With expertise in developing and refining brand identities, she creates promotional materials that communicate her clients' messages effectively, enhancing their brand awareness and driving conversions."/>
-            <meta name="keywords" content="graphic design, branding, social media marketing, Tiffany C."/>
           </Head>
           <section className='relative lg:h-[90vh] sm:h-[45vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
