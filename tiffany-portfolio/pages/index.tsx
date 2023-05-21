@@ -28,19 +28,19 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
             <meta name='description' content='Tiffany C. is a Malaysian creative designer and marketing professional, specialising in graphic design, branding, and social media marketing. With expertise in developing and refining brand identities, she creates promotional materials that communicate her clients messages effectively, enhancing their brand awareness and driving conversions.'/>
           </Head>
           <section className='relative lg:h-[90vh] sm:h-[45vh] md:h-[50vh]'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium sm:mt-6 sm:text-[100px] md:text-[18vw] lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-center lg:block'>
+              <div className='whitespace-nowrap uppercase font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
                 <span>{'  '}</span>
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
-              </p>
-              <p className='whitespace-nowrap uppercase font-medium sm:text-[100px] md:text-[18vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              </div>
+              <p className='whitespace-nowrap uppercase font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{HomePageMetadata.animation2}</span>
                 <span></span>
               </p>
             </div>
             <div className='absolute top-5 left-0 flex flex-row items-center justify-center w-full h-full'>
-              <img alt='' src={HomePageMetadata.newProjectImage?.fields.file.url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
+              <img alt='' src={HomePageMetadata.newProjectImage?.fields.file.url} className='md:w-1/2 sm:w-3/4 sm:h-auto md:h-auto'/>
             </div>
           </section>
           <section className='mx-auto sm:mx-20 mt-20 mb-10'>
