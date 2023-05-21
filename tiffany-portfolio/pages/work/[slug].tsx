@@ -34,7 +34,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
           </div>
         </div>
       </section>
-      <section className='text-left justify-center flex flex-row text-white'>
+      <section className='text-center justify-center flex flex-row text-white'>
         <div className='flex flex-col gap-y-8 mx-10'>
           {
             pageMetadata?.pageDescription?.content?.map((item)=> {
@@ -48,7 +48,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
           {/* <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
               {pageMetadata?.pageDescription?.content?.[0].content?.[0].value}{' '}
           </p> */}
-          <div className='text-white text-left justify-center'>
+          <div className='text-white text-center justify-center'>
             <div className='font-content md:text-lg sm:text-sm'>Client: {pageMetadata?.projectClient}</div>
             <div className='font-content md:text-lg sm:text-sm'>Designer: {pageMetadata?.projectDesigner}</div>
             <div className='font-content md:text-lg sm:text-sm'>Developer: {pageMetadata?.projectDeveloper}</div>
@@ -56,7 +56,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
         </div>
       </section>
       <section className='flex flex-row justify-center sm:mx-5 md:mx-20 lg:mx-80'>
-        <div className='py-20 space-y-10'>
+        <div className='py-10 space-y-10'>
           <img
             alt=""
             src={
@@ -102,16 +102,18 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
                 <span>{'   '}</span>
               </p>
             </div>
-            <div className='absolute top-8 left-0 flex flex-row items-center justify-center w-full h-full'>
-              <img alt='' src={pageMetadata?.nextPagePic?.fields?.file.url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
-              <div
-                className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
-                >
-                <a href={`/work/${pageMetadata.nextPageSlug}`} className='font-view'>
-                  VIEW PROJECT
-                </a>
+              <a href={`/work/${pageMetadata.nextPageSlug}`}>
+                <div className='absolute top-8 left-0 flex flex-row items-center justify-center w-full h-full'>
+                <img alt='' src={pageMetadata?.nextPagePic?.fields?.file.url} className='md:w-1/2 h-[80vh] sm:w-1/2 lg:max-w-[520px]  sm:h-5/6 md:h-5/6'/>
+                <div
+                  className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
+                  >
+                  <p className='font-view'>
+                    VIEW PROJECT
+                  </p>
+                </div>
               </div>
-            </div>
+              </a>
       </section>
     </div>
   );
