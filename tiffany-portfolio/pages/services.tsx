@@ -119,7 +119,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
       </section>
       <section className='sm:mt-10 md:mt-0'>
         <div className='overflow-hidden h-full lg:pt-[8.35vh] flex flex-col justify-between lg:block'>
-          <p className='whitespace-nowrap items-center uppercase font-medium text-[15vw] md:text-[20vw] leading-1'> 
+          <p className='whitespace-nowrap items-center font-medium text-[15vw] md:text-[20vw] leading-1'> 
             <span className='text-scrolling font-animation'>{ServicesPageMetadata.animation}</span>
             <span>{'    '}</span>
             <span className='text-scrolling font-animation'>{ServicesPageMetadata.animation}</span>

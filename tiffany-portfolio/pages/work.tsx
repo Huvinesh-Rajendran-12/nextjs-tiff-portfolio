@@ -25,7 +25,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
       </Head>
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-          <p className='whitespace-nowrap uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+          <p className='whitespace-nowrap font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
               <span className='text-scrolling font-animation'>{WorkPageMetaData.animation1}</span>
               <span className='text-scrolling font-animation'>{WorkPageMetaData.animation1}</span>
           </p>
@@ -231,7 +231,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
       </section>
       <section>
         <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-          <p className='whitespace-nowrap mb-6 uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+          <p className='whitespace-nowrap mb-6 font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
               <span className='reverse text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
               <span className='reverse text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
           </p>

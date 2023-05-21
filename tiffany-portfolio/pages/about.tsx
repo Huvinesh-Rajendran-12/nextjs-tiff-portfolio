@@ -43,9 +43,7 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
                    <div className='flex flex-col justify-center text-center'>
                         <h1 className='lg:text-2xl sm:text-md font-title mb-1'>{AboutPageMetadata.userName}</h1>
                         <div className='text-white flex sm:flex-col md:flex-row h-6 justify-center mt-0 sm:mt-2 gap-x-2'>
-                            <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag1}</div>
-                            {/* <div className='vertical-line' />
-                            <div className='uppercase font-content max-w-md'>{AboutPageMetadata.userTag2}</div> */}
+                            <div className='font-content max-w-md'>{AboutPageMetadata.userTag1}</div>
                         </div>
                      </div>
                 </div>
@@ -66,7 +64,7 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
           </section>
           <section>
               <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
-                  <p className='whitespace-nowrap mb-12 uppercase font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
+                  <p className='whitespace-nowrap mb-12 font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
                       <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
                       <span className='text-scrolling font-animation'>{AboutPageMetadata.animation}</span>
                   </p>

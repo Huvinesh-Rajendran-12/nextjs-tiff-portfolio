@@ -29,12 +29,12 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
           </Head>
           <section className='relative lg:h-[90vh] sm:h-[45vh] md:h-[50vh]'>
             <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-12 items-center justify-center lg:block'>
-              <div className='whitespace-nowrap uppercase font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'> 
+              <div className='whitespace-nowrap font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
                 <span>{'  '}</span>
                 <span className='text-scrolling font-animation'>{HomePageMetadata.animation1}</span>
               </div>
-              <p className='whitespace-nowrap uppercase font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:mt-16 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{HomePageMetadata.animation2}</span>
                 <span></span>
               </p>
@@ -183,7 +183,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
           <section className='py-10'>
             <div className='py-2'>
               <div className='text-center w-full md:text-5xl sm:text-2xl items-center justify-center flex flex-row'>
-                <p className='max-w-xl font-title uppercase'>{HomePageMetadata.marketingPhrase}</p>
+                <p className='max-w-xl font-title'>{HomePageMetadata.marketingPhrase}</p>
               </div>
             </div>
             <div
@@ -193,9 +193,9 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
               <div className='justify-center md:text-left text-center sm:space-y-2'>
                 <div className='font-bold text-xl text-white font-title'>{HomePageMetadata.userName}</div>
                 <div className='flex justify-center sm:flex-col items-center md:flex-row md:space-x-2 md:h-3'>
-                  <div className='text-white text-md font-content uppercase' >{HomePageMetadata.tag1}</div>
+                  <div className='text-white text-md font-content' >{HomePageMetadata.tag1}</div>
                   <div className='vertical-line'></div>
-                  <div className='text-white text-md font-content uppercase'>{HomePageMetadata.tag2}</div>
+                  <div className='text-white text-md font-content'>{HomePageMetadata.tag2}</div>
                 </div>
               </div>
             </div>
@@ -212,10 +212,10 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                   >
                     <div className='flex overflow-hidden w-full'>
                       <div  className='scrollTextContainerRightToLeft'>
-                        <div className='uppercase font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
+                        <div className='font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
                           {HomePageMetadata.animation3}
                         </div>
-                        <div className='uppercase font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
+                        <div className='font-medium font-animation text-[12vw] md:text-[15vw] pb-8 leading-1'>
                           {HomePageMetadata.animation3}
                         </div>
                       </div>

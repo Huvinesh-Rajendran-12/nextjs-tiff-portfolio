@@ -28,9 +28,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
         <div className='flex flex-col justify-center text-center space-y-8'>
           <h1 className='lg:text-5xl sm:text-3xl font-title'>{pageMetadata?.title}</h1>
           <div className='text-white flex flex-row justify-center gap-x-2'>
-            <div className='uppercase font-content sm:text-lg'>{pageMetadata?.pageTag1}</div>
-            {/* <div className='vertical-line' />
-            <div className='uppercase font-content sm:text-lg'>{pageOneMetadata.pageTag2}</div> */}
+            <div className='font-content sm:text-lg'>{pageMetadata?.pageTag1}</div>
           </div>
         </div>
       </section>
@@ -90,14 +88,14 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
           </div>
         </div>
       </section>
-      <section className='relative lg:h-[90vh] sm:h-[40vh] md:h-[50vh] sm:mb-12'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-4 justify-between lg:block'>
-              <p className='whitespace-nowrap uppercase font-medium sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'> 
+      <section className='relative lg:h-[90vh] sm:h-[40vh] md:h-[60vh] sm:mb-12 md:py-8'>
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-4 justify-center lg:block'>
+              <p className='whitespace-nowrap font-medium sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{pageMetadata?.animation1}</span>
                 <span>{'  '}</span>
                 <span className='text-scrolling font-animation'>{pageMetadata?.animation1}</span>
               </p>
-              <p className='whitespace-nowrap uppercase font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'>
+              <p className='whitespace-nowrap font-light sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'>
                 <span className='reverse text-scrolling font-animation'>{pageMetadata?.animation2}</span>
                 <span>{'   '}</span>
               </p>
