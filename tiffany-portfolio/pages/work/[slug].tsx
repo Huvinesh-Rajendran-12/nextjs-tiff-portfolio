@@ -89,7 +89,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
         </div>
       </section>
       <section className='relative lg:h-[90vh] sm:h-[40vh] md:h-[60vh] sm:mb-12 md:py-8'>
-            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-4 justify-center lg:block'>
+            <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col lg:space-y-4 justify-center'>
               <p className='whitespace-nowrap font-medium sm:text-[70px] md:text-[10vw] lg:text-[15vw] lg:leading-[15.28vw]'> 
                 <span className='text-scrolling font-animation'>{pageMetadata?.animation1}</span>
                 <span>{'  '}</span>
