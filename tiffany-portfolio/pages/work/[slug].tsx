@@ -34,7 +34,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
           </div>
         </div>
       </section>
-      <section className='text-center justify-center flex flex-row text-white'>
+      <section className='text-left justify-center flex flex-row text-white'>
         <div className='flex flex-col gap-y-8 mx-10'>
           {
             pageMetadata?.pageDescription?.content?.map((item)=> {
@@ -48,7 +48,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
           {/* <p className='lg:max-w-xl sm:max-w-sm font-content md:text-lg sm:text-sm'>
               {pageMetadata?.pageDescription?.content?.[0].content?.[0].value}{' '}
           </p> */}
-          <div className='text-white text-center justify-center'>
+          <div className='text-white text-left justify-center'>
             <div className='font-content md:text-lg sm:text-sm'>Client: {pageMetadata?.projectClient}</div>
             <div className='font-content md:text-lg sm:text-sm'>Designer: {pageMetadata?.projectDesigner}</div>
             <div className='font-content md:text-lg sm:text-sm'>Developer: {pageMetadata?.projectDeveloper}</div>

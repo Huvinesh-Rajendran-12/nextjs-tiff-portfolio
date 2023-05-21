@@ -200,11 +200,13 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
               </div>
             </div>
           </section>
-          <section>
+          <section className=''>
             <div className='mt-10'>
               <div className='py-2'>
-                <div className='relative'>
-                  <img alt='' src={HomePageMetadata?.endPic?.fields.file.url} className='w-full max-h-[600px]' />
+                <div className='relative overflow-visible'>
+                  <div className='sm:-z-[0] sticky'>
+                    <img alt='' src={HomePageMetadata?.endPic?.fields.file.url} className='w-full max-w-[100%] max-h-[600px]' />
+                  </div>
                   <div
                     className='absolute flex w-full h-full justify-center items-center top-0 left-0'
                   >
