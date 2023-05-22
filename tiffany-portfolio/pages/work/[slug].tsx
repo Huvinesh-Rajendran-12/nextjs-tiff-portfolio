@@ -102,7 +102,7 @@ export default function PageOne({pageData, fontAPIData}:PageOneProps) {
             </div>
               <a href={`/work/${pageMetadata.nextPageSlug}`}>
                 <div className='absolute top-8 left-0 flex flex-row items-center justify-center w-full h-full'>
-                <img alt='' src={pageMetadata?.nextPagePic?.fields?.file.url} className='md:w-1/2 h-[80vh] sm:w-3/4 lg:max-w-[520px] sm:h-5/6 md:h-5/6'/>
+                <img alt='' src={pageMetadata?.nextPagePic?.fields?.file.url} className='md:w-1/2 h-[81vh] sm:w-3/4 lg:max-w-[520px] sm:h-5/6 md:h-5/6'/>
                 <div
                   className='absolute flex w-full h-full top-0 left-0 opacity-0 text-white justify-center items-center bg-zinc-900  hover:opacity-60'
                   >
