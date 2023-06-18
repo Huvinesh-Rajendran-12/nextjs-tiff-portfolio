@@ -34,11 +34,17 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
           </div>
           <div className='flex justify-center'>
             <div className='max-w-md'>
-              <p
+              {ServicesPageMetadata.pageDescription?.content?.map((item)=> {
+
+      return (
+                      <p
                 className='text-center py-10 text-white font-content lg:max-w-xl sm:max-w-sm sm:mx-6 md:mx-0 font-content md:text-lg sm:text-md'
               >
-                {ServicesPageMetadata.pageDescription?.content?.[0].content?.[0].value}
+                {item.content?.[0].value}
               </p>
+      )
+              })}
+
             </div>
           </div>
         </div>

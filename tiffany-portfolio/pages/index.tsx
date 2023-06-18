@@ -85,7 +85,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                         </div>
                       </a>
                     </div>
-                    <div className='py-4'>
+                    <div className='py-4 sm:text-center md:text-left'>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic1Reference?.fields.title}</div>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic1Reference?.fields.year}</div>
                     </div>
@@ -106,7 +106,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                         </div>
                       </a>
                     </div>
-                    <div className='py-4'>
+                    <div className='py-4 sm:text-center md:text-left'>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic2Reference?.fields.title}</div>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic2Reference?.fields.year}</div>
                     </div>
@@ -129,7 +129,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                         </div>
                       </a>
                     </div>
-                    <div className='py-4'>
+                    <div className='py-4 sm:text-center md:text-left'>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic3Reference?.fields.title}</div>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic3Reference?.fields.year}</div>
                     </div>
@@ -150,7 +150,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                         </div>
                       </a>
                     </div>
-                    <div className='py-4'>
+                    <div className='py-4 sm:text-center md:text-left'>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic4Reference?.fields.title}</div>
                       <div className='text-white font-subtitle'>{HomePageMetadata?.pic4Reference?.fields.year}</div>
                     </div>
@@ -172,7 +172,7 @@ export default function HomePage({fontAPIData,HomePageData}:HomePageProps){
                         </div>
                       </a>
                   </div>
-                  <div>
+                  <div className="sm:text-center md:text-left">
                     <div className='text-white font-subtitle mt-4'>{HomePageMetadata?.pic5Reference?.fields.title}</div>
                     <div className='text-white font-subtitle'>{HomePageMetadata?.pic5Reference?.fields.year}</div>
                   </div>

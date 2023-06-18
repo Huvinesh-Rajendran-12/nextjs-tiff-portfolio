@@ -55,9 +55,18 @@ export default function AboutPage({fontAPIData,AboutPageData}: AboutPageProps) {
               <img alt='' src={AboutPageMetadata.logo?.fields.file.url} className='w-1/12 lg:max-w-[50px] md:min-w-[15vw] sm:min-w-[70px]' />
               <div className='gap-y-6 flex flex-col'>
                 <div className='text-white lg:max-w-xl md:max-w-sm'>
-                  <p className='lg:text-lg sm:text-md font-content sm:text-left md:text-left'>
-                    {AboutPageMetadata.description?.content?.[0].content?.[0].value}
+
+                  {AboutPageMetadata.description?.content?.map((item)=> {
+                return(
+                 <p className='lg:text-lg sm:text-md font-content sm:text-left md:text-left'>
+                    {item.content?.[0].value}
                   </p>
+                  
+                )
+
+              
+})}
+ 
                 </div>
               </div>
             </div>
