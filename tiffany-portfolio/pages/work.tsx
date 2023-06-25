@@ -230,7 +230,7 @@ export default function Work({WorkPageData, fontAPIData}:WorkPageProps) {
         </div>
       </section>
       <section>
-        <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block'>
+        <div className='overflow-hidden h-full lg:pt-[12.35vh] flex flex-col space-y-6 justify-between lg:block pt-8'>
           <p className='whitespace-nowrap mb-6 font-medium text-[30vw] md:text-[20vw] pb-8 lg:text-xxl1 leading-1 lg:leading-[15.28vw]'> 
               <span className='reverse text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
               <span className='reverse text-scrolling font-animation'>{WorkPageMetaData.animation2}</span>
