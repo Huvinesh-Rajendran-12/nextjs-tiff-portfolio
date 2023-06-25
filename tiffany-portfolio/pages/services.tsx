@@ -104,7 +104,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
                 {ServicesPageMetadata.secondServiceDescription?.content?.map((item)=> {
             return (
                 <p className='font-content'>
-                  {item.content?.[]}
+                  {item.content?.[0].value}
                 </p>
             )
                 })}
