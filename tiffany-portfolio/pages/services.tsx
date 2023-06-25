@@ -67,7 +67,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
               <div className='max-w-sm pt-4'>
                 {ServicesPageMetadata.firstServiceDescription?.content?.map((item)=> {
             return (
-                <p className='font-content'>
+                <p className='font-content lg:text-left sm:text-center'>
                   {item.content?.[0].value}
                 </p>
             )
@@ -103,7 +103,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
               <div className='max-w-sm pt-4'>
                 {ServicesPageMetadata.secondServiceDescription?.content?.map((item)=> {
             return (
-                <p className='font-content'>
+                <p className='font-content sm:text-center lg:text-left'>
                   {item.content?.[0].value}
                 </p>
             )
