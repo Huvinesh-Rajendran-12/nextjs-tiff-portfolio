@@ -61,16 +61,20 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
             />
             <div className='sm:ml-10 md:ml-0'>
               <h1 className='text-white md:text-left text-center font-subtitle sm:text-2xl md:text-3xl'>1</h1>
-              <h1 className='text-white text-left font-subtitle font-medium py-2'>
+              <h1 className='text-white text-left font-subtitle font-medium py-4'>
                 {ServicesPageMetadata.firstServiceTitle}
               </h1>
-              <div className='max-w-sm'>
+              <div className='max-w-sm pt-4'>
+                {ServicesPageMetadata.firstServiceDescription?.content?.map((item)=> {
+            return (
                 <p className='font-content'>
-                  {ServicesPageMetadata.firstServiceDescription?.content?.[0].content?.[0].value}
+        {ServicesPageMetadata.firstServiceDescription?.content?.[0].content?.[0].value}
                 </p>
+            )
+                })}
               </div>
-              <h1 className='text-left font-bold font-subtitle py-2'>{ServicesPageMetadata.firstServiceListTitle}</h1>
-              <ul className='list-disc ml-6'>
+              <h1 className='text-left font-bold font-subtitle py-4'>{ServicesPageMetadata.firstServiceListTitle}</h1>
+              <ul className='list-disc ml-6 py-4'>
                 {ServicesPageMetadata.firstServiceListItems?.content[0].content?.map((item) => {
                     return (
                         <li>
@@ -96,12 +100,16 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
               <h1 className='text-white py-2 text-left font-subtitle'>
                 {ServicesPageMetadata.secondServiceTitle}
               </h1>
-              <div className='max-w-sm'>
-                <div className='text-white font-content'>
-                  {ServicesPageMetadata.secondServiceDescription?.content?.[0].content?.[0].value}
-                </div>
+              <div className='max-w-sm pt-4'>
+                {ServicesPageMetadata.secondServiceDescription?.content?.map((item)=> {
+            return (
+                <p className='font-content'>
+        {ServicesPageMetadata.firstServiceDescription?.content?.[0].content?.[0].value}
+                </p>
+            )
+                })}
               </div>
-              <h1 className='text-left font-bold font-subtitle py-2'>{ServicesPageMetadata.secondServiceListTitle}</h1>
+              <h1 className='text-left font-bold font-subtitle py-4'>{ServicesPageMetadata.secondServiceListTitle}</h1>
               <ul className='list-disc ml-6'>
                 {ServicesPageMetadata.secondServiceListItems?.content[0].content?.map((item) => {
                     return (
@@ -118,7 +126,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
             <img
               alt=""
               src={ServicesPageMetadata?.secondServicePic?.fields.file.url}
-              className=''
+              className='md:max-w-[550px] sm:max-w-[360px]'
             />
           </div>
         </div>
