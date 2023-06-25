@@ -96,7 +96,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
             className='flex-col-reverse lg:flex-row flex items-center justify-center md:px-3 gap-y-4 md:space-x-10 sm:mx-3 md:mx-0'
           >
             <div className='sm:ml-10 md:ml-0'>
-              <h1 color={'secondary'} className='md:text-left text-center font-subtitle sm:text-2xl md:text-3xl'>2</h1>
+              <h1 color={'secondary'} className='lg:text-left sm:text-center font-subtitle sm:text-2xl md:text-3xl'>2</h1>
               <h1 className='text-white py-2 lg:text-left sm:text-center font-subtitle'>
                 {ServicesPageMetadata.secondServiceTitle}
               </h1>
@@ -104,7 +104,7 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
                 {ServicesPageMetadata.secondServiceDescription?.content?.map((item)=> {
             return (
                 <p className='font-content'>
-                  {item}
+                  {item.content?.[]}
                 </p>
             )
                 })}
