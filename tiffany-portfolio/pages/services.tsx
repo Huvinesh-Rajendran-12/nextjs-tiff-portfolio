@@ -61,19 +61,19 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
             />
             <div className='sm:ml-10 md:ml-0'>
               <h1 className='text-white md:text-left text-center font-subtitle sm:text-2xl md:text-3xl'>1</h1>
-              <h1 className='text-white text-left font-subtitle font-medium py-4'>
+              <h1 className='text-white lg:text-left sm:text-center font-subtitle font-medium py-4'>
                 {ServicesPageMetadata.firstServiceTitle}
               </h1>
               <div className='max-w-sm pt-4'>
                 {ServicesPageMetadata.firstServiceDescription?.content?.map((item)=> {
             return (
                 <p className='font-content'>
-        {ServicesPageMetadata.firstServiceDescription?.content?.[0].content?.[0].value}
+                  {item.content?.[0].value}
                 </p>
             )
                 })}
               </div>
-              <h1 className='text-left font-bold font-subtitle py-4'>{ServicesPageMetadata.firstServiceListTitle}</h1>
+              <h1 className='lg:text-left sm:text-center font-bold font-subtitle py-4'>{ServicesPageMetadata.firstServiceListTitle}</h1>
               <ul className='list-disc ml-6 py-4'>
                 {ServicesPageMetadata.firstServiceListItems?.content[0].content?.map((item) => {
                     return (
@@ -97,19 +97,19 @@ export default function ServicesPage({ServicesPageData, fontAPIData}: ServicesPa
           >
             <div className='sm:ml-10 md:ml-0'>
               <h1 color={'secondary'} className='md:text-left text-center font-subtitle sm:text-2xl md:text-3xl'>2</h1>
-              <h1 className='text-white py-2 text-left font-subtitle'>
+              <h1 className='text-white py-2 lg:text-left sm:text-center font-subtitle'>
                 {ServicesPageMetadata.secondServiceTitle}
               </h1>
               <div className='max-w-sm pt-4'>
                 {ServicesPageMetadata.secondServiceDescription?.content?.map((item)=> {
             return (
                 <p className='font-content'>
-        {ServicesPageMetadata.firstServiceDescription?.content?.[0].content?.[0].value}
+                  {item}
                 </p>
             )
                 })}
               </div>
-              <h1 className='text-left font-bold font-subtitle py-4'>{ServicesPageMetadata.secondServiceListTitle}</h1>
+              <h1 className='lg:text-left sm:text-center font-bold font-subtitle py-4'>{ServicesPageMetadata.secondServiceListTitle}</h1>
               <ul className='list-disc ml-6'>
                 {ServicesPageMetadata.secondServiceListItems?.content[0].content?.map((item) => {
                     return (
